@@ -20,9 +20,10 @@
 .form{}
 .input_group{display:flex;align-items: center;}
 .input_group + .input_group{margin-top:5px;}
-.input_group .dash{margin:0 4px;}
+.input_group .dash{margin:0 4px;font-weight:600;color:#000;font-size:16px;}
 .input_group .input{display: flex;align-items: center;flex: 1 1 auto;position: relative;}
 .input_group > * + *{margin-left:6px;}
+.input_group .dash + *{margin-left:0;}
 .input_group input[type="text"],
 .input_group input[type="email"],
 .input_group input[type="password"],
