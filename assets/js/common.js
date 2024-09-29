@@ -169,3 +169,96 @@ $(document).ready(function () {
 });
 
 
+//접근성 탭 포커스 
+function trapFocus(popup) {
+    var focusableElements = popup.querySelectorAll('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
+    var firstFocusableElement = focusableElements[0];  
+    var lastFocusableElement = focusableElements[focusableElements.length - 1]; 
+
+    popup.addEventListener('keydown', function(e) {
+        var isTabPressed = (e.key === 'Tab' || e.keyCode === 9);
+
+        if (!isTabPressed) {
+            return;
+        }
+
+        if (e.shiftKey) {
+            if (document.activeElement === firstFocusableElement) {
+                e.preventDefault();
+                lastFocusableElement.focus();
+            }
+        } else {
+            if (document.activeElement === lastFocusableElement) {
+                e.preventDefault();
+                firstFocusableElement.focus();
+            }
+        }
+    });
+}
+
+//레이어팝업 오픈 히든
+let layerOpenButton = null;
+function layerOpen(button, target){
+    var popup = document.querySelector(target);
+    popup.classList.remove('dns');
+    popup.focus();
+    popup.focus();
+    trapFocus(popup);
+    layerOpenButton = button; //버튼 눌러 레이어 열었을때 버튼 메모리
+}
+function layerClose(button) {
+    var popup = button.closest('.pops1');
+    popup.classList.add('dns');
+    if(layerOpenButton != null){
+        layerOpenButton.focus(); //열었던 버튼 포커스로 되돌림  (접근성)
+    }
+}
+
+
+//첨부파일
+function initFileInput() {
+    document.querySelectorAll('.file_input').forEach(function (fileInput) {
+        const fileInputField = fileInput.querySelector('input[type="file"]');
+        const textInput = fileInput.querySelector('input[type="text"]');
+        const removeButton = fileInput.querySelector('.remove_file');
+        const sizeInMB = parseInt(fileInputField.getAttribute('size'), 10);
+        const maxFileSize = sizeInMB * 1024 * 1024;
+        const allowedExtensions = fileInputField.getAttribute('accept')
+            .split(',')
+            .map(ext => ext.trim().replace('.', '').toLowerCase());
+
+        fileInputField.addEventListener('change', function () {
+            const file = fileInputField.files[0];
+
+            if (file) {
+                const fileSize = file.size;
+                const fileExtension = file.name.split('.').pop().toLowerCase();
+
+                if (!allowedExtensions.includes(fileExtension)) {
+                    alert("허용되지 않는 파일 형식입니다. " + allowedExtensions.join(', ') + " 파일만 업로드 가능합니다.");
+                    fileInputField.value = ''; 
+                    textInput.value = '';
+                    return;
+                }
+                if (fileSize > maxFileSize) {
+                    alert("파일 용량이 " + sizeInMB + "MB를 초과했습니다.");
+                    fileInputField.value = '';
+                    textInput.value = '';
+                    return;
+                }
+                textInput.value = file.name;
+                removeButton.classList.add('active');
+            }
+        });
+
+        removeButton.addEventListener('click', function () {
+            fileInputField.value = '';
+            textInput.value = '';
+            removeButton.classList.remove('active');
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    initFileInput();
+});

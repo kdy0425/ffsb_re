@@ -146,14 +146,16 @@ button{cursor:pointer;}
 
 
 .txt_underline{text-decoration:underline !important;}
-.txt_red{color:#ec1b36 !important;}
+.txt_red{color:#ee3f3f  !important;}
 .txt_bgreen{color:#8edac2 !important;}
 .txt_green{color:#00c63d !important;}
 .txt_blue{color:#006699 !important;}
 .txt_skyblue{color:#55acee !important;}
 .txt_orange{color:#ed573d !important;}
 .txt_pdt{color:#f36c01 !important;}
+.txt_theme{color:#2460ce !important;}
 
+.dns{display: none !important;}
 .bold{font-weight:700;}
 .semi_bold{font-weight:600;}
 .container{max-width:1140px;margin-left:auto;margin-right:auto;}
@@ -195,10 +197,12 @@ textarea::placeholder{color:#888;opacity: 1;}
 textarea:read-only{background-color: #F9F9F9;color:#222;}
 
 /*디자인 체크,라디오*/
-select{color:#222;padding-left:16px;border:1px solid #ccc;height:38px;padding-right:30px;background-repeat:no-repeat;background-position:right 12px center;appearance:none; -webkit-appearance:none; box-sizing:border-box;
+select{color:#222;padding-left:16px;border:1px solid #ccc;height:38px;padding-right:25px;background-repeat:no-repeat;background-position:right 8px center;appearance:none; -webkit-appearance:none; box-sizing:border-box;
   background-image: url("data:image/svg+xml,%3Csvg id='ico_dropdown' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Crect id='area' width='20' height='20' fill='%2300dcff' opacity='0'/%3E%3Cg id='그룹_843' data-name='그룹 843' transform='translate(6 8)'%3E%3Cpath id='패스_1135' data-name='패스 1135' d='M1514.5,216.425l4,4,4-4' transform='translate(-1514.5 -216.425)' fill='none' stroke='%23222' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");}
 select::-ms-expand {display:none;}
-
+@media screen and (max-width:1180px) {
+  select{padding-left:10px;padding-right:17px;background-position:right 2px center;}
+}
 /*슬라이더*/
 .slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
 .slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}
@@ -235,16 +239,16 @@ label{cursor:pointer;}
 .checkbox .ck_icon{position:absolute;left:0;top:1px;z-index:2;width:24px;height:24px;border:1px solid #ccc;background-color:#fff;border-radius:2px;background-repeat:no-repeat;background-position: center center;}
 .checkbox.circle{padding-left:32px;}
 .checkbox.circle .ck_icon{border-radius:50%;width:24px;height:24px;top:0;background-color:#ccc;background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.816' height='10.408' viewBox='0 0 12.816 10.408'%3E%3Cpath id='패스_6207' data-name='패스 6207' d='M1242.979-7754.041l3.383,4.091,6.617-8' transform='translate(-1241.571 7759.358)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E%0A");}
-.checkbox.sm{padding-left:25px;font-size:14px;padding-top:1px;}
-.checkbox.sm .ck_icon{width:18px;height:18px;}
-.checkbox input{width:16px;height:16px;left:1px;top:2px;background-color: transparent;border:0;}
-.checkbox.sm input[type="radio"] + .ck_icon{width:18px;height:18px;}
+.checkbox.sm{padding-left:23px;font-size:14px;padding-top:0;line-height: 1.5;}
+.checkbox.sm .ck_icon{width:18px;height:18px;top:2px;}
+.checkbox input{width:14px;height:14px;left:1px;top:2px;background-color: transparent;border:0;}
+.checkbox.sm input[type="radio"] + .ck_icon{width:16px;height:16px;}
 .checkbox input:checked + .ck_icon{border:1px solid #4F69D2;background-color:#4F69D2;background-position: center center;background-repeat: no-repeat;}
 .checkbox input:disabled{}
 .checkbox input:disabled + .ck_icon{border:1px solid #cccccc;background-color:#f5f5f5;}
 .checkbox input:disabled:checked + .ck_icon{color:#cccccc;background-color:#f5f5f5;}
 .checkbox input:disabled:checked + .ck_icon + .ck_text{color:#bbb;}
-.checkbox input[type="radio"] + .ck_icon{border-radius:50%;width:22px;height:22px;left:1px;top:1px;background-color:#fff;border:5px solid #fff;box-shadow:0 0 0 1px #ccc;}
+.checkbox input[type="radio"] + .ck_icon{border-radius:50%;width:22px;height:22px;left:1px;top:2px;background-color:#fff;border:5px solid #fff;box-shadow:0 0 0 1px #ccc;}
 .checkbox input[type="checkbox"]:checked + .ck_icon{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.816' height='10.408' viewBox='0 0 12.816 10.408'%3E%3Cpath id='패스_6207' data-name='패스 6207' d='M1242.979-7754.041l3.383,4.091,6.617-8' transform='translate(-1241.571 7759.358)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E%0A");}
 .checkbox input[type="checkbox"]:disabled + .ck_icon{}
 .checkbox input[type="radio"]:checked + .ck_icon{background-color: #4F69D2;border:4px solid #fff;box-shadow:0 0 0 1px #4F69D2;}
@@ -272,3 +276,5 @@ label{cursor:pointer;}
   .checkbox input[type="radio"] + .ck_icon{width:18px;height:18px;}
   .checkbox.inline{margin-right:10px;margin-bottom:3px;}
 }
+
+caption.hidden{position: absolute;left:-999999999em;}

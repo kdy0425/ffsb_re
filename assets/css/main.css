@@ -79,7 +79,6 @@ button{cursor:pointer;}
 #header .hd_bottom .hd_inner{display: flex;align-items: center;}
 #header #nav{}
 #header .nav_bg{display:none;position:absolute;left:0;top:0;width:100%;background-color: #fff;border-bottom: 1px solid #ECECEC;box-shadow: 0 0 60px rgba(12,42,90,.1);}
-#header.hover .hd_bottom,#header.all .hd_bottom{border-bottom:1px solid #ECECEC;}
 #header.hover .nav_bg{display:block;}
 #header.hover #nav .in_wrap{display:block;}
 
@@ -511,13 +510,13 @@ button{cursor:pointer;}
 
 .mp_mb *,
 .mp_cnt *{box-sizing: border-box;}
-.mp_mb{display: flex;align-items: center;border:1px solid #DBDCDD;padding:33px 35px;margin-top:30px;}
+.mp_mb{display: flex;align-items: center;border:1px solid #DBDCDD;padding:33px 35px;}
 .mp_mb .member{padding-left:72px;position: relative;min-height: 54px;display:flex;flex-direction: column;justify-content: center;}
 .mp_mb .member .photo{position: absolute;width:54px;height:54px;left:0;top:50%;margin-top:-27px;border-radius: 50%;background-position: center center;background-repeat: no-repeat;background-size: cover;background-image: url("data:image/svg+xml,%3Csvg width='54' height='54' viewBox='0 0 54 54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='0.75' cx='27' cy='27' r='27' fill='%23D0D0D0'/%3E%3Cmask id='mask0_18_858' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='54' height='54'%3E%3Ccircle cx='27' cy='27' r='27' fill='%23F4F7FC'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_18_858)'%3E%3Ccircle cx='27' cy='18' r='9.9' fill='white'/%3E%3Ccircle cx='26.9999' cy='56.7' r='26.1' fill='white'/%3E%3C/g%3E%3Ccircle cx='27' cy='27' r='26.5' stroke='%23D0D0D0'/%3E%3C/svg%3E%0A");}
 .mp_mb .member .name{color:#333;font-size:18px;}
 .mp_mb .member .name strong{font-weight:700;}
 .mp_mb .member .login{margin-top:10px;color:#555;font-size:12px;}
-.mp_mb .mb_modify{margin-left:auto;color:#fff;background-color: #4D71D9;width:160px;height: 36px;line-height: 36px;border-radius: 4px;text-align: center;font-size:12px;font-weight:700;}
+.mp_mb .mb_modify{margin-left:auto;color:#fff;background-color: #4D71D9;width:160px;height: 36px;line-height: 36px;border-radius: 4px;text-align: center;font-size:14px;font-weight:700;}
 .mp_cnt{margin-top:30px;display:flex;flex-wrap: wrap;}
 .mp_cnt .item{width:calc((100% - 40px) / 3);margin-right:20px;border:1px solid #DBDCDD;}
 .mp_cnt .item:nth-child(3n){margin-right:0;}
