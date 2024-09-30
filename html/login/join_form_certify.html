@@ -95,154 +95,78 @@
 	<!-- //sub_wrap -->
 	<div class="sub_wrap">
 		<!-- content -->
-		<div id="twoColWrap" class="clearfix">
-            <div id="sideBar">
-                <div class="heading">
-                    <h2 class="tit">마이페이지</h2>
-                    <img src="https://www.ffsb.kr/common/img/sub/icon_lnb8.png" class="icon">
-                </div>
-                <div class="inner">
-                    <ul id="lnb">
-                        <li><a href="/mypage/ffmCertRqnStatus.do">신청현황</a></li>
-                        <li class="on"><a href="/mypage/compMemView.do">회원정보</a></li>
-                    </ul>
-                </div>
-            </div><!-- end #sideBar -->
-            <div id="content" class="sub_content">
-                <div class="inner">
-                    <p class="locations">
-                        <span class="home">Home</span> 
-                        <span class="entity">&gt;</span>
-                        <span>마이페이지</span>
-                        <span class="entity">&gt;</span>
-                        <strong>회원정보</strong>
-                    </p>
+		<div id="content" class="sub_content login_content">
+			<div class="container_800">
+				<div class="visual1 bg_person">
+					<h1>가족이 행복한 즐거운 일터!<br/><strong>가족친화지원사업</strong></h1>
+				</div>
 
-                    <div class="titles1">
-                        <h1>회원정보</h1>
-                    </div>
-                   
-                    <div class="rtext_btn">
-                        <div class="text">
-                            최종수정일 : <span class="txt_theme">2024-08-29</span>
-                        </div>
-                        <div class="btns">
-                            <a href="javascript:;" id="btnCompMemModify" class="btn btn_md btn_dblue">회원정보수정</a>		
-                        </div>					
-					</div>
+                <ul class="tap_table">
+                    <li><a href="/login/idFind.do">기업(관)회원</a></li>
+                    <li class="on"><a href="/login/pwdFind.do" title="선택됨">강사ㆍ컨설턴트 회원</a></li>
+                </ul>
+                
+                <h2 class="sound_only">강사·컨설턴트 회원</h2>
 
-                    <div class="form_table">
-                        <h3 class="form_title">기업(관) 정보</h3>
-                        <table>
-                            <!-- 20180122 접근성 수정 -->
-                            <caption class="hidden">
-                                <strong>기업(관) 정보</strong>
-                                <p>기업(관)명, 대표자명, 사업자등록번호, 법인등록번호, 업종, 업태, 종목, 주력분야, 기업(관)분류, 기업(관)분류(세부), 지역, 주소, 가족친화인증현황, 인증현황, 인증번호, 인증유효기간으로 구성된 표</p>
-                            </caption>
-                            <!-- //20180122 접근성 수정 -->
-                            <colgroup>
-                                <col width="18%">
-                                <col width="32%">
-                                <col width="18%">
-                                <col width="*">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">기업(관)명</th>
-                                    <td>가친부서테스트02</td>
-                                    <th scope="row">대표자명</th>
-                                    <td>김철수</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">사업자등록번호</th>
-                                    <td>123-12-12345</td>
-                                    <th scope="row">법인등록번호</th>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">업종</th>
-                                    <td>도매 및 소매업</td>
-                                    <th scope="row">업태</th>
-                                    <td> 연구 </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">종목</th>
-                                    <td> ㅇ </td>
-                                    <th scope="row">주력분야</th>
-                                    <td>IT개발 서비스</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">기업(관)분류</th>
-                                    <td>중소기업</td>
-                                    <th scope="row">기업(관)분류(세부)</th>
-                                    <td>중소기업</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">주소</th>
-                                    <td colspan="3"> 04554 <br> 서울특별시 중구 퇴계로 173 24층 </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">가족친화 인증현황</th>
-                                    <td>미인증</td>
-                                    <th scope="row">인증현황</th>
-                                    <td>미인증</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">인증번호</th>
-                                    <td>미인증</td>
-                                    <th scope="row">인증유효기간</th>
-                                    <td>미인증</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <form id="frm" name="frm" method="post" action="">
+                <input type="hidden" id="memHp" name="memHp" value="">
+                
+				<div class="form_table">
 
-                    <div class="form_table">
-                        <h3 class="form_title">기업(관) 정보</h3>
-                        <table>
-                            <!-- 20180122 접근성 수정 -->
-                            <caption class="hidden">
-                                <strong>담당자 정보</strong>
-                                <p>아이디, 담당자(성명), 담당부서, 직급, 전화, 휴대전화, 팩스, 이메일로 구성된 표</p>
-                            </caption>
-                            <!-- //20180122 접근성 수정 -->
-                            <colgroup>
-                                <col width="18%">
-                                <col width="32%">
-                                <col width="18%">
-                                <col width="*">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">아이디</th>
-                                    <td>kihfse2 (가입 :2023-03-16)</td>
-                                    <th scope="row">담당자(성명)</th>
-                                    <td>가친부서02</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">담당부서</th>
-                                    <td>관리팀</td>
-                                    <th scope="row">직급</th>
-                                    <td>과장</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">전화</th>
-                                    <td>02-3479-7600</td>
-                                    <th scope="row">휴대전화</th>
-                                    <td>010-1234-5678</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">팩스</th>
-                                    <td>02-3479-7786</td>
-                                    <th scope="row">이메일</th>
-                                    <td>ffsb@kihf.or.kr</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <table class="tables1">
+                        <!-- 20180122 접근성 수정 -->
+                        <caption class="hidden">
+                            <strong>회원가입 인증 정보입력</strong>
+                            <p>이름, 휴대전화 뒤 4자리, 인증번호로 구성된 표</p>
+                        </caption>
+                        <!-- //20180122 접근성 수정 -->
+                        <colgroup>
+                            <col width="19%">
+                            <col width="*">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><label for="memNm"><span class="required">필수</span>이름</label></th>
+                                <td>
+                                    <div class="input_group">
+                                        <div class="input">
+                                            <input type="text" id="memNm" name="memNm" value="" maxlength="25" title="이름 입력">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="memHp1"><span class="required">필수</span>휴대전화 뒤 4자리</label></th>
+                                <td>
+                                    <div class="input_group">
+                                        <div class="input">
+                                            <input type="text" id="memHp1" value="" maxlength="4" size="4" title="휴대전화 뒤 4자리 입력" onkeyup="fnCommonOnlyNumber(this);">
+                                        </div>
+                                    </div>
+                                    <span id="memHpErr" class="input_status red" style="display: none;">필수 정보입니다.</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><label for="memCheckNum"><span class="required">필수</span>인증번호</label></th>
+                                <td>
+                                    <div class="input_group">
+                                        <div class="input">
+                                            <input type="text" id="memCheckNum" name="memCheckNum" value="" maxlength="25" title="인증번호 입력">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+				</div>
+                <small>※ 본 페이지는 강사와 컨설턴트 회원가입을 위한 페이지입니다.<br/>
+                    기업(관) 회원가입의 경우 왼쪽의 탭을 이용하여 주시기 바랍니다.</small>
+                <div class="form_btns">
+                    <a href="javascript:fnMemJoinReg();" class="btn btn_lg btn_submit">인증 후 가입하기</a>
                 </div>
+                </form>
             </div>
-        </div>
+		</div>
 		<!-- //content -->
 
 		<div class="quick_wrap">

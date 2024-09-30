@@ -103,8 +103,15 @@
                 </div>
                 <div class="inner">
                     <ul id="lnb">
-                        <li><a href="/mypage/ffmCertRqnStatus.do">신청현황</a></li>
-                        <li class="on"><a href="/mypage/compMemView.do">회원정보</a></li>
+                        <li>
+                            <a href="/mypage/history/instructor.do">연계이력</a>
+                        </li>
+                        <li>
+                            <a href="/ffsbbod/bs/boardList.do?boardSeq=11">직장교육 자료실</a>
+                        </li>
+                        <li>
+                            <a href="/mypage/userMemView.do">회원정보</a>
+                        </li>
                     </ul>
                 </div>
             </div><!-- end #sideBar -->
@@ -114,131 +121,183 @@
                         <span class="home">Home</span> 
                         <span class="entity">&gt;</span>
                         <span>마이페이지</span>
-                        <span class="entity">&gt;</span>
-                        <strong>회원정보</strong>
                     </p>
-
                     <div class="titles1">
-                        <h1>회원정보</h1>
+                        <h1>마이페이지</h1>
                     </div>
-                   
-                    <div class="rtext_btn">
-                        <div class="text">
-                            최종수정일 : <span class="txt_theme">2024-08-29</span>
+                    
+                    
+                    <div class="mb_info">
+                        <div class="info">
+                            <span class="profile"></span>
+                            <div class="cnt">
+                                <span class="name">테스트님 안녕하세요?</span>
+                                <span class="date">최종수정일 : 2024-04-26</span>
+                                <a href="/mypage/userMemView.do" class="modify_btn">회원정보 관리</a>
+                            </div>
                         </div>
-                        <div class="btns">
-                            <a href="javascript:;" id="btnCompMemModify" class="btn btn_md btn_dblue">회원정보수정</a>		
-                        </div>					
-					</div>
-
-                    <div class="form_table">
-                        <h3 class="form_title">기업(관) 정보</h3>
-                        <table>
-                            <!-- 20180122 접근성 수정 -->
-                            <caption class="hidden">
-                                <strong>기업(관) 정보</strong>
-                                <p>기업(관)명, 대표자명, 사업자등록번호, 법인등록번호, 업종, 업태, 종목, 주력분야, 기업(관)분류, 기업(관)분류(세부), 지역, 주소, 가족친화인증현황, 인증현황, 인증번호, 인증유효기간으로 구성된 표</p>
-                            </caption>
-                            <!-- //20180122 접근성 수정 -->
-                            <colgroup>
-                                <col width="18%">
-                                <col width="32%">
-                                <col width="18%">
-                                <col width="*">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">기업(관)명</th>
-                                    <td>가친부서테스트02</td>
-                                    <th scope="row">대표자명</th>
-                                    <td>김철수</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">사업자등록번호</th>
-                                    <td>123-12-12345</td>
-                                    <th scope="row">법인등록번호</th>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">업종</th>
-                                    <td>도매 및 소매업</td>
-                                    <th scope="row">업태</th>
-                                    <td> 연구 </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">종목</th>
-                                    <td> ㅇ </td>
-                                    <th scope="row">주력분야</th>
-                                    <td>IT개발 서비스</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">기업(관)분류</th>
-                                    <td>중소기업</td>
-                                    <th scope="row">기업(관)분류(세부)</th>
-                                    <td>중소기업</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">주소</th>
-                                    <td colspan="3"> 04554 <br> 서울특별시 중구 퇴계로 173 24층 </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">가족친화 인증현황</th>
-                                    <td>미인증</td>
-                                    <th scope="row">인증현황</th>
-                                    <td>미인증</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">인증번호</th>
-                                    <td>미인증</td>
-                                    <th scope="row">인증유효기간</th>
-                                    <td>미인증</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="links">
+                            <a href="javascript:fnDownloadFile();" class="print_btn">결과보고서 <br>양식 출력 </a>
+                            <a href="javascript:fnPrint('teacherCareerReport');" class="print_btn">직장교육 <br>경력증명서 출력 </a>
+                            <a href="javascript:fnPrint('teacherAppoReport');;" class="print_btn">위촉장 <br> 출력 </a>
+                        </div>
                     </div>
 
-                    <div class="form_table">
-                        <h3 class="form_title">기업(관) 정보</h3>
-                        <table>
-                            <!-- 20180122 접근성 수정 -->
-                            <caption class="hidden">
-                                <strong>담당자 정보</strong>
-                                <p>아이디, 담당자(성명), 담당부서, 직급, 전화, 휴대전화, 팩스, 이메일로 구성된 표</p>
-                            </caption>
-                            <!-- //20180122 접근성 수정 -->
-                            <colgroup>
-                                <col width="18%">
-                                <col width="32%">
-                                <col width="18%">
-                                <col width="*">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">아이디</th>
-                                    <td>kihfse2 (가입 :2023-03-16)</td>
-                                    <th scope="row">담당자(성명)</th>
-                                    <td>가친부서02</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">담당부서</th>
-                                    <td>관리팀</td>
-                                    <th scope="row">직급</th>
-                                    <td>과장</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">전화</th>
-                                    <td>02-3479-7600</td>
-                                    <th scope="row">휴대전화</th>
-                                    <td>010-1234-5678</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">팩스</th>
-                                    <td>02-3479-7786</td>
-                                    <th scope="row">이메일</th>
-                                    <td>ffsb@kihf.or.kr</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="mb_table">
+                        <div class="mbt_top">
+                            <h2>직장인교육 연계이력 - <strong>테스트 강사</strong>
+                            </h2>
+                            <div class="r">
+                                <a href="/mypage/history/instructor.do" class="btn_more">연계이력 더 보기</a>
+                            </div>
+                        </div>
+                        <div class="table">
+                            <table>
+                                <colgroup>
+                                    <col style="width:60px;">
+                                    <col style="width:120px;">
+                                    <col style="width:90px;">
+                                    <col style="width:100px;">
+                                    <col>
+                                    <col style="width:80px;">
+                                    <col style="width:110px;">
+                                    <col style="width:140px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>번호</th>
+                                        <th>기업(관)명</th>
+                                        <th>교육일시</th>
+                                        <th>수강과목</th>
+                                        <th>주소</th>
+                                        <th>교육참가자</th>
+                                        <th>결과보고서</th>
+                                        <th>리포팅</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="mb_tit">번호</span>
+                                            <span class="mb_cnt">12</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">기업(관)명</span>
+                                            <span class="mb_cnt">한국기업3</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">교육일시</span>
+                                            <span class="mb_cnt">2020-08-07</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">수강과목</span>
+                                            <span class="mb_cnt">일반근로자1</span>
+                                        </td>
+                                        <td class="align_left">
+                                            <span class="mb_tit">주소</span>
+                                            <span class="mb_cnt">서울특별시 서초구 반포대로 217</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">교육참가자</span>
+                                            <span class="mb_cnt">20명</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">결과보고서</span>
+                                            <span class="mb_cnt">
+                                                <a href="#" class="btn1 a rds3" data="731">파일업로드</a>
+                                                <p class="status wait">대기</p>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">리포팅</span>
+                                            <span class="mb_cnt">
+                                                <a href="javascript:btnPrint1('999003','','한국기업3');" class="btn1">기업정보</a>
+                                                <a href="javascript:btnPrint2('731');" class="btn1">신청정보</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="mb_tit">번호</span>
+                                            <span class="mb_cnt">11</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">기업(관)명</span>
+                                            <span class="mb_cnt">니트로아이22f</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">교육일시</span>
+                                            <span class="mb_cnt">2018-12-05</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">수강과목</span>
+                                            <span class="mb_cnt">일반근로자1</span>
+                                        </td>
+                                        <td class="align_left">
+                                            <span class="mb_tit">주소</span>
+                                            <span class="mb_cnt">서울특별시 동작구 신대방1가길 1</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">교육참가자</span>
+                                            <span class="mb_cnt">20명</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">결과보고서</span>
+                                            <span class="mb_cnt">
+                                                <a href="#" class="btn1 a rds3" data="446">파일업로드</a>
+                                                <p class="status wait">대기</p>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">리포팅</span>
+                                            <span class="mb_cnt">
+                                                <a href="javascript:btnPrint1('3292','','니트로아이22f');" class="btn1">기업정보</a>
+                                                <a href="javascript:btnPrint2('446');" class="btn1">신청정보</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="mb_tit">번호</span>
+                                            <span class="mb_cnt">10</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">기업(관)명</span>
+                                            <span class="mb_cnt">한국기업5</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">교육일시</span>
+                                            <span class="mb_cnt">2018-11-28</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">수강과목</span>
+                                            <span class="mb_cnt">일반근로자1</span>
+                                        </td>
+                                        <td class="align_left">
+                                            <span class="mb_tit">주소</span>
+                                            <span class="mb_cnt">서울특별시 서초구 반포대로 217</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">교육참가자</span>
+                                            <span class="mb_cnt">10명</span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">결과보고서</span>
+                                            <span class="mb_cnt">
+                                                <a href="#" class="btn1 a rds3" data="444">파일업로드</a>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <span class="mb_tit">리포팅</span>
+                                            <span class="mb_cnt">
+                                                <a href="javascript:btnPrint1('999005','','한국기업5');" class="btn1">기업정보</a>
+                                                <a href="javascript:btnPrint2('444');" class="btn1">신청정보</a>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
