@@ -103,8 +103,27 @@
                 </div>
                 <div class="inner">
                     <ul id="lnb">
-                        <li><a href="/mypage/ffmCertRqnStatus.do">신청현황</a></li>
-                        <li class="on"><a href="/mypage/compMemView.do">회원정보</a></li>
+                        <li>
+                            <a href="/mypage/history/consultant.do?gubun=01">인증준비 그룹형 컨설팅</a>
+                        </li>
+                        <li>
+                            <a href="/mypage/history/consultant.do?gubun=03">인증준비 방문형 컨설팅</a>
+                        </li>
+                        <li>
+                            <a href="/mypage/history/consultant.do?gubun=02">문화 컨설팅</a>
+                        </li>
+                        <li>
+                            <a href="/selfChk/mypage/myPageSelfChkResultList.do">온라인서면 컨설팅</a>
+                        </li>
+                        <li>
+                            <a href="/ffsbbod/bs/boardList.do?boardSeq=12">컨설턴트 자료실</a>
+                        </li>
+                        <li class="on">
+                            <a href="/ffsbbod/bs/boardList.do?boardSeq=16">컨설팅 게시판</a>
+                        </li>
+                        <li>
+                            <a href="/mypage/userMemView.do">회원정보</a>
+                        </li>
                     </ul>
                 </div>
             </div><!-- end #sideBar -->
@@ -115,130 +134,186 @@
                         <span class="entity">&gt;</span>
                         <span>마이페이지</span>
                         <span class="entity">&gt;</span>
-                        <strong>회원정보</strong>
+                        <strong>컨설팅 게시판</strong>
                     </p>
-
                     <div class="titles1">
-                        <h1>회원정보</h1>
+                        <h1>컨설팅 게시판</h1>
+                        <div class="sub">컨설팅 게시판 입니다.</div>
                     </div>
-                   
-                    <div class="rtext_btn">
-                        <div class="text">
-                            최종수정일 : <span class="txt_theme">2024-08-29</span>
+
+                    <div class="list_search">
+                        <div class="inner">
+                            <div class="input_group">
+                                <div class="input">
+                                    <select id="keyKind" name="keyKind" title="검색분류선택" style="width:130px;">
+                                        <option value="ALL">제목+내용</option>
+                                        <option value="TITLE">제목</option>
+                                        <option value="CONTENTS">내용</option>
+                                    </select>
+                                </div>
+                                <div class="input">
+                                    <input type="text" id="keyWord" name="keyWord" title="검색어 입력" value="" style="width:250px;">
+                                </div>
+                                <button type="submit" class="btn btn_md btn_dblue">검색</button>
+                            </div>
                         </div>
-                        <div class="btns">
-                            <a href="javascript:;" id="btnCompMemModify" class="btn btn_md btn_dblue">회원정보수정</a>		
-                        </div>					
-					</div>
-
-                    <div class="form_table">
-                        <h3 class="form_title">기업(관) 정보</h3>
-                        <table>
-                            <!-- 20180122 접근성 수정 -->
-                            <caption class="hidden">
-                                <strong>기업(관) 정보</strong>
-                                <p>기업(관)명, 대표자명, 사업자등록번호, 법인등록번호, 업종, 업태, 종목, 주력분야, 기업(관)분류, 기업(관)분류(세부), 지역, 주소, 가족친화인증현황, 인증현황, 인증번호, 인증유효기간으로 구성된 표</p>
-                            </caption>
-                            <!-- //20180122 접근성 수정 -->
-                            <colgroup>
-                                <col width="18%">
-                                <col width="32%">
-                                <col width="18%">
-                                <col width="*">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">기업(관)명</th>
-                                    <td>가친부서테스트02</td>
-                                    <th scope="row">대표자명</th>
-                                    <td>김철수</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">사업자등록번호</th>
-                                    <td>123-12-12345</td>
-                                    <th scope="row">법인등록번호</th>
-                                    <td>-</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">업종</th>
-                                    <td>도매 및 소매업</td>
-                                    <th scope="row">업태</th>
-                                    <td> 연구 </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">종목</th>
-                                    <td> ㅇ </td>
-                                    <th scope="row">주력분야</th>
-                                    <td>IT개발 서비스</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">기업(관)분류</th>
-                                    <td>중소기업</td>
-                                    <th scope="row">기업(관)분류(세부)</th>
-                                    <td>중소기업</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">주소</th>
-                                    <td colspan="3"> 04554 <br> 서울특별시 중구 퇴계로 173 24층 </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">가족친화 인증현황</th>
-                                    <td>미인증</td>
-                                    <th scope="row">인증현황</th>
-                                    <td>미인증</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">인증번호</th>
-                                    <td>미인증</td>
-                                    <th scope="row">인증유효기간</th>
-                                    <td>미인증</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
 
-                    <div class="form_table">
-                        <h3 class="form_title">기업(관) 정보</h3>
+                    <div class="list_top">
+                        <div>
+                            <div class="list_total">전체 <span class="txt_theme">13</span>개</div>
+                        </div>
+                    </div>
+                    <div class="list_table">
                         <table>
-                            <!-- 20180122 접근성 수정 -->
                             <caption class="hidden">
-                                <strong>담당자 정보</strong>
-                                <p>아이디, 담당자(성명), 담당부서, 직급, 전화, 휴대전화, 팩스, 이메일로 구성된 표</p>
+                                <strong></strong>
+                                <p>번호, 제목, 파일, 등록일, 조회수로 구성된 표</p>
                             </caption>
-                            <!-- //20180122 접근성 수정 -->
+                            <!-- 20180122 접근성 수정 -->
                             <colgroup>
-                                <col width="18%">
-                                <col width="32%">
-                                <col width="18%">
+                                <col width="10%">
                                 <col width="*">
+                                <col width="10%">
+                                <col width="15%">
+                                <col width="10%">
                             </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">파일</th>
+                                    <th scope="col">등록일</th>
+                                    <th scope="col">조회수</th>
+                                </tr>
+                            </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">아이디</th>
-                                    <td>kihfse2 (가입 :2023-03-16)</td>
-                                    <th scope="row">담당자(성명)</th>
-                                    <td>가친부서02</td>
+                                    <td class="num">13</td>
+                                    <td class="subject">
+                                        <div>
+                                            <a class="link" href="javascript:fnBoardContentView('2099')">제목명제목명제목명제목명제목명제목명제목명제목명제목명제목명제목명제목명제목명제목명명제목명제목명제목명제목명</a>
+                                            <span class="new">N</span>
+                                        </div>
+                                    </td>
+                                    <td class="empty"></td>
+                                    <td><span class="mb_tit">등록일: </span> 2024-09-05 </td>
+                                    <td><span class="mb_tit">조회수: </span>672</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">담당부서</th>
-                                    <td>관리팀</td>
-                                    <th scope="row">직급</th>
-                                    <td>과장</td>
+                                    <td class="num"> 12 </td>
+                                    <td class="subject">
+                                        <div>
+                                            <a class="link" href="javascript:fnBoardContentView('2099')">제목명</a>
+                                            <span class="new">N</span>
+                                        </div>
+                                    </td>
+                                    <td class="empty"></td>
+                                    <td><span class="mb_tit">등록일: </span> 2024-09-05 </td>
+                                    <td><span class="mb_tit">조회수: </span>672</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">전화</th>
-                                    <td>02-3479-7600</td>
-                                    <th scope="row">휴대전화</th>
-                                    <td>010-1234-5678</td>
+                                    <td class="num"> 11 </td>
+                                    <td class="subject">
+                                        <div>
+                                            <a class="link" href="javascript:fnBoardContentView('2099')">제목명</a>
+                                        </div>
+                                    </td>
+                                    <td class="empty"></td>
+                                    <td><span class="mb_tit">등록일: </span> 2024-09-05 </td>
+                                    <td><span class="mb_tit">조회수: </span>672</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">팩스</th>
-                                    <td>02-3479-7786</td>
-                                    <th scope="row">이메일</th>
-                                    <td>ffsb@kihf.or.kr</td>
+                                    <td class="num"> 10 </td>
+                                    <td class="subject">
+                                        <div>
+                                            <a class="link" href="javascript:fnBoardContentView('2099')">제목명</a>
+                                        </div>
+                                    </td>
+                                    <td class="empty"></td>
+                                    <td><span class="mb_tit">등록일: </span> 2024-09-05 </td>
+                                    <td><span class="mb_tit">조회수: </span>672</td>
+                                </tr>
+                                <tr>
+                                    <td class="num"> 9 </td>
+                                    <td class="subject">
+                                        <div>
+                                            <a class="link" href="javascript:fnBoardContentView('2099')">제목명</a>
+                                        </div>
+                                    </td>
+                                    <td class="empty"></td>
+                                    <td><span class="mb_tit">등록일: </span> 2024-09-05 </td>
+                                    <td><span class="mb_tit">조회수: </span>672</td>
+                                </tr>
+                                <tr>
+                                    <td class="num"> 8 </td>
+                                    <td class="subject">
+                                        <div>
+                                            <a class="link" href="javascript:fnBoardContentView('2099')">제목명</a>
+                                        </div>
+                                    </td>
+                                    <td class="empty"></td>
+                                    <td><span class="mb_tit">등록일: </span> 2024-09-05 </td>
+                                    <td><span class="mb_tit">조회수: </span>672</td>
+                                </tr>
+                                <tr>
+                                    <td class="num"> 7 </td>
+                                    <td class="subject">
+                                        <div>
+                                            <a class="link" href="javascript:fnBoardContentView('2099')">제목명</a>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="mb_tit">첨부파일: </span> 
+                                        <span class="sound_only">첨부파일 있음</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-download" style="width:20px;height:20px;" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#444" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2zM12 17v-6"/><path d="M9.5 14.5 12 17l2.5-2.5"/></svg>
+                                    </td>
+                                    <td><span class="mb_tit">등록일: </span> 2024-09-05 </td>
+                                    <td><span class="mb_tit">조회수: </span>672</td>
+                                </tr>
+                                <tr>
+                                    <td class="num"> 6 </td>
+                                    <td class="subject">
+                                        <div>
+                                            <a class="link" href="javascript:fnBoardContentView('2099')">제목명</a>
+                                        </div>
+                                    </td>
+                                    <td class="empty"></td>
+                                    <td><span class="mb_tit">등록일: </span> 2024-09-05 </td>
+                                    <td><span class="mb_tit">조회수: </span>672</td>
+                                </tr>
+                                <tr>
+                                    <td class="num"> 5 </td>
+                                    <td class="subject">
+                                        <div>
+                                            <a class="link" href="javascript:fnBoardContentView('2099')">제목명</a>
+                                        </div>
+                                    </td>
+                                    <td class="empty"></td>
+                                    <td><span class="mb_tit">등록일: </span> 2024-09-05 </td>
+                                    <td><span class="mb_tit">조회수: </span>672</td>
+                                </tr>
+                                <tr>
+                                    <td class="num"> 4 </td>
+                                    <td class="subject">
+                                        <div>
+                                            <a class="link" href="javascript:fnBoardContentView('2099')">제목명</a>
+                                        </div>
+                                    </td>
+                                    <td class="empty"></td>
+                                    <td><span class="mb_tit">등록일: </span> 2024-09-05 </td>
+                                    <td><span class="mb_tit">조회수: </span>672</td>
                                 </tr>
                             </tbody>
                         </table>
+
+                        <p class="pagings1">
+                            <a href="javascript:fnGoPage('1', '')" class="first">처음으로</a> <a href="javascript:fnGoPage('1', '')" class="prev">이전 10개</a> <span class="num"><a href="#" class="on">1</a><a href="javascript:fnGoPage('2', '')">2</a></span> <a href="javascript:fnGoPage('2', '')" class="next">다음 10개</a> <a href="javascript:fnGoPage('2', '')" class="last">끝으로</a>
+                        </p>
+                    </div>
+
+                    <div class="bottom_btns">
+                        <a href="javascript:fnBoardContentInsert()" class="btn btn_lg btn_default">작성</a>
                     </div>
                 </div>
             </div>

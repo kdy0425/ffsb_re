@@ -20,7 +20,7 @@
 	<link href="../../assets/css/swiper.min.css" rel="stylesheet" />
 	<link href="../../assets/css/slick.css" rel="stylesheet" />
 	<link href="../../assets/css/simplebar.css" rel="stylesheet" />
-	<link href="../../assets/css/jquery-ui" rel="stylesheet" />
+	<link href="../../assets/css/jquery-ui.css" rel="stylesheet" />
 	<script src="../../assets/js/jquery-3.7.1.min.js"></script>
 	<script src="../../assets/js/jquery-ui.js"></script>
 	<script src="../../assets/js/swiper.min.js"></script>
@@ -492,6 +492,9 @@
                                             </div>
                                             <span class="dash">@</span>
                                             <div class="input">
+                                                <input type="text" id="memEmail3" value="kihf.or.kr" maxlength="30" title="이메일 계정 입력">
+                                            </div>
+                                            <div class="input">
                                                 <select id="memEmail2" title="이메일 계정 선택" onchange="fnMemEmailDomain();">
                                                     <option value="">직접입력</option>
                                                     <option value="naver.com">naver.com</option>
@@ -500,9 +503,11 @@
                                                     <option value="hotmail.com">hotmail.com</option>
                                                     <option value="hanmail.net">hanmail.net</option>
                                                 </select>
-                                            </div>
-                                            <div class="input">
-                                                <input type="text" id="memEmail3" value="kihf.or.kr" maxlength="30" class="is1 mls5 mrs10" title="이메일 계정 입력">
+                                                <script>
+                                                    function fnMemEmailDomain(email) {
+                                                        $("#emailAddr2").val(email);
+                                                    }
+                                                </script>
                                             </div>
                                         </div>
                                         <div class="input_group">
@@ -520,7 +525,7 @@
                                             <span class="required">필수</span>주소 </label>
                                     </th>
                                     <td colspan="3">
-                                        <div class="input_group">
+                                        <div class="input_group w50_pc">
                                             <div class="input">
                                                 <input type="text" id="memZip" name="memZip" value="04554" maxlength="10" readonly="readonly" title="우편번호">
                                             </div>
@@ -799,7 +804,7 @@
                         </div>
 
                         <div class="form_btns">
-                            <a href="javascript:;" class="btn btn_lg btn_dblue js-pw-change">비밀번호변경</a>
+                            <a href="javascript:;" class="btn btn_lg btn_submit js-pw-change">비밀번호변경</a>
                             <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">취소</a>
                         </div>
                     </div>

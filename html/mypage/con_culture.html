@@ -103,11 +103,23 @@
                 </div>
                 <div class="inner">
                     <ul id="lnb">
-                        <li class="on">
-                            <a href="/mypage/history/instructor.do">연계이력</a>
+                        <li>
+                            <a href="/mypage/history/consultant.do?gubun=01">인증준비 그룹형 컨설팅</a>
                         </li>
                         <li>
-                            <a href="/ffsbbod/bs/boardList.do?boardSeq=11">직장교육 자료실</a>
+                            <a href="/mypage/history/consultant.do?gubun=03">인증준비 방문형 컨설팅</a>
+                        </li>
+                        <li class="on">
+                            <a href="/mypage/history/consultant.do?gubun=02">문화 컨설팅</a>
+                        </li>
+                        <li>
+                            <a href="/selfChk/mypage/myPageSelfChkResultList.do">온라인서면 컨설팅</a>
+                        </li>
+                        <li>
+                            <a href="/ffsbbod/bs/boardList.do?boardSeq=12">컨설턴트 자료실</a>
+                        </li>
+                        <li>
+                            <a href="/ffsbbod/bs/boardList.do?boardSeq=16">컨설팅 게시판</a>
                         </li>
                         <li>
                             <a href="/mypage/userMemView.do">회원정보</a>
@@ -122,7 +134,7 @@
                         <span class="entity">&gt;</span>
                         <span>마이페이지</span>
                         <span class="entity">&gt;</span>
-                        <strong>연계 이력</strong>
+                        <strong>문화 컨설팅</strong>
                     </p>
                     <div class="titles1">
                         <h1>연계 이력</h1>
@@ -131,22 +143,22 @@
                     <div class="list_table line_table">
                         <div class="list_top">
                             <div class="r btn_list">
-                                <a href="#" id="downloadFile" class="btn btn_md btn_bline round">
+                                <a href="#" id="downloadFile" class="btn btn_md btn_bline round" name="downloadFile" data="B">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" style="width:18px;height:18px;" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5 5-5M12 4v12"/></svg>
-                                결과보고서 양식
+                                2024년 진단지 양식
                                 </a>
-                                <a href="#" id="teacherCareerReport" class="btn btn_md btn_bline round" onclick="btnPrint('teacherCareerReport'); return false;">
+                                <a href="#" id="downloadFile" class="btn btn_md btn_bline round" name="downloadFile" data="C">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" style="width:18px;height:18px;" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5 5-5M12 4v12"/></svg>
-                                직장교육 경력증명서
+                                2024년 결과보고서 양식
                                 </a>
-                                <a href="#" id="teacherAppoReport" class="btn btn_md btn_bline round" onclick="btnPrint('teacherAppoReport'); return false;">
+                                <a href="#" id="downloadFile" class="btn btn_md btn_bline round" name="downloadFile" data="E">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" style="width:18px;height:18px;" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5 5-5M12 4v12"/></svg>
-                                위촉장 출력
+                                2024년 이행보고서 양식
                                 </a>
                             </div>
                         </div>
                         <div class="title_bulit">
-                            <h3>직장교육 연계이력 – <span class="txt_theme">테스트 강사</span></h3>
+                            <h3>인증 후 컨설팅 연계이력 – <span class="txt_theme">컨설턴트테스트01 컨설턴트</span></h3>
                             <div class="r">
                                 <div class="input_group">
                                     <label for="frmYyyyForm" class="input_text">연도구분</label>
@@ -181,62 +193,114 @@
                             </div>
                         </div>
                         <table>
-                            <caption class="hidden">직장교육 연계이력</caption>
+                            <caption class="hidden">인증 후 컨설팅 연계이력</caption>
                             <colgroup>
-                                <col style="width: ;">
-                                <col style="width: ;">
-                                <col style="width: ;">
-                                <col style="width: ;">
-                                <col style="width: 120px;">
-                                <col style="width: 120px;">
+                                <col width="11%">
+                                <col width="10%">
+                                <col width="15%">		
+                                <col width="*">
+                                <col width="*">
+                                <!-- <col width="*" /> -->
+                                <col width="15%">
+                                <col width="10%">
                             </colgroup>
                             <!-- 20180122 접근성 수정 -->
                             <thead>
                                 <tr>
-                                    <th scope="col">번호</th>
-                                    <th scope="col">기업(관)명</th>
-                                    <th scope="col">교육일시</th>
-                                    <th scope="col">수강과목</th>
-                                    <th scope="col">주소</th>
-                                    <th scope="col">교육참가자</th>
-                                    <!-- 2020.08.03 최예주 선생님 요청으로 결과보고서 작성 숨기고 결과보고서 첨부로 변경 -->
-                                    <th scope="col">결과보고서</th>
-                                    <th scope="col">리포팅</th>
-                                </tr>
+                                    <th scope="col" width="12.5%">연계일자</th>
+                                    <th scope="col" width="12.5%">기업(관)명</th>
+                                    <th scope="col" width="12.5%">희망모듈</th>
+                                    <th scope="col" width="12.5%">최종결과보고서</th>
+                                    <th scope="col" width="12.5%">이행보고서</th>
+                                    <!--  <th scope="col" width="12.5%">중간보고서</th> -->
+                                    <th scope="col" width="12.5%">리포팅</th>
+                                    <th scope="col" width="12.5%">상세보기</th>
+                                </tr>	
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="num">12</td>
-                                    <td><span class="mb_tit">기업(관)명: </span>한국기업3</td>
-                                    <td><span class="mb_tit">교육일시: </span>2020-08-07 11:00-13:00</td>
-                                    <td><span class="mb_tit">수강과목: </span>일반근로자1</td>
-                                    <td><span class="mb_tit">주소: </span>서울특별시 서초구 반포대로 217</td>
-                                    <td><span class="mb_tit">교육참가자: </span>20명</td>
-                                    <td class="mb_flex"><span class="mb_tit">결과보고서: </span>
-                                        <a href="#" class="btn btn_sm btn_line" data="731" onclick="layerOpen(this, '.js-pop');">파일업로드</a>
-                                        <small class="txt_red">대기</small>
+                                    <td rowspan="3"><span class="mb_tit">연계일자: </span>2023-09-12</td>
+                                    <td><span class="mb_tit">기업(관)명: </span>한국기업5</td>
+                                    <td><span class="mb_tit">희망모듈: </span>모듈 B-가족친화문화 컨설팅</td>
+                                    <td class="mb_flex"><span class="mb_tit">최종결과보고서: </span>
+                                        <a href="javascript:;" data-pop="3" data="9290" class="btn btn_sm btn_line" onclick="layerOpen(this, '.js-pop');">파일업로드</a>
                                     </td>
-                                    <td class="mb_flex">
-                                        <span class="mb_tit">리포팅: </span>
-                                        <a href="javascript:btnPrint1('999003','','한국기업3');" class="btn btn_sm btn_line">기업정보</a>
-                                        <a href="javascript:btnPrint2('731');" class="btn btn_sm btn_line">신청정보</a>
+                                    <td class="mb_flex"><span class="mb_tit">이행보고서: </span>
+                                        <a href="javascript:;" data-pop="1" data="9290" class="btn btn_sm btn_line" onclick="layerOpen(this, '.js-pop');">파일업로드</a>
+                                        <a href="/file/fileDownAct.do?fileSeq=519282" class="btn btn_sm btn_sline">파일다운로드</a>
+                                        <small class="txt_theme">제출 완료</small>
+                                    </td>
+                                    <td class="mb_flex"><span class="mb_tit">리포팅: </span>
+                                        <a href="javascript:btnPrint1('999005','010-0000-1111','한국기업5');" class="btn btn_sm btn_line">기업정보</a>
+                                        <a href="javascript:btnPrint2('9290','999005','02','한국기업5','2023-09-12','after');" class="btn btn_sm btn_line">신청정보</a>
+                                        <a href="javascript:reqFileDownload('9290','한국기업5','999005','after');" class="btn btn_sm btn_line">신청서류</a>
+
+                                    </td>
+                                    <td class="mb_flex"><span class="mb_tit">상세보기: </span>
+                                        <a href="javascript:fn_conResult('999005');" onclick="layerOpen(this, '.ex1');" class="btn btn_sm btn_line">상세보기</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="num">12</td>
-                                    <td><span class="mb_tit">기업(관)명: </span>한국기업3</td>
-                                    <td><span class="mb_tit">교육일시: </span>2020-08-07 11:00-13:00</td>
-                                    <td><span class="mb_tit">수강과목: </span>일반근로자1</td>
-                                    <td><span class="mb_tit">주소: </span>서울특별시 서초구 반포대로 217</td>
-                                    <td><span class="mb_tit">교육참가자: </span>20명</td>
-                                    <td class="mb_flex"><span class="mb_tit">결과보고서: </span>
-                                        <a href="#" class="btn btn_sm btn_sline" href="/file/fileDownAct.do?fileSeq=95908">파일다운로드</a>
-                                        <small class="txt_theme">제출 완료</small>
+                                    <td colspan="6" class="subject">
+                                        <a href="javascript:;" class="btn btn_sm2 btn_submit wid_100" onclick="consultingToggle(this);">컨설팅 회차정보 입력 펼치기</a>
                                     </td>
-                                    <td class="mb_flex">
-                                        <span class="mb_tit">리포팅: </span>
-                                        <a href="javascript:btnPrint1('999003','','한국기업3');" class="btn btn_sm btn_line">기업정보</a>
-                                        <a href="javascript:btnPrint2('731');" class="btn btn_sm btn_line">신청정보</a>
+                                </tr>
+                                <tr class="consultingToggleContent" style="display: none;">
+                                    <td colspan="6" class="subject">
+                                        <div class="list_table line_table">
+                                            <table>
+                                                <colgroup>
+                                                    <col style="width:100px;">
+                                                    <col>
+                                                    <col style="width:180px;">
+                                                </colgroup>
+                                                <caption class="hidden">인증 후 컨설팅 연계이력</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>회차</th>
+                                                        <th>컨설팅일시</th>
+                                                        <th>비고</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="mb_flex"><span class="mb_tit">회차: </span>1회차</td>
+                                                        <td class="mb_flex"><span class="mb_tit">컨설팅일시: </span>
+                                                            <div class="input_group">
+                                                                <div class="input">
+                                                                    <input type="text" class="datepicker">
+                                                                </div>
+                                                                <div class="input">
+                                                                    <select name="conslTime" title="시간선택">
+                                                                        <option value="06" selected="">6시</option>
+                                                                        <option value="07">7시</option>
+                                                                        <option value="08">8시</option>
+                                                                        <option value="09">9시</option>
+                                                                        <option value="10">10시</option>
+                                                                        <option value="11">11시</option>
+                                                                        <option value="12">12시</option>
+                                                                        <option value="13">13시</option>
+                                                                        <option value="14">14시</option>
+                                                                        <option value="15">15시</option>
+                                                                        <option value="16">16시</option>
+                                                                        <option value="17">17시</option>
+                                                                        <option value="18">18시</option>
+                                                                        <option value="19">19시</option>
+                                                                        <option value="20">20시</option>
+                                                                        <option value="21">21시</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="mb_flex">
+                                                            <a href="javascript:;" name="btnSave" class="btn btn_sm2 btn_sline inline mb_auto">저장</a>
+                                                            <a href="javascript:add_row('listTable9290','true','9290','3')" name="btnAdd" class="btn btn_sm2 btn_sline inline mb_auto">추가</a>
+                                                            <a href="javascript:deleteRow('9290','6977')" name="btnDel" class="btn btn_sm2 btn_sline inline mb_auto">제거</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -251,13 +315,27 @@
             </div>
         </div>
 		<!-- //content -->
+         <script>
+            function consultingToggle(button) {
+                var $currentTr = $(button).closest('tr');
+                var $button = $(button);
+                if ($button.text().trim() === "컨설팅 회차정보 입력 펼치기") {
+                    $button.text("컨설팅 회차정보 입력 닫기");
+                    $currentTr.prev('tr').find('th').attr('rowspan', 3);
+                } else {
+                    $button.text("컨설팅 회차정보 입력 펼치기");
+                    $currentTr.prev('tr').find('th').attr('rowspan', 2);
+                }
+                $currentTr.next('tr.consultingToggleContent').toggle();
+            }
+         </script>
 
-        <!-- 직장교육 결과보고서 파일 업로드 -->
+        <!-- 인증후 컨설팅 착수보고서 파일 업로드 -->
         <div class="pops1 js-pop dns" tabindex="-1">
             <div class="pop-wrap" style="width:590px;">
                 <div class="heading">
                     <div class="inner">
-                        <h2 class="tit">직장교육 결과보고서 파일 업로드</h2>
+                        <h2 class="tit">인증후 컨설팅 착수보고서 파일 업로드</h2>
                     </div>
                 </div>
                 <div class="cont">
@@ -268,33 +346,19 @@
                             <input type="hidden" name="frmYyyy" id="frmYyyy" value="">
                             <div class="form form_type1">
                                 <div class="form_item">
-                                    <label for="fileInput11" class="form_tit">직장교육 결과보고서 파일 업로드</label>
+                                    <label for="fileInput11" class="form_tit">착수보고서 파일 업로드</label>
                                     <div class="form_cnt">
                                         <div class="input_group file_input">
                                             <div class="input">
-                                                <input type="text" title="첨부파일 경로" id="fileInput1" placeholder="가족친화 직장교육 강의실적 보고서_홍길동.hwp(1,258kbyte)" readonly>
+                                                <input type="text" title="첨부파일 경로" id="fileInput1" placeholder="한가원 착수보고서_홍길동.hwp(1,258kbyte)" readonly>
                                                 <button type="button" class="remove_file">파일삭제</button>
                                             </div>
                                             <label class="btn btn_lg btn_gray">
                                                 파일첨부
-                                                <input type="file" id="file40" name="file40" title="첨부파일 찾아찾기" size="5" accept="pdf, hwp, jpg, jpeg, png, zip">
+                                                <input type="file" id="file67" name="file67" title="첨부파일 찾아찾기" size="5" accept="pdf, hwp, jpg, jpeg, png, zip">
                                             </label>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="form_item">
-                                    <label for="fileInput11" class="form_tit">여비 파일 업로드(선택)</label>
-                                    <div class="form_cnt">
-                                        <div class="input_group file_input">
-                                            <div class="input">
-                                                <input type="text" title="첨부파일 경로" id="fileInput43" placeholder="여비_홍길동.hwp(1,258kbyte)" readonly>
-                                                <button type="button" class="remove_file">파일삭제</button>
-                                            </div>
-                                            <label class="btn btn_lg btn_gray">
-                                                파일첨부
-                                                <input type="file" id="file43" name="file43" title="첨부파일 찾아찾기" size="5" accept="pdf, hwp, jpg, jpeg, png, zip">
-                                            </label>
-                                        </div>
+                                        <small>ppt, hwp, jpg, pdf, docx파일만 업로드 가능</small>
                                     </div>
                                 </div>
                             </div>
@@ -309,7 +373,58 @@
                 <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
             </div>
         </div>
-        <!-- // -->
+        <!-- //인증후 컨설팅 착수보고서 파일 업로드 -->
+
+        <!-- 다른 컨설팅 받았는지 여부 -->
+        <div class="pops1 ex1 dns" tabindex="-1">
+            <div class="pop-wrap" style="width:500px;">
+                <div class="heading">
+                    <div class="inner">
+                        <h2 class="tit">다른 컨설팅 받았는지 여부</h2>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="inner">
+                        <div class="form_table">
+                            <table>
+                                <colgroup>
+                                    <col style="width:50%">
+                                    <col>
+                                </colgroup>
+                                <!-- 20180122 접근성 수정 -->
+                                <caption class="hidden">다른 컨설팅 받았는지 여부</caption>
+                                <!-- //20180122 접근성 수정 -->
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">인증준비 그룹형 컨설팅</th>
+                                        <td scope="col" id="preConslYn">N</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">인증준비 방문형 컨설팅</th>
+                                        <td scope="col" id="preVisitConslYn">N</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">문화 컨설팅</th>
+                                        <td scope="col" id="afterConslYn">N</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">온라인서면 컨설팅</th>
+                                        <td scope="col" id="onConslYn">N</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="form_btns">
+                            <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">닫기</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
+            </div>
+        </div>
+        <!-- //다른 컨설팅 받았는지 여부 -->
+        
 
 
 		<div class="quick_wrap">

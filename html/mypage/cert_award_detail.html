@@ -104,13 +104,21 @@
                 <div class="inner">
                     <ul id="lnb">
                         <li class="on">
-                            <a href="/mypage/history/instructor.do">연계이력</a>
+                            <a href="https://www.ffsb.kr/mypageJudge/certAwardList.do">가족친화인증심사</a>
+                        </li>
+                        <!-- 20170523 수정 -->
+                        <li>
+                            <a href=" https://www.ffsb.kr/mypageJudge/schedule.do">심사 스케줄 관리</a>
+                        </li>
+                        <!-- 20170523 수정 -->
+                        <li>
+                            <a href="https://www.ffsb.kr/mypageJudge/recommendCorp.do">기업 추천 관리</a>
                         </li>
                         <li>
-                            <a href="/ffsbbod/bs/boardList.do?boardSeq=11">직장교육 자료실</a>
+                            <a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=17">심사원 공지사항</a>
                         </li>
                         <li>
-                            <a href="/mypage/userMemView.do">회원정보</a>
+                            <a href="https://www.ffsb.kr/mypageJudge/judgeMemberInfoList.do">회원정보</a>
                         </li>
                     </ul>
                 </div>
@@ -122,195 +130,231 @@
                         <span class="entity">&gt;</span>
                         <span>마이페이지</span>
                         <span class="entity">&gt;</span>
-                        <strong>연계 이력</strong>
+                        <strong>가족친화인증 심사</strong>
                     </p>
+
                     <div class="titles1">
-                        <h1>연계 이력</h1>
+                        <h1>가족친화인증 심사</h1>
+                    </div>
+                   
+                    <div class="form_table">
+                        <h3 class="form_title">신청 기업정보</h3>
+                        <table>
+                            <!-- 20180122 접근성 수정 -->
+                            <caption class="hidden">신청 기업정보</caption>
+                            <!-- //20180122 접근성 수정 -->
+                            <colgroup>
+                                <col width="18%">
+                                <col width="32%">
+                                <col width="18%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">기업(관)명</th>
+                                    <td>주식회사 아람인더스트리</td>
+                                    <th scope="row">대표자명</th>
+                                    <td>이건우</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">사업자번호</th>
+                                    <td>449-88-00479</td>
+                                    <th scope="row">법인등록번호</th>
+                                    <td>280211-0158226</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">주소</th>
+                                    <td colspan="3">[11448] 경기도 양주시 칠봉산로 230 (봉양동) 양주지점</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">신청일자</th>
+                                    <td>
+                                        <div class="input_group">
+                                            <span class="text">2024-08-28</span>
+                                            <a class="btn btn_gray" href="javascript:fnCertRqnInfo('15813')">인증신청서 조회</a>
+                                        </div>
+                                    </td>
+                                    <th scope="row">신청구분</th>
+                                    <td>신규인증</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">인증이력</th>
+                                    <td></td>
+                                    <th scope="row">인증번호</th>
+                                    <td>신중1134</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    <div class="list_table line_table">
-                        <div class="list_top">
-                            <div class="r btn_list">
-                                <a href="#" id="downloadFile" class="btn btn_md btn_bline round">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" style="width:18px;height:18px;" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5 5-5M12 4v12"/></svg>
-                                결과보고서 양식
-                                </a>
-                                <a href="#" id="teacherCareerReport" class="btn btn_md btn_bline round" onclick="btnPrint('teacherCareerReport'); return false;">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" style="width:18px;height:18px;" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5 5-5M12 4v12"/></svg>
-                                직장교육 경력증명서
-                                </a>
-                                <a href="#" id="teacherAppoReport" class="btn btn_md btn_bline round" onclick="btnPrint('teacherAppoReport'); return false;">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" style="width:18px;height:18px;" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5 5-5M12 4v12"/></svg>
-                                위촉장 출력
-                                </a>
-                            </div>
-                        </div>
-                        <div class="title_bulit">
-                            <h3>직장교육 연계이력 – <span class="txt_theme">테스트 강사</span></h3>
-                            <div class="r">
-                                <div class="input_group">
-                                    <label for="frmYyyyForm" class="input_text">연도구분</label>
-                                    <div class="input">
-                                        <select id="frmYyyyForm" name="frmYyyyForm" style="width: 120px" onchange="javascript:searchYear()">
-                                            <option value="">전체</option>
-                                            <option value="2008">2008</option>
-                                            <option value="2009">2009</option>
-                                            <option value="2010">2010</option>
-                                            <option value="2011">2011</option>
-                                            <option value="2012">2012</option>
-                                            <option value="2013">2013</option>
-                                            <option value="2014">2014</option>
-                                            <option value="2015">2015</option>
-                                            <option value="2016">2016</option>
-                                            <option value="2017">2017</option>
-                                            <option value="2018">2018</option>
-                                            <option value="2019">2019</option>
-                                            <option value="2020">2020</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
-                                            <option value="2027">2027</option>
-                                            <option value="2028">2028</option>
-                                            <option value="2029">2029</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="form_table">
+                        <h3 class="form_title">신청 담당자정보</h3>
                         <table>
-                            <caption class="hidden">직장교육 연계이력</caption>
-                            <colgroup>
-                                <col style="width: ;">
-                                <col style="width: ;">
-                                <col style="width: ;">
-                                <col style="width: ;">
-                                <col style="width: 120px;">
-                                <col style="width: 120px;">
-                            </colgroup>
                             <!-- 20180122 접근성 수정 -->
+                            <caption class="hidden">신청 담당자정보</caption>
+                            <!-- //20180122 접근성 수정 -->
+                            <colgroup>
+                                <col width="18%">
+                                <col width="32%">
+                                <col width="18%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">담당부서</th>
+                                    <td>경영관리</td>
+                                    <th scope="row">담당자명</th>
+                                    <td>이건우</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">직급</th>
+                                    <td>대표이사</td>
+                                    <th scope="row">전화</th>
+                                    <td>031-841-8831</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">휴대전화</th>
+                                    <td>010-8859-9357</td>
+                                    <th scope="row">팩스</th>
+                                    <td>031-841-8831</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이메일</th>
+                                    <td colspan="3">ahram8855@naver.com</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="form_table">
+                        <h3 class="form_title">인증 현황정보</h3>
+                        <table>
+                            <!-- 20180122 접근성 수정 -->
+                            <caption class="hidden">인증 현황정보</caption>
+                            <!-- //20180122 접근성 수정 -->
+                            <colgroup>
+                                <col width="18%">
+                                <col width="32%">
+                                <col width="18%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">심사원 배정현황</th>
+                                    <td colspan="3">팀장 : 인증사무국 , 팀원 : 인증사무국2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="default_table mb_scroll">
+                        <table>
+                            <!-- 20180122 접근성 수정 -->
+                            <caption class="hidden">인증 현황정보</caption>
+                            <!-- //20180122 접근성 수정 -->
                             <thead>
                                 <tr>
-                                    <th scope="col">번호</th>
-                                    <th scope="col">기업(관)명</th>
-                                    <th scope="col">교육일시</th>
-                                    <th scope="col">수강과목</th>
-                                    <th scope="col">주소</th>
-                                    <th scope="col">교육참가자</th>
-                                    <!-- 2020.08.03 최예주 선생님 요청으로 결과보고서 작성 숨기고 결과보고서 첨부로 변경 -->
-                                    <th scope="col">결과보고서</th>
-                                    <th scope="col">리포팅</th>
+                                    <th>심사단계</th>
+                                    <th>처리일자</th>
+                                    <th>관리</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="num">12</td>
-                                    <td><span class="mb_tit">기업(관)명: </span>한국기업3</td>
-                                    <td><span class="mb_tit">교육일시: </span>2020-08-07 11:00-13:00</td>
-                                    <td><span class="mb_tit">수강과목: </span>일반근로자1</td>
-                                    <td><span class="mb_tit">주소: </span>서울특별시 서초구 반포대로 217</td>
-                                    <td><span class="mb_tit">교육참가자: </span>20명</td>
-                                    <td class="mb_flex"><span class="mb_tit">결과보고서: </span>
-                                        <a href="#" class="btn btn_sm btn_line" data="731" onclick="layerOpen(this, '.js-pop');">파일업로드</a>
-                                        <small class="txt_red">대기</small>
-                                    </td>
-                                    <td class="mb_flex">
-                                        <span class="mb_tit">리포팅: </span>
-                                        <a href="javascript:btnPrint1('999003','','한국기업3');" class="btn btn_sm btn_line">기업정보</a>
-                                        <a href="javascript:btnPrint2('731');" class="btn btn_sm btn_line">신청정보</a>
-                                    </td>
+                                    <td>서류검토 중</td>
+                                    <td>2024-09-04</td>
+                                    <td class="align_left"><a class="btn btn_gray btn_sm inline" href="javascript:fnCertBeofrePop()">서류검토 체크리스트</a></td>
                                 </tr>
                                 <tr>
-                                    <td class="num">12</td>
-                                    <td><span class="mb_tit">기업(관)명: </span>한국기업3</td>
-                                    <td><span class="mb_tit">교육일시: </span>2020-08-07 11:00-13:00</td>
-                                    <td><span class="mb_tit">수강과목: </span>일반근로자1</td>
-                                    <td><span class="mb_tit">주소: </span>서울특별시 서초구 반포대로 217</td>
-                                    <td><span class="mb_tit">교육참가자: </span>20명</td>
-                                    <td class="mb_flex"><span class="mb_tit">결과보고서: </span>
-                                        <a href="#" class="btn btn_sm btn_sline" href="/file/fileDownAct.do?fileSeq=95908">파일다운로드</a>
-                                        <small class="txt_theme">제출 완료</small>
+                                    <td>서류심사</td>
+                                    <td>2024-09-04</td>
+                                    <td class="align_left"><a class="btn btn_gray btn_sm inline"  href="javascript:fnCertJudgePop()">서류심사 결과보고서</a></td>
+                                </tr>
+                                <tr>
+                                    <td>서류심사 결과</td>
+                                    <td>2024-09-04</td>
+                                    <td class="align_left"><span class="txt_blue">적합</span> <span class="txt_red"><현장심사 시 보완></span> / 현장심사일자 : 2024-09-27</td>
+                                </td>
+
+                                </tr>
+                                <tr>
+                                    <td>현장심사</td>
+                                    <td>2024-09-04</td>
+                                    <td class="align_left"><a class="btn btn_gray btn_sm inline"  href="javascript:fnCertPointJudgePop()">현장심사 결과보고서</a></td>
+                                </tr>
+                                <tr>
+                                    <td>현장심사 결과</td>
+                                    <td></td>
+                                    <td class="align_left"></td>
+                                </tr>
+                                <tr>
+                                    <td>검증심사</td>
+                                    <td></td>
+                                    <td class="align_left"><a class="btn btn_gray btn_sm inline"  href="javascript:fnCertPointJudgeValPop()">검증 결과보고서</a></td>
+                                </tr>
+                                <tr>
+                                    <td>검증심사 결과</td>
+                                    <td></td>
+                                    <td class="align_left"><span class="txt_blue">적합</span></td>
+                                </tr>
+                                <tr class="bg_pink">
+                                    <td>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke="#006699" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="m9 6 6 6-6 6"/></svg>
+                                        인증결과
                                     </td>
-                                    <td class="mb_flex">
-                                        <span class="mb_tit">리포팅: </span>
-                                        <a href="javascript:btnPrint1('999003','','한국기업3');" class="btn btn_sm btn_line">기업정보</a>
-                                        <a href="javascript:btnPrint2('731');" class="btn btn_sm btn_line">신청정보</a>
+                                    <td></td>
+                                    <td class="align_left"><span class="txt_blue">적합</span> / 현장심사 전날 포기통보. 25년도 신청제한 필요함</td>
+                                </tr>
+                                <tr>
+                                    <td>인증발표</td>
+                                    <td></td>
+                                    <td class="align_left"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="form_table">
+                        <table>
+                            <!-- 20180122 접근성 수정 -->
+                            <caption class="hidden">인증 현황정보 보고서</caption>
+                            <!-- //20180122 접근성 수정 -->
+                            <colgroup>
+                                <col width="18%">
+                                <col width="32%">
+                                <col width="18%">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">보고서</th>
+                                    <td colspan="3">
+                                        <div class="input_group file_input">
+                                            <span class="input_text">리서치 보고서</span>
+                                            <div class="input">
+                                                <input type="text" title="첨부파일 경로" id="fileInput1" name="fileInput1" placeholder="" readonly>
+                                                <button type="button" class="remove_file">파일삭제</button>
+                                            </div>
+                                            <label class="btn btn_lg btn_gray">
+                                                파일첨부
+                                                <input type="file" id="file263" name="file263" title="첨부파일 찾아찾기" size="50" accept="HWP,DOC,JPEG,PPT,PPTX,PDF,JPG,PNG, hwp, doc, jpeg, ppt, pptx, pdf, jpg, png">
+                                            </label>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
-                    <p class="pagings1">
-                    <a href="javascript:fnGoPage('1', '')" class="first">처음으로</a> <a href="javascript:fnGoPage('1', '')" class="prev">이전 10개</a> <span class="num"><a href="#" class="on">1</a><a href="javascript:fnGoPage('2', '')">2</a></span> <a href="javascript:fnGoPage('2', '')" class="next">다음 10개</a> <a href="javascript:fnGoPage('2', '')" class="last">끝으로</a>
-                    </p>
-
+                    <div class="bottom_btns">
+                        <a href="#" id="btnReqModify" class="btn btn_lg btn_bline">저장</a>
+                        <a href="#" id="btnCancel" class="btn btn_lg btn_bline">취소</a>
+                        <a href="#" id="btnList" class="btn btn_lg btn_default">목록</a> 
+                    </div>
                 </div>
             </div>
         </div>
 		<!-- //content -->
-
-        <!-- 직장교육 결과보고서 파일 업로드 -->
-        <div class="pops1 js-pop dns" tabindex="-1">
-            <div class="pop-wrap" style="width:590px;">
-                <div class="heading">
-                    <div class="inner">
-                        <h2 class="tit">직장교육 결과보고서 파일 업로드</h2>
-                    </div>
-                </div>
-                <div class="cont">
-                    <div class="inner">
-                        <form name="frm" id="frm" method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="pageNo" id="pageNo">
-                            <input type="hidden" name="jrSeq" id="jrSeq" value="731">
-                            <input type="hidden" name="frmYyyy" id="frmYyyy" value="">
-                            <div class="form form_type1">
-                                <div class="form_item">
-                                    <label for="fileInput11" class="form_tit">직장교육 결과보고서 파일 업로드</label>
-                                    <div class="form_cnt">
-                                        <div class="input_group file_input">
-                                            <div class="input">
-                                                <input type="text" title="첨부파일 경로" id="fileInput1" placeholder="가족친화 직장교육 강의실적 보고서_홍길동.hwp(1,258kbyte)" readonly>
-                                                <button type="button" class="remove_file">파일삭제</button>
-                                            </div>
-                                            <label class="btn btn_lg btn_gray">
-                                                파일첨부
-                                                <input type="file" id="file40" name="file40" title="첨부파일 찾아찾기" size="5" accept="pdf, hwp, jpg, jpeg, png, zip">
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_item">
-                                    <label for="fileInput11" class="form_tit">여비 파일 업로드(선택)</label>
-                                    <div class="form_cnt">
-                                        <div class="input_group file_input">
-                                            <div class="input">
-                                                <input type="text" title="첨부파일 경로" id="fileInput43" placeholder="여비_홍길동.hwp(1,258kbyte)" readonly>
-                                                <button type="button" class="remove_file">파일삭제</button>
-                                            </div>
-                                            <label class="btn btn_lg btn_gray">
-                                                파일첨부
-                                                <input type="file" id="file43" name="file43" title="첨부파일 찾아찾기" size="5" accept="pdf, hwp, jpg, jpeg, png, zip">
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form_btns">
-                                <a href="javascript:;" class="btn btn_lg btn_submit js-pw-change" id="btnSubmit">파일업로드</a>
-                                <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">취소</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
-            </div>
-        </div>
-        <!-- // -->
-
 
 		<div class="quick_wrap">
 			<script>

@@ -377,7 +377,7 @@
                                             <span class="required">필수</span>주소 </label>
                                     </th>
                                     <td colspan="3">
-                                        <div class="input_group">
+                                        <div class="input_group w50_pc">
                                             <div class="input">
                                                 <input type="text" id="compZip" name="compZip" value="04554" maxlength="10" readonly="readonly" title="우편번호">
                                             </div>
@@ -591,6 +591,9 @@
                                             </div>
                                             <span class="dash">@</span>
                                             <div class="input">
+                                                <input type="text" id="memEmail3" value="kihf.or.kr" maxlength="30" title="이메일 계정 입력">
+                                            </div>
+                                            <div class="input">
                                                 <select id="memEmail2" title="이메일 계정 선택" onchange="fnMemEmailDomain();">
                                                     <option value="">직접입력</option>
                                                     <option value="naver.com">naver.com</option>
@@ -599,9 +602,11 @@
                                                     <option value="hotmail.com">hotmail.com</option>
                                                     <option value="hanmail.net">hanmail.net</option>
                                                 </select>
-                                            </div>
-                                            <div class="input">
-                                                <input type="text" id="memEmail3" value="kihf.or.kr" maxlength="30" class="is1 mls5 mrs10" title="이메일 계정 입력">
+                                                <script>
+                                                    function fnMemEmailDomain(email) {
+                                                        $("#memEmail3").val(email);
+                                                    }
+                                                </script>
                                             </div>
                                         </div>
                                         <div class="input_group">
@@ -680,7 +685,7 @@
                         </div>
 
                         <div class="form_btns">
-                            <a href="javascript:;" class="btn btn_lg btn_dblue js-pw-change">비밀번호변경</a>
+                            <a href="javascript:;" class="btn btn_lg btn_submit js-pw-change">비밀번호변경</a>
                             <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">취소</a>
                         </div>
                     </div>
@@ -743,7 +748,7 @@
                             </div>
 
                             <div class="form_btns">
-                                <a href="javascript:;" class="btn btn_lg btn_dblue js-pw-change">변경요청</a>
+                                <a href="javascript:;" class="btn btn_lg btn_submit js-pw-change">변경요청</a>
                                 <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">취소</a>
                             </div>
                         </form>
@@ -788,22 +793,27 @@
                                                 </script>
                                             </div>
                                         </div>
-                                        <div id="jumin_input" class="input_group inner_input gbox" style="display:none;">
-                                            <label for="ssn1" class="text">주민등록번호 인증</label>
-                                            <div class="input">
-                                                <input type="text" title="앞 6자리 입력" maxlength="6" id="ssn1">
+                                        <div id="jumin_input" class="form form_type1 inner_input" style="display:none;">
+                                            <div class="form_item">
+                                                <label for="ssn1" class="form_tit">주민등록번호 인증</label>
+                                                <div class="form_cnt">
+                                                    <div class="input_group">
+                                                        <div class="input">
+                                                            <input type="text" title="앞 6자리 입력" maxlength="6" id="ssn1">
+                                                        </div>
+                                                        <span class="dash">-</span>
+                                                        <div class="input">
+                                                            <input type="password" title="뒤 7자리 입력" maxlength="7" id="ssn2">
+                                                        </div>
+                                                        <a href="javascript:fnCheckPersonalNo();" class="btn btn_lg btn_line">인증</a>
+                                                    </div>
+                                                    <span id="ssnSuccess" class="input_status blue dns" style="display: none;">인증 완료되었습니다. 하단의 확인 버튼을 누르세요.</span>
+                                                    <span id="ssnErr" class="input_status red dns" style="display: none;">유효하지 않는 주민번호입니다.</span>
+                                                </div>
                                             </div>
-                                            <span class="dash">-</span>
-                                            <div class="input">
-                                                <input type="password" title="뒤 7자리 입력" maxlength="7" id="ssn2">
-                                            </div>
-                                            <a href="javascript:fnCheckPersonalNo();" class="btn btn_lg btn_line">인증</a>
                                         </div>
-                                        <span id="ssnSuccess" class="input_status blue dns" style="display: none;">인증 완료되었습니다. 하단의 확인 버튼을 누르세요.</span>
-                                        <span id="ssnErr" class="input_status red dns" style="display: none;">유효하지 않는 주민번호입니다.</span>
                                     </div>
                                 </div>
-
                                 <div class="form_item">
                                     <div class="form_cnt">
                                         <div class="input_group">
@@ -815,32 +825,12 @@
                                                 </label>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-                                
-
-                                <div class="bbs2 fs14 pbs25" style="min-width:567px;">
-                                    <div>
-                                        <label for="p1"></label>
-                                    </div>
-                                    <div class="boxs6 bcs2 mls30 mts15 acs lhs1 dns">
-                                        <div class="inners8">
-                                            <label for="ssn1" class="mrs10"></label>
-                                            <!-- 조건에 따른 출력 dns: 숨기는 클래스 -->
-                                            
-                
-                                        </div>
-                                    </div>
-                                    <div class="mts15">
-                                        <label for="p3"></label>
-                                    </div>
-                                </div>
-                                
                             </div>
 
                             <div class="form_btns">
-                                <a href="javascript:;" class="btn btn_lg btn_dblue js-pw-change">변경요청</a>
+                                <a href="javascript:;" class="btn btn_lg btn_submit js-pw-change">변경요청</a>
                                 <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">취소</a>
                             </div>
                         </form>

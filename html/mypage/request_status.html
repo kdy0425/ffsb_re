@@ -20,7 +20,7 @@
 	<link href="../../assets/css/swiper.min.css" rel="stylesheet" />
 	<link href="../../assets/css/slick.css" rel="stylesheet" />
 	<link href="../../assets/css/simplebar.css" rel="stylesheet" />
-	<link href="../../assets/css/jquery-ui" rel="stylesheet" />
+	<link href="../../assets/css/jquery-ui.css" rel="stylesheet" />
 	<script src="../../assets/js/jquery-3.7.1.min.js"></script>
 	<script src="../../assets/js/jquery-ui.js"></script>
 	<script src="../../assets/js/swiper.min.js"></script>
@@ -212,17 +212,15 @@
                             <!-- 20180122 접근성 수정 -->
                             <colgroup>
                             <thead>
-                                <thead>
-                                    <tr>
-                                        <th scope="col">No</th>
-                                        <th scope="col">신청구분</th>
-                                        <th scope="col">인증신청일자</th>
-                                        <th scope="col">담당자</th>
-                                        <th scope="col">진행단계</th>
-                                        <th scope="col">진행현황</th>
-                                        <th scope="col">상세보기</th>
-                                    </tr>		
-                                </thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">신청구분</th>
+                                    <th scope="col">인증신청일자</th>
+                                    <th scope="col">담당자</th>
+                                    <th scope="col">진행단계</th>
+                                    <th scope="col">진행현황</th>
+                                    <th scope="col">상세보기</th>
+                                </tr>		
                             </thead>
                             <tbody>
                                 <tr>
@@ -604,7 +602,7 @@
                                 </p>
 
                                 <div class="form_btns">
-                                    <a href="javascript:;" class="btn btn_lg btn_dblue" onclick="surveySubmit();">제출</a>
+                                    <a href="javascript:;" class="btn btn_lg btn_submit" onclick="surveySubmit();">제출</a>
                                     <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">취소</a>
                                 </div>
                             </form>	

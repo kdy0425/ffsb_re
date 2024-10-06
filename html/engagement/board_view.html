@@ -20,7 +20,7 @@
 	<link href="../../assets/css/swiper.min.css" rel="stylesheet" />
 	<link href="../../assets/css/slick.css" rel="stylesheet" />
 	<link href="../../assets/css/simplebar.css" rel="stylesheet" />
-	<link href="../../assets/css/jquery-ui" rel="stylesheet" />
+	<link href="../../assets/css/jquery-ui.css" rel="stylesheet" />
 	<script src="../../assets/js/jquery-3.7.1.min.js"></script>
 	<script src="../../assets/js/jquery-ui.js"></script>
 	<script src="../../assets/js/swiper.min.js"></script>
@@ -130,6 +130,12 @@
                     <div class="titles1">
                         <h1>소통게시판</h1>
                         <div class="sub">소통게시판입니다.</div>
+
+						<div class="share_btn">
+							<button type="button" title="SNS 공유하기" onclick="layerOpen(this, '.js-pop-sns')">
+								SNS 공유하기
+							</button>
+						</div>
                     </div>
 
                     <div class="board_view">
@@ -243,6 +249,52 @@
             </div>
         </div>
 		<!-- //content -->
+
+		<!-- sns공유하기 -->
+        <div class="pops1 js-pop-sns dns" tabindex="-1">
+            <div class="pop-wrap" style="width:400px;">
+                <div class="heading">
+                    <div class="inner">
+                        <h2 class="tit">공유하기</h2>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="inner">
+                        <ul class="sns_wrap">
+							<li>
+								<a href="javascript:;" onclick="javascript:fnShareSite(1);return false;">
+									<img src="https://www.ffsb.kr/common/img/common/icon_facebook2.gif" alt="페이스북 공유하기(새창)">
+									<span class="text">페이스북</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" onclick="javascript:fnShareSite(2);return false;">
+									<img src="https://www.ffsb.kr/common/img/common/icon_twitter2.gif" alt="(새창)">
+									<span class="text">트위터</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" onclick="javascript:fnShareSite(3);return false;">
+									<img src="https://www.ffsb.kr/common/img/common/icon_blog2.gif" alt="네이버블로그 공유하기(새창)">
+									<span class="text">네이버블로그</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" onclick="javascript:fnShareSite(4);return false;">
+									<img src="https://www.ffsb.kr/common/img/common/icon_band2.gif" alt="네이버밴드 공유하기(새창)">
+									<span class="text">네이버밴드</span>
+								</a>
+							</li>
+						</ul>
+                        <div class="form_btns">
+                            <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">닫기</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
+            </div>
+        </div>
+        <!-- //sns공유하기 -->
 
 		<div class="quick_wrap">
 			<script>

@@ -103,11 +103,23 @@
                 </div>
                 <div class="inner">
                     <ul id="lnb">
-                        <li class="on">
-                            <a href="/mypage/history/instructor.do">연계이력</a>
+                        <li>
+                            <a href="/mypage/history/consultant.do?gubun=01">인증준비 그룹형 컨설팅</a>
                         </li>
                         <li>
-                            <a href="/ffsbbod/bs/boardList.do?boardSeq=11">직장교육 자료실</a>
+                            <a href="/mypage/history/consultant.do?gubun=03">인증준비 방문형 컨설팅</a>
+                        </li>
+                        <li>
+                            <a href="/mypage/history/consultant.do?gubun=02">문화 컨설팅</a>
+                        </li>
+                        <li class="on">
+                            <a href="/selfChk/mypage/myPageSelfChkResultList.do">온라인서면 컨설팅</a>
+                        </li>
+                        <li>
+                            <a href="/ffsbbod/bs/boardList.do?boardSeq=12">컨설턴트 자료실</a>
+                        </li>
+                        <li>
+                            <a href="/ffsbbod/bs/boardList.do?boardSeq=16">컨설팅 게시판</a>
                         </li>
                         <li>
                             <a href="/mypage/userMemView.do">회원정보</a>
@@ -122,121 +134,45 @@
                         <span class="entity">&gt;</span>
                         <span>마이페이지</span>
                         <span class="entity">&gt;</span>
-                        <strong>연계 이력</strong>
+                        <strong>온라인서면 컨설팅</strong>
                     </p>
                     <div class="titles1">
-                        <h1>연계 이력</h1>
+                        <h1>인증 후 온라인(서면) 컨설팅</h1>
                     </div>
 
                     <div class="list_table line_table">
-                        <div class="list_top">
-                            <div class="r btn_list">
-                                <a href="#" id="downloadFile" class="btn btn_md btn_bline round">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" style="width:18px;height:18px;" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5 5-5M12 4v12"/></svg>
-                                결과보고서 양식
-                                </a>
-                                <a href="#" id="teacherCareerReport" class="btn btn_md btn_bline round" onclick="btnPrint('teacherCareerReport'); return false;">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" style="width:18px;height:18px;" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5 5-5M12 4v12"/></svg>
-                                직장교육 경력증명서
-                                </a>
-                                <a href="#" id="teacherAppoReport" class="btn btn_md btn_bline round" onclick="btnPrint('teacherAppoReport'); return false;">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" style="width:18px;height:18px;" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5 5-5M12 4v12"/></svg>
-                                위촉장 출력
-                                </a>
-                            </div>
-                        </div>
                         <div class="title_bulit">
-                            <h3>직장교육 연계이력 – <span class="txt_theme">테스트 강사</span></h3>
-                            <div class="r">
-                                <div class="input_group">
-                                    <label for="frmYyyyForm" class="input_text">연도구분</label>
-                                    <div class="input">
-                                        <select id="frmYyyyForm" name="frmYyyyForm" style="width: 120px" onchange="javascript:searchYear()">
-                                            <option value="">전체</option>
-                                            <option value="2008">2008</option>
-                                            <option value="2009">2009</option>
-                                            <option value="2010">2010</option>
-                                            <option value="2011">2011</option>
-                                            <option value="2012">2012</option>
-                                            <option value="2013">2013</option>
-                                            <option value="2014">2014</option>
-                                            <option value="2015">2015</option>
-                                            <option value="2016">2016</option>
-                                            <option value="2017">2017</option>
-                                            <option value="2018">2018</option>
-                                            <option value="2019">2019</option>
-                                            <option value="2020">2020</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2023">2023</option>
-                                            <option value="2024">2024</option>
-                                            <option value="2025">2025</option>
-                                            <option value="2026">2026</option>
-                                            <option value="2027">2027</option>
-                                            <option value="2028">2028</option>
-                                            <option value="2029">2029</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
+                            <h3>인증 후 온라인(서면) 컨설팅 내역</h3>
                         </div>
                         <table>
-                            <caption class="hidden">직장교육 연계이력</caption>
+                            <caption class="hidden">인증 후 온라인(서면) 컨설팅 내역</caption>
                             <colgroup>
-                                <col style="width: ;">
-                                <col style="width: ;">
-                                <col style="width: ;">
-                                <col style="width: ;">
-                                <col style="width: 120px;">
-                                <col style="width: 120px;">
+                                <col style="width:10%">
+                                <col style="width:10%">
+                                <col style="width:11%">
+                                <col style="width:20%">
+                                <col style="width:12%">
+                                <col style="width:11%">
+                                <col style="*">
+                                <col style="width:11%">
                             </colgroup>
                             <!-- 20180122 접근성 수정 -->
                             <thead>
                                 <tr>
-                                    <th scope="col">번호</th>
-                                    <th scope="col">기업(관)명</th>
-                                    <th scope="col">교육일시</th>
-                                    <th scope="col">수강과목</th>
-                                    <th scope="col">주소</th>
-                                    <th scope="col">교육참가자</th>
-                                    <!-- 2020.08.03 최예주 선생님 요청으로 결과보고서 작성 숨기고 결과보고서 첨부로 변경 -->
-                                    <th scope="col">결과보고서</th>
-                                    <th scope="col">리포팅</th>
-                                </tr>
+                                    <th scope="col">기업분류</th>
+                                    <th scope="col">차수</th>
+                                    <th scope="col">상태</th>
+                                    <th scope="col">기업명</th>
+                                    <th scope="col">담당자명</th>
+                                    <th scope="col">등록일시</th>
+                                    <th scope="col">비고</th>
+                                    <th scope="col">상세보기</th>
+                                </tr>		
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="num">12</td>
-                                    <td><span class="mb_tit">기업(관)명: </span>한국기업3</td>
-                                    <td><span class="mb_tit">교육일시: </span>2020-08-07 11:00-13:00</td>
-                                    <td><span class="mb_tit">수강과목: </span>일반근로자1</td>
-                                    <td><span class="mb_tit">주소: </span>서울특별시 서초구 반포대로 217</td>
-                                    <td><span class="mb_tit">교육참가자: </span>20명</td>
-                                    <td class="mb_flex"><span class="mb_tit">결과보고서: </span>
-                                        <a href="#" class="btn btn_sm btn_line" data="731" onclick="layerOpen(this, '.js-pop');">파일업로드</a>
-                                        <small class="txt_red">대기</small>
-                                    </td>
-                                    <td class="mb_flex">
-                                        <span class="mb_tit">리포팅: </span>
-                                        <a href="javascript:btnPrint1('999003','','한국기업3');" class="btn btn_sm btn_line">기업정보</a>
-                                        <a href="javascript:btnPrint2('731');" class="btn btn_sm btn_line">신청정보</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="num">12</td>
-                                    <td><span class="mb_tit">기업(관)명: </span>한국기업3</td>
-                                    <td><span class="mb_tit">교육일시: </span>2020-08-07 11:00-13:00</td>
-                                    <td><span class="mb_tit">수강과목: </span>일반근로자1</td>
-                                    <td><span class="mb_tit">주소: </span>서울특별시 서초구 반포대로 217</td>
-                                    <td><span class="mb_tit">교육참가자: </span>20명</td>
-                                    <td class="mb_flex"><span class="mb_tit">결과보고서: </span>
-                                        <a href="#" class="btn btn_sm btn_sline" href="/file/fileDownAct.do?fileSeq=95908">파일다운로드</a>
-                                        <small class="txt_theme">제출 완료</small>
-                                    </td>
-                                    <td class="mb_flex">
-                                        <span class="mb_tit">리포팅: </span>
-                                        <a href="javascript:btnPrint1('999003','','한국기업3');" class="btn btn_sm btn_line">기업정보</a>
-                                        <a href="javascript:btnPrint2('731');" class="btn btn_sm btn_line">신청정보</a>
+                                    <td colspan="8" class="list_empty">
+                                        내역이 없습니다.
                                     </td>
                                 </tr>
                             </tbody>
@@ -251,13 +187,27 @@
             </div>
         </div>
 		<!-- //content -->
+         <script>
+            function consultingToggle(button) {
+                var $currentTr = $(button).closest('tr');
+                var $button = $(button);
+                if ($button.text().trim() === "컨설팅 회차정보 입력 펼치기") {
+                    $button.text("컨설팅 회차정보 입력 닫기");
+                    $currentTr.prev('tr').find('th').attr('rowspan', 3);
+                } else {
+                    $button.text("컨설팅 회차정보 입력 펼치기");
+                    $currentTr.prev('tr').find('th').attr('rowspan', 2);
+                }
+                $currentTr.next('tr.consultingToggleContent').toggle();
+            }
+         </script>
 
-        <!-- 직장교육 결과보고서 파일 업로드 -->
+        <!-- 인증후 컨설팅 착수보고서 파일 업로드 -->
         <div class="pops1 js-pop dns" tabindex="-1">
             <div class="pop-wrap" style="width:590px;">
                 <div class="heading">
                     <div class="inner">
-                        <h2 class="tit">직장교육 결과보고서 파일 업로드</h2>
+                        <h2 class="tit">인증후 컨설팅 착수보고서 파일 업로드</h2>
                     </div>
                 </div>
                 <div class="cont">
@@ -268,33 +218,19 @@
                             <input type="hidden" name="frmYyyy" id="frmYyyy" value="">
                             <div class="form form_type1">
                                 <div class="form_item">
-                                    <label for="fileInput11" class="form_tit">직장교육 결과보고서 파일 업로드</label>
+                                    <label for="fileInput11" class="form_tit">착수보고서 파일 업로드</label>
                                     <div class="form_cnt">
                                         <div class="input_group file_input">
                                             <div class="input">
-                                                <input type="text" title="첨부파일 경로" id="fileInput1" placeholder="가족친화 직장교육 강의실적 보고서_홍길동.hwp(1,258kbyte)" readonly>
+                                                <input type="text" title="첨부파일 경로" id="fileInput1" placeholder="한가원 착수보고서_홍길동.hwp(1,258kbyte)" readonly>
                                                 <button type="button" class="remove_file">파일삭제</button>
                                             </div>
                                             <label class="btn btn_lg btn_gray">
                                                 파일첨부
-                                                <input type="file" id="file40" name="file40" title="첨부파일 찾아찾기" size="5" accept="pdf, hwp, jpg, jpeg, png, zip">
+                                                <input type="file" id="file67" name="file67" title="첨부파일 찾아찾기" size="5" accept="pdf, hwp, jpg, jpeg, png, zip">
                                             </label>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="form_item">
-                                    <label for="fileInput11" class="form_tit">여비 파일 업로드(선택)</label>
-                                    <div class="form_cnt">
-                                        <div class="input_group file_input">
-                                            <div class="input">
-                                                <input type="text" title="첨부파일 경로" id="fileInput43" placeholder="여비_홍길동.hwp(1,258kbyte)" readonly>
-                                                <button type="button" class="remove_file">파일삭제</button>
-                                            </div>
-                                            <label class="btn btn_lg btn_gray">
-                                                파일첨부
-                                                <input type="file" id="file43" name="file43" title="첨부파일 찾아찾기" size="5" accept="pdf, hwp, jpg, jpeg, png, zip">
-                                            </label>
-                                        </div>
+                                        <small>ppt, hwp, jpg, pdf, docx파일만 업로드 가능</small>
                                     </div>
                                 </div>
                             </div>
@@ -309,7 +245,58 @@
                 <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
             </div>
         </div>
-        <!-- // -->
+        <!-- //인증후 컨설팅 착수보고서 파일 업로드 -->
+
+        <!-- 다른 컨설팅 받았는지 여부 -->
+        <div class="pops1 ex1 dns" tabindex="-1">
+            <div class="pop-wrap" style="width:500px;">
+                <div class="heading">
+                    <div class="inner">
+                        <h2 class="tit">다른 컨설팅 받았는지 여부</h2>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="inner">
+                        <div class="form_table">
+                            <table>
+                                <colgroup>
+                                    <col style="width:50%">
+                                    <col>
+                                </colgroup>
+                                <!-- 20180122 접근성 수정 -->
+                                <caption class="hidden">다른 컨설팅 받았는지 여부</caption>
+                                <!-- //20180122 접근성 수정 -->
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">인증준비 그룹형 컨설팅</th>
+                                        <td scope="col" id="preConslYn">N</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">인증준비 방문형 컨설팅</th>
+                                        <td scope="col" id="preVisitConslYn">N</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">문화 컨설팅</th>
+                                        <td scope="col" id="afterConslYn">N</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">온라인서면 컨설팅</th>
+                                        <td scope="col" id="onConslYn">N</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="form_btns">
+                            <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">닫기</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
+            </div>
+        </div>
+        <!-- //다른 컨설팅 받았는지 여부 -->
+        
 
 
 		<div class="quick_wrap">

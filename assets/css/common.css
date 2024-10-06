@@ -203,6 +203,7 @@ select::-ms-expand {display:none;}
 @media screen and (max-width:1180px) {
   select{padding-left:10px;padding-right:17px;background-position:right 2px center;}
 }
+select.select_sm{padding-left:5px;height:30px;padding-right:20px;font-size:13px;background-position: right 5px center;}
 /*슬라이더*/
 .slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
 .slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}
@@ -234,16 +235,15 @@ label{cursor:pointer;}
 .checkbox{display:inline-block;min-width:24px;min-height:24px;padding-left:31px;position:relative;color:#222;padding-top:3px;}
 .checkbox.lg{color:#444;font-size:18px;}
 .checkbox.lg .ck_icon{top:4px;}
-.checkbox.single{padding-left:24px;}
 .checkbox input{position:absolute;left:4px;top:5px;z-index:1;}
-.checkbox .ck_icon{position:absolute;left:0;top:1px;z-index:2;width:24px;height:24px;border:1px solid #ccc;background-color:#fff;border-radius:2px;background-repeat:no-repeat;background-position: center center;}
+.checkbox .ck_icon{position:absolute;left:0;top:1px;z-index:2;width:24px;height:24px;border:1px solid #D7D8D9;background-color:#fff;border-radius:4px;background-repeat:no-repeat;background-position: center center;}
 .checkbox.circle{padding-left:32px;}
 .checkbox.circle .ck_icon{border-radius:50%;width:24px;height:24px;top:0;background-color:#ccc;background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.816' height='10.408' viewBox='0 0 12.816 10.408'%3E%3Cpath id='패스_6207' data-name='패스 6207' d='M1242.979-7754.041l3.383,4.091,6.617-8' transform='translate(-1241.571 7759.358)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E%0A");}
-.checkbox.sm{padding-left:23px;font-size:14px;padding-top:0;line-height: 1.5;}
-.checkbox.sm .ck_icon{width:18px;height:18px;top:2px;}
+.checkbox.sm{padding-left:25px;font-size:14px;padding-top:0;line-height: 1.5;}
+.checkbox.sm .ck_icon{width:20px;height:20px;top:1px;}
 .checkbox input{width:14px;height:14px;left:1px;top:2px;background-color: transparent;border:0;}
 .checkbox.sm input[type="radio"] + .ck_icon{width:16px;height:16px;}
-.checkbox input:checked + .ck_icon{border:1px solid #4F69D2;background-color:#4F69D2;background-position: center center;background-repeat: no-repeat;}
+.checkbox input:checked + .ck_icon{border:1px solid #357BF3;background-color:#357BF3;background-position: center center;background-repeat: no-repeat;}
 .checkbox input:disabled{}
 .checkbox input:disabled + .ck_icon{border:1px solid #cccccc;background-color:#f5f5f5;}
 .checkbox input:disabled:checked + .ck_icon{color:#cccccc;background-color:#f5f5f5;}
@@ -251,14 +251,18 @@ label{cursor:pointer;}
 .checkbox input[type="radio"] + .ck_icon{border-radius:50%;width:22px;height:22px;left:1px;top:2px;background-color:#fff;border:5px solid #fff;box-shadow:0 0 0 1px #ccc;}
 .checkbox input[type="checkbox"]:checked + .ck_icon{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.816' height='10.408' viewBox='0 0 12.816 10.408'%3E%3Cpath id='패스_6207' data-name='패스 6207' d='M1242.979-7754.041l3.383,4.091,6.617-8' transform='translate(-1241.571 7759.358)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E%0A");}
 .checkbox input[type="checkbox"]:disabled + .ck_icon{}
-.checkbox input[type="radio"]:checked + .ck_icon{background-color: #4F69D2;border:4px solid #fff;box-shadow:0 0 0 1px #4F69D2;}
+.checkbox input[type="radio"]:checked + .ck_icon{background-color: #357BF3;border:4px solid #fff;box-shadow:0 0 0 1px #357BF3;}
 .checkbox input[type="radio"]:disabled + .ck_icon{background-color: #f5f5f5;border:4px solid #f5f5f5;box-shadow:0 0 0 1px #E9E9E9;}
 .checkbox input[type="radio"]:checked:disabled + .ck_icon{border:5px solid #f5f5f5;background-color:#ccc;box-shadow:0 0 0 1px #ccc;}
 .checkbox input[type="checkbox"]:disabled + .ck_icon{background-color: #f9f9f9;border:1px solid #ccc;}
 .checkbox input[type="checkbox"]:disabled:checked + .ck_icon{background-color: #f9f9f9;border:1px solid #ccc;border-radius: 0;background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.816' height='10.408' viewBox='0 0 12.816 10.408'%3E%3Cpath id='패스_6207' data-name='패스 6207' d='M1242.979-7754.041l3.383,4.091,6.617-8' transform='translate(-1241.571 7759.358)' fill='none' stroke='%23ccc' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E%0A");}
 .checkbox input:focus + .ck_icon{outline:2px solid #000;}
 .checkbox input:focus{outline: none;}
-.checkbox.inline{margin-right:15px;margin-bottom:5px;}
+.checkbox.inline{margin-right:15px;margin-top:2px;margin-bottom:2px;}
+.checkbox.sm.single{padding-left:20px;min-height:20px;min-width:20px;}
+.checkbox.sm.single .ck_icon{top:0;}
+.text_down{color:#2460ce !important;text-decoration: underline;}
+.text_down:hover{text-decoration: underline !important;}
 .datepicker{background-repeat: no-repeat;background-position: right 12px center;background-image: url("data:image/svg+xml,%3Csvg id='ico_calendar' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Crect id='area' width='20' height='20' fill='%2300dcff' opacity='0'/%3E%3Cg id='그룹_843' data-name='그룹 843' transform='translate(2.5 2)'%3E%3Cline id='선_40' data-name='선 40' x2='1' transform='translate(3.5 7.5)' fill='none' stroke='%23666' stroke-linecap='square' stroke-linejoin='round' stroke-width='1.5'/%3E%3Cline id='선_46' data-name='선 46' x2='1' transform='translate(3.5 10.5)' fill='none' stroke='%23666' stroke-linecap='square' stroke-linejoin='round' stroke-width='1.5'/%3E%3Cline id='선_43' data-name='선 43' x2='1' transform='translate(7 7.5)' fill='none' stroke='%23666' stroke-linecap='square' stroke-linejoin='round' stroke-width='1.5'/%3E%3Cline id='선_45' data-name='선 45' x2='1' transform='translate(7 10.5)' fill='none' stroke='%23666' stroke-linecap='square' stroke-linejoin='round' stroke-width='1.5'/%3E%3Cline id='선_44' data-name='선 44' x2='1' transform='translate(10.5 7.5)' fill='none' stroke='%23666' stroke-linecap='square' stroke-linejoin='round' stroke-width='1.5'/%3E%3Cline id='선_47' data-name='선 47' x2='1' transform='translate(10.5 10.5)' fill='none' stroke='%23666' stroke-linecap='square' stroke-linejoin='round' stroke-width='1.5'/%3E%3Cline id='선_41' data-name='선 41' y2='4' transform='translate(4)' fill='none' stroke='%23666' stroke-linecap='square' stroke-linejoin='round' stroke-width='2'/%3E%3Cline id='선_42' data-name='선 42' y2='4' transform='translate(11)' fill='none' stroke='%23666' stroke-linecap='square' stroke-linejoin='round' stroke-width='2'/%3E%3Crect id='사각형_1576' data-name='사각형 1576' width='15' height='13' transform='translate(0 2)' fill='none' stroke='%23707070' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");}
 .datepicker:focus{background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg data-name='그룹 843'%3E%3Cpath data-name='선 40' transform='translate(6 9.5)' style='stroke-width:1.5px;fill:none;stroke:%233c4de2;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='선 46' transform='translate(6 12.5)' style='stroke-width:1.5px;fill:none;stroke:%233c4de2;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='선 43' transform='translate(9.5 9.5)' style='stroke-width:1.5px;fill:none;stroke:%233c4de2;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='선 45' transform='translate(9.5 12.5)' style='stroke-width:1.5px;fill:none;stroke:%233c4de2;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='선 44' transform='translate(13 9.5)' style='stroke-width:1.5px;fill:none;stroke:%233c4de2;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='선 47' transform='translate(13 12.5)' style='stroke-width:1.5px;fill:none;stroke:%233c4de2;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='패스 72' d='M14 2.5H2A1.566 1.566 0 0 0 .5 4.125v9.75A1.566 1.566 0 0 0 2 15.5h12a1.566 1.566 0 0 0 1.5-1.625v-9.75A1.566 1.566 0 0 0 14 2.5z' transform='translate(2 1.5)' style='stroke-width:2px;fill:none;stroke:%233c4de2;stroke-linecap:round;stroke-linejoin:round'/%3E%3Cpath data-name='선 41' transform='translate(6.5 2)' style='stroke-width:2px;fill:none;stroke:%233c4de2;stroke-linecap:round;stroke-linejoin:round' d='M0 0v4'/%3E%3Cpath data-name='선 42' transform='translate(13.5 2)' style='stroke-width:2px;fill:none;stroke:%233c4de2;stroke-linecap:round;stroke-linejoin:round' d='M0 0v4'/%3E%3C/g%3E%3C/svg%3E");}
 .ui-datepicker-buttonpane{display:none;}
@@ -267,14 +271,14 @@ label{cursor:pointer;}
 .datepicker_select_yymm select{height:40px;border:1px solid #ccc;font-size:15px;font-weight:600;color:#222;}
 .datepicker_select_yymm select + select{margin-left:6px;}
 .datepicker:disabled{color:#bbb;background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg data-name='그룹 843'%3E%3Cpath data-name='선 40' transform='translate(6 9.5)' style='stroke-width:1.5px;fill:none;stroke:%23ccc;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='선 46' transform='translate(6 12.5)' style='stroke-width:1.5px;fill:none;stroke:%23ccc;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='선 43' transform='translate(9.5 9.5)' style='stroke-width:1.5px;fill:none;stroke:%23ccc;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='선 45' transform='translate(9.5 12.5)' style='stroke-width:1.5px;fill:none;stroke:%23ccc;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='선 44' transform='translate(13 9.5)' style='stroke-width:1.5px;fill:none;stroke:%23ccc;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='선 47' transform='translate(13 12.5)' style='stroke-width:1.5px;fill:none;stroke:%23ccc;stroke-linecap:round;stroke-linejoin:round' d='M0 0h1'/%3E%3Cpath data-name='패스 72' d='M14 2.5H2A1.566 1.566 0 0 0 .5 4.125v9.75A1.566 1.566 0 0 0 2 15.5h12a1.566 1.566 0 0 0 1.5-1.625v-9.75A1.566 1.566 0 0 0 14 2.5z' transform='translate(2 1.5)' style='stroke-width:2px;fill:none;stroke:%23ccc;stroke-linecap:round;stroke-linejoin:round'/%3E%3Cpath data-name='선 41' transform='translate(6.5 2)' style='stroke-width:2px;fill:none;stroke:%23ccc;stroke-linecap:round;stroke-linejoin:round' d='M0 0v4'/%3E%3Cpath data-name='선 42' transform='translate(13.5 2)' style='stroke-width:2px;fill:none;stroke:%23ccc;stroke-linecap:round;stroke-linejoin:round' d='M0 0v4'/%3E%3C/g%3E%3C/svg%3E");}
-.ui-datepicker{z-index:100 !important;}
+.ui-datepicker{z-index:100000 !important;}
 @media screen and (max-width:1180px) {
   .checkbox{padding-left:25px;font-size:14px;padding-top:1px;}
   .checkbox .ck_icon{width:18px;height:18px;}
   .checkbox input[type="radio"] + .ck_icon{width:18px;height:18px;}
-  .checkbox.inline{margin-right:10px;margin-bottom:3px;}
+  .checkbox.inline{margin-right:10px;}
 }
-
+.wid_100{width:100% !important;max-width: 100% !important;}
 caption.hidden{position: absolute;left:-999999999em;}
 .d_inline_flex{display: inline-flex;;}
 .d_flex{display:flex;}
@@ -286,3 +290,12 @@ caption.hidden{position: absolute;left:-999999999em;}
   .btn_list{margin-left:-2px;margin-right:-2px;}
   .btn_list .btn{margin:2px;}
 }
+br.v_pc{}
+@media screen and (max-width:1180px) {
+  br.v_pc{display: none;}
+}
+
+html .ui-datepicker .ui-datepicker-title select{margin:1px 2px;}
+html .ui-datepicker-prev .ui-icon{background-size:22px;background-position:center center;background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-chevron-left' width='48' height='48' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23000' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M0 0h24v24H0z' stroke='none'/%3E%3Cpath d='m15 6-6 6 6 6'/%3E%3C/svg%3E");}
+html .ui-datepicker-next .ui-icon{background-size:22px;background-position:center center;background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-chevron-right' width='48' height='48' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23000' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M0 0h24v24H0z' stroke='none'/%3E%3Cpath d='m9 6 6 6-6 6'/%3E%3C/svg%3E");}
+html .ui-datepicker .ui-datepicker-prev,html .ui-datepicker .ui-datepicker-next{top:13px;}

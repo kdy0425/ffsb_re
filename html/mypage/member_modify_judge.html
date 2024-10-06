@@ -104,13 +104,21 @@
                 <div class="inner">
                     <ul id="lnb">
                         <li>
-                            <a href="/mypage/history/instructor.do">연계이력</a>
+                            <a href="https://www.ffsb.kr/mypageJudge/certAwardList.do">가족친화인증심사</a>
+                        </li>
+                        <!-- 20170523 수정 -->
+                        <li>
+                            <a href=" https://www.ffsb.kr/mypageJudge/schedule.do">심사 스케줄 관리</a>
+                        </li>
+                        <!-- 20170523 수정 -->
+                        <li>
+                            <a href="https://www.ffsb.kr/mypageJudge/recommendCorp.do">기업 추천 관리</a>
                         </li>
                         <li>
-                            <a href="/ffsbbod/bs/boardList.do?boardSeq=11">직장교육 자료실</a>
+                            <a href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=17">심사원 공지사항</a>
                         </li>
                         <li class="on">
-                            <a href="/mypage/userMemView.do">회원정보</a>
+                            <a href="https://www.ffsb.kr/mypageJudge/judgeMemberInfoList.do">회원정보</a>
                         </li>
                     </ul>
                 </div>
@@ -158,9 +166,7 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th scope="row">아이디</th>
-                                    <td>kihfse2</td>
-                                    <th scope="row" rowspan="2"><span class="required">필수</span>사진</th>
+                                    <th scope="row" rowspan="2">심사원사진</th>
                                     <td rowspan="2">
                                         <div class="input_group">
                                             <img height="100px" src="https://www.ffsb.kr/file/fileDownAct.do?fileSeq=163639">
@@ -174,6 +180,13 @@
                                                 파일첨부
                                                 <input type="file" id="file11" name="file11" title="첨부파일" size="5" accept="gif, jpg, jpeg, png">
                                             </label>
+                                        </div>
+                                    </td>
+                                    <th scope="row">아이디</th>
+                                    <td>
+                                        <div class="input_group">
+                                            <span class="text">kihfse2</span>
+                                            <button type="button" class="btn btn_line" onclick="fnJudgeReport('229');">위촉장 발급</button>
                                         </div>
                                     </td>
                                 </tr>
@@ -192,12 +205,12 @@
 
                     <div class="form_table">
                         <div class="form_title">
-                            <h3>회원 정보</h3>
+                            <h3>심사원 정보</h3>
                             <div class="r"><span class="txt_red">*</span> 필수 입력사항</div>
                         </div>
                         <table>
                             <!-- 20180122 접근성 수정 -->
-                            <caption class="hidden">회원 정보</caption>
+                            <caption class="hidden">심사원 정보</caption>
                             <!-- //20180122 접근성 수정 -->
                             <colgroup>
                                 <col style="width:16%">
@@ -207,16 +220,84 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th scope="row"><label for="memNm"><span class="required">필수</span>이름</label></th>
+                                    <th scope="row"><label for="memNm"><span class="required">필수</span>성명</label></th>
                                     <td>
                                         <div class="input_group">
                                             <div class="input">
-                                                <input type="text" id="memNm" name="memNm" value="테스트" maxlength="25">
+                                                <input type="text" id="memNm" name="memNm" value="인증사무국2">
                                             </div>
                                         </div>
                                     </td>
                                     <th scope="row">
-                                        <label for="memTel1"><span class="required">필수</span>연락처</label>
+                                        <label for="memBirthday"><span class="required">필수</span>생년월일</label>
+                                    </th>
+                                    <td>
+                                        <div class="input_group">
+                                            <div class="input">
+                                                <input type="text" class="datepicker" id="memBirthday" name="memBirthday" value="2020-08-07" placeholder="YYYY-MM-DD">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        심사원구분
+                                    </th>
+                                    <td>심사팀장 (검증심사원) </td>
+                                    <th scope="row">
+                                        <label for="memBelong"><span class="required">필수</span>소속</label>
+                                    </th>
+                                    <td>
+                                        <div class="input_group">
+                                            <div class="input">
+                                                <input type="text" id="memBelong" name="memBelong" value="한국경영인증원">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="judgeGbnCd_01"><span class="required">필수</span>심사원 자격분류</label>
+                                    </th>
+                                    <td>
+                                        <label class="checkbox sm inline">
+                                            <input type="checkbox" id="judgeGbnCd_01" name="judgeTypeCdList" value="01" onclick="fnJudgeTypeChk()">
+                                                <span class="ck_icon"></span>
+                                            <strong>ISO</strong>
+                                        </label>
+                                        <label class="checkbox sm inline">
+                                            <input type="checkbox" id="judgeGbnCd_02" name="judgeTypeCdList" value="02" onclick="fnJudgeTypeChk()">
+                                                <span class="ck_icon"></span>
+                                            <strong>공인노무사</strong>
+                                        </label>
+                                        <label class="checkbox sm inline">
+                                            <input type="checkbox" id="judgeGbnCd_03" name="judgeTypeCdList" value="03" checked="checked" onclick="fnJudgeTypeChk()">
+                                                <span class="ck_icon"></span>
+                                            <strong>산업전문가</strong>
+                                        </label>
+                                        <label class="checkbox sm inline">
+                                            <input type="checkbox" id="judgeGbnCd_04" name="judgeTypeCdList" value="04" onclick="fnJudgeTypeChk()">
+                                                <span class="ck_icon"></span>
+                                            <strong>학계전문가</strong>
+                                        </label>
+                                        <input type="hidden" id="judgeTypeCd" name="judgeTypeCd" value="03,">
+                                        <input type="hidden" id="valGbnYn" name="valGbnYn" value="Y">
+                                        <input style="display:none;" type="checkbox" id="valGbnYnChk" onclick="fnValGbnYnChk()">
+                                    </td>
+                                    <th scope="row">
+                                        <label for="positNm"><span class="required">필수</span>직위</label>
+                                    </th>
+                                    <td>
+                                        <div class="input_group">
+                                            <div class="input">
+                                                <input type="text" id="positNm" name="positNm" value="심사원">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <label for="memTel1"><span class="required">필수</span>자택전화</label>
                                     </th>
                                     <td>
                                         <div class="input_group">
@@ -249,53 +330,52 @@
                                             </div>
                                             <span class="dash">-</span>
                                             <div class="input">
-                                                <input type="text" id="memTel2" value="3479" maxlength="4" size="4" title="중간 4자리 입력">
+                                                <input type="text" id="memTel2" value="6309" maxlength="4" size="4" title="중간 4자리 입력">
                                             </div>
                                             <span class="dash">-</span>
                                             <div class="input">
-                                                <input type="text" id="memTel3" value="7675" maxlength="4" size="4" title="뒤 4자리 입력">
+                                                <input type="text" id="memTel3" value="9047" maxlength="4" size="4" title="뒤 4자리 입력">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th scope="row">
+                                        <label for="finalEdu"><span class="required">필수</span>휴대전화</label>
+                                    </th>
+                                    <td>
+                                        <div class="input_group">
+                                            <div class="input">
+                                                <select title="서비스번호 선택" id="memHp1">
+                                                    <option value="">선택</option>
+                                                    <option value="010" selected="selected">010</option>
+                                                    <option value="011">011</option>
+                                                    <option value="016">016</option>
+                                                    <option value="017">017</option>
+                                                    <option value="018">018</option>
+                                                    <option value="019">019</option>
+                                                </select>
+                                            </div>
+                                            <span class="dash">-</span>
+                                            <div class="input">
+                                                <input type="text" id="memHp2" value="0000" maxlength="4" size="4" title="중간 4자리 입력">
+                                            </div>
+                                            <span class="dash">-</span>
+                                            <div class="input">
+                                                <input type="text" id="memHp3" value="0000" maxlength="4" size="4" title="뒤 4자리 입력">
                                             </div>
                                         </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                        <label for="belongNm"><span class="required">필수</span>소속</label>
+                                        위촉기간
                                     </th>
-                                    <td>
-                                        <div class="input_group">
-                                            <div class="input">
-                                                <input type="text" id="belongNm" name="belongNm" value="수정 소속" maxlength="25">
-                                            </div>
-                                        </div>
-                                    </td>
+                                    <td>2024-05-01 ~ 2025-05-01</td>
                                     <th scope="row">
-                                        <label for="positionNm"><span class="required">필수</span>직책</label>
+                                        <label for=""><span class="required">필수</span>주 심사가능지역</label>
                                     </th>
                                     <td>
                                         <div class="input_group">
-                                            <div class="input">
-                                                <input type="text" id="positionNm" name="positionNm" value="테스트 직책" maxlength="25">
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label for="majorNm"><span class="required">필수</span>전공</label>
-                                    </th>
-                                    <td>
-                                        <div class="input_group">
-                                            <div class="input">
-                                                <input type="text" id="majorNm" name="majorNm" value="수정 전공" maxlength="25">
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <th scope="row">
-                                        <label for="sidoCd"><span class="required">필수</span>활동지역</label>
-                                    </th>
-                                    <td>
-                                        <div class="input_group">
+                                            <span class="input_text">1순위</span>
                                             <div class="input">
                                                 <select id="sidoCd" name="sidoCd">
                                                     <option value="">선택</option>
@@ -303,9 +383,36 @@
                                                     <option value="11">서울</option>
                                                     <option value="26">부산</option>
                                                     <option value="27">대구</option>
-                                                    <option value="28" selected="selected">인천</option>
+                                                    <option value="28">인천</option>
                                                     <option value="29">광주</option>
                                                     <option value="30">대전</option>
+                                                    <option value="31">울산</option>
+                                                    <option value="41">경기</option>
+                                                    <option value="42">강원</option>
+                                                    <option value="43">충북</option>
+                                                    <option value="44" selected="selected">충남</option>
+                                                    <option value="45">전북</option>
+                                                    <option value="46">전남</option>
+                                                    <option value="47">경북</option>
+                                                    <option value="48">경남</option>
+                                                    <option value="50">제주</option>
+                                                    <option value="60">세종</option>
+                                                    <option value="99">온라인</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="input_group">
+                                            <span class="input_text">2순위</span>
+                                            <div class="input">
+                                                <select id="sidoCd2" name="sidoCd2">
+                                                    <option value="">선택</option>
+                                                    <option value="00">전국</option>
+                                                    <option value="11">서울</option>
+                                                    <option value="26">부산</option>
+                                                    <option value="27">대구</option>
+                                                    <option value="28">인천</option>
+                                                    <option value="29">광주</option>
+                                                    <option value="30" selected="selected">대전</option>
                                                     <option value="31">울산</option>
                                                     <option value="41">경기</option>
                                                     <option value="42">강원</option>
@@ -320,30 +427,9 @@
                                                     <option value="99">온라인</option>
                                                 </select>
                                             </div>
-                                            <div class="input">
-                                                <select id="sidoCd2" name="sidoCd2">
-                                                    <option value="">선택</option>
-                                                    <option value="00">전국</option>
-                                                    <option value="11">서울</option>
-                                                    <option value="26">부산</option>
-                                                    <option value="27">대구</option>
-                                                    <option value="28">인천</option>
-                                                    <option value="29">광주</option>
-                                                    <option value="30">대전</option>
-                                                    <option value="31">울산</option>
-                                                    <option value="41" selected="selected">경기</option>
-                                                    <option value="42">강원</option>
-                                                    <option value="43">충북</option>
-                                                    <option value="44">충남</option>
-                                                    <option value="45">전북</option>
-                                                    <option value="46">전남</option>
-                                                    <option value="47">경북</option>
-                                                    <option value="48">경남</option>
-                                                    <option value="50">제주</option>
-                                                    <option value="60">세종</option>
-                                                    <option value="99">온라인</option>
-                                                </select>
-                                            </div>
+                                        </div>
+                                        <div class="input_group">
+                                            <span class="input_text">3순위</span>
                                             <div class="input">
                                                 <select id="sidoCd3" name="sidoCd3">
                                                     <option value="">선택</option>
@@ -373,117 +459,19 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                        <label for="finalEdu"><span class="required">필수</span>최종학력</label>
+                                        <label for="memEmail1"><span class="required">필수</span>이메일</label>
                                     </th>
                                     <td colspan="3">
                                         <div class="input_group">
                                             <div class="input">
-                                                <input type="text" id="finalEdu" name="finalEdu" title="최종학력" value="수정학력">
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label for="majorGbnCd_01"><span class="required">필수</span>주요분야</label>
-                                    </th>
-                                    <td colspan="3">
-                                        <label class="checkbox sm inline">
-                                            <input type="checkbox" id="majorGbnCd_01" name="majorFieldCdList" value="01" checked="checked" onclick="fnMajorFieldChk(this)">
-                                                <span class="ck_icon"></span>
-                                            <strong>가족친화</strong>
-                                        </label>
-                                        <label class="checkbox sm inline">
-                                            <input type="checkbox" id="majorGbnCd_02" name="majorFieldCdList" value="02" checked="checked" onclick="fnMajorFieldChk(this)">
-                                                <span class="ck_icon"></span>
-                                            <strong>가족관계</strong>
-                                        </label>
-                                        <label class="checkbox sm inline">
-                                            <input type="checkbox" id="majorGbnCd_03" name="majorFieldCdList" value="03" onclick="fnMajorFieldChk(this)">
-                                                <span class="ck_icon"></span>
-                                            <strong>기업문화</strong>
-                                        </label>
-                                        <label class="checkbox sm inline">
-                                            <input type="checkbox" id="majorGbnCd_04" name="majorFieldCdList" value="04" onclick="fnMajorFieldChk(this)">
-                                            <span class="ck_icon"></span>
-                                            <strong>기업경영</strong>
-                                        </label>
-                                        <label class="checkbox sm inline">
-                                            <input type="checkbox" id="majorGbnCd_05" name="majorFieldCdList" value="05" onclick="fnMajorFieldChk(this)">
-                                                <span class="ck_icon"></span>
-                                            <strong>노무</strong>
-                                        </label>
-                                        <label class="checkbox sm inline">
-                                            <input type="checkbox" id="majorGbnCd_06" name="majorFieldCdList" value="06" onclick="fnMajorFieldChk(this)">
-                                                <span class="ck_icon"></span>
-                                            <strong>성인지,성폭력</strong>
-                                        </label>
-                                        <label class="checkbox sm inline">
-                                            <input type="checkbox" id="majorGbnCd_07" name="majorFieldCdList" value="07" checked="checked" onclick="fnMajorFieldChk(this)">
-                                                <span class="ck_icon"></span>
-                                            <strong>사회복지</strong>
-                                        </label>
-                                        <div class="d_inline_flex align_center">
-                                            <label class="checkbox sm">
-                                                <input type="checkbox" id="majorGbnCd_08" name="majorFieldCdList" value="08" onclick="fnMajorFieldChk(this)">
-                                                    <span class="ck_icon"></span>
-                                                <strong>기타</strong>
-                                            </label>
-                                            <input type="text" id="majorEtc" name="majorEtc" title="기타" value="추가내용입력" style="width:200px;margin-left:10px;">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label for="memHp1"><span class="required">필수</span>휴대전화</label>
-                                    </th>
-                                    <td colspan="3">
-                                        <div class="input_group">
-                                            <div class="input">
-                                                <select title="서비스번호 선택" id="memHp1">
-                                                    <option value="010" selected="selected">010</option>
-                                                    <option value="011">011</option>
-                                                    <option value="016">016</option>
-                                                    <option value="017">017</option>
-                                                    <option value="018">018</option>
-                                                    <option value="019">019</option>
-                                                </select>
-                                            </div>
-                                            <span class="dash">-</span>
-                                            <div class="input">
-                                                <input type="text" id="memHp2" value="1234" maxlength="4" size="4" title="중간 4자리 입력" onkeyup="fnCommonOnlyNumber(this);">
-                                            </div>
-                                            <span class="dash">-</span>
-                                            <div class="input">
-                                                <input type="text" id="memHp3" value="5678" maxlength="4" size="4" title="뒤 4자리 입력" onkeyup="fnCommonOnlyNumber(this);">
-                                            </div>
-                                            <button type="button" id="btnHpAuth" class="btn btn_gray" >인증번호전송</button>
-                                        </div>
-
-                                        <div class="input_group">
-                                            <div class="input">
-                                                <input type="text" id="authNum" title="인증번호 6자리 입력" placeholder="인증번호 6자리 입력">
-                                            </div>
-                                            <button type="button" id="btnHpAuthCfm" class="btn btn_gray" >확인</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label for="memEmail1">
-                                            <span class="required">필수</span>이메일 </label>
-                                    </th>
-                                    <td colspan="3">
-                                        <div class="input_group">
-                                            <div class="input">
-                                                <input type="text" id="memEmail1" value="ffsb" maxlength="50" title="이메일  입력">
+                                                <input type="text" id="emailAddr1" name="emailAddr1" value="ffm" title="이메일 아이디 입력">
                                             </div>
                                             <span class="dash">@</span>
                                             <div class="input">
-                                                <input type="text" id="memEmail3" value="kihf.or.kr" maxlength="30" title="이메일 계정 입력">
+                                                <input type="text" id="emailAddr2" name="emailAddr2" value="ikmr.co.kr" title="이메일 계정 입력">
                                             </div>
                                             <div class="input">
-                                                <select id="memEmail2" title="이메일 계정 선택" onchange="fnMemEmailDomain();">
+                                                <select id="memEmail2" title="이메일 계정 선택" onchange="fnMemEmailDomain(this.value);">
                                                     <option value="">직접입력</option>
                                                     <option value="naver.com">naver.com</option>
                                                     <option value="gmail.com">gmail.com</option>
@@ -497,14 +485,6 @@
                                                     }
                                                 </script>
                                             </div>
-                                            
-                                        </div>
-                                        <div class="input_group">
-                                            <label class="checkbox sm">
-                                                <input type="checkbox" id="labelA8" name="emailRcvAgreeYn" value="Y" checked="checked" disabled="disabled">
-                                                <span class="ck_icon"></span>
-                                                <strong>수신동의</strong>
-                                            </label>
                                         </div>
                                     </td>
                                 </tr>
@@ -516,269 +496,24 @@
                                     <td colspan="3">
                                         <div class="input_group w50_pc">
                                             <div class="input">
-                                                <input type="text" id="memZip" name="memZip" value="04554" maxlength="10" readonly="readonly" title="우편번호">
+                                                <input type="text" id="memZip" name="memZip" value="07299" maxlength="10" readonly="readonly" title="우편번호">
                                             </div>
                                             <button type="button" class="btn btn_gray" onclick="openPostPopup('1')">주소검색</button>
                                         </div>
                                         <div class="input_group m100">
                                             <div class="input">
-                                                <input type="text" id="memAddr" name="memAddr" value="서울특별시 중구 퇴계로 173" maxlength="100" title="상세주소 입력">
+                                                <input type="text" id="memAddr" name="memAddr" title="상세주소 입력" value="서울특별시 영등포구 경인로 775 (문래동3가) 한국경영인증원">
                                             </div>
                                         </div>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label for="coreHis">자격증</label>
-                                    </th>
-                                    <td colspan="3">
-                                        <div class="input_group">
-                                            <div class="input">
-                                                <input type="text" class="is1" id="coreHis" name="coreHis" title="자격증" value="수정 자격증" style="width:600px;">
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label for="">가족친화 직장교육 경력 (최근 3년 이내 최대 5건 작성) </label>
-                                    </th>
-                                    <td colspan="3">
-                                        <div class="default_table align_center">
-                                            <div class="list_top d_flex">
-                                                <div class="r btn_list">
-                                                    <button type="button" onclick="add_row('listTable1')" class="btn btn_md btn_gray">추가</button>
-                                                    <button type="button" onclick="delete_row('listTable1')" class="btn btn_md btn_gray">제거</button>
-                                                </div>
-                                            </div>
-                                            <table id="listTable1">
-                                                <colgroup>
-                                                    <col style="width:160px;">
-                                                    <col style="width:160px;">
-                                                    <col>
-                                                </colgroup>
-                                                <caption class="hidden">경력</caption>
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">기간</th>
-                                                        <th scope="col">기관(업)명</th>
-                                                        <th scope="col">내용</th>
-                                                    </tr>		
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="input_group">
-                                                                <div class="input">
-                                                                    <input type="text">
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="input_group">
-                                                                <div class="input">
-                                                                    <input type="text">
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="input_group">
-                                                                <div class="input">
-                                                                    <input type="text">
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label for="">기타 가족친화 관련 교육경력 (최근 3년 이내 최대 5건 작성)</label>
-                                    </th>
-                                    <td colspan="3">
-                                        <div class="default_table align_center">
-                                            <div class="list_top d_flex">
-                                                <div class="r btn_list">
-                                                    <button type="button" onclick="add_row('listTable2')" class="btn btn_md btn_gray">추가</button>
-                                                    <button type="button" onclick="delete_row('listTable2')" class="btn btn_md btn_gray">제거</button>
-                                                </div>
-                                            </div>
-                                            <table id="listTable2">
-                                                <colgroup>
-                                                    <col style="width:160px;">
-                                                    <col style="width:160px;">
-                                                    <col>
-                                                </colgroup>
-                                                <caption class="hidden">경력</caption>
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">기간</th>
-                                                        <th scope="col">기관(업)명</th>
-                                                        <th scope="col">내용</th>
-                                                    </tr>		
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="input_group">
-                                                                <div class="input">
-                                                                    <input type="text">
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="input_group">
-                                                                <div class="input">
-                                                                    <input type="text">
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="input_group">
-                                                                <div class="input">
-                                                                    <input type="text">
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">가족친화 교육 내역 (최근 3년)</th>
-                                    <td colspan="3">
-                                        <div class="default_table align_center">
-                                            <table>
-                                                <colgroup>
-                                                    <col style="width:160px;">
-                                                    <col style="width:160px;">
-                                                    <col>
-                                                </colgroup>
-                                                <caption class="hidden">경력</caption>
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">기간</th>
-                                                        <th scope="col">기관(업)명</th>
-                                                        <th scope="col">내용</th>
-                                                    </tr>		
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>2018. 2. ~ 9.</td>
-                                                        <td>가족개발원</td>
-                                                        <td>인증 전 컨설팅</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2017. 4. 12.</td>
-                                                        <td>가족기관</td>
-                                                        <td>가족컨설팅2</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                   </td>
                                 </tr>
                             </tbody>
                         </table>
-                        <script>
-                            function add_row(tableId) {
-                                var my_tbody = document.getElementById(tableId);
-                                // var row = my_tbody.insertRow(0); // 상단에 추가
-                                var row = my_tbody.insertRow( my_tbody.rows.length ); // 하단에 추가
-                                var answerTypeA = $("#answerTypeANum").val();
-                                var answerTypeB = $("#answerTypeBNum").val();
-                                if(tableId == 'listTable1')
-                                {
-                                    if(answerTypeA > 4) {
-                                        alert("최대 5개 까지 작성가능합니다.");
-                                        return;
-                                    }
-                                }
-                                
-                                if(tableId == 'listTable2')
-                                {
-                                    if(answerTypeB > 4) {
-                                        alert("최대 5개 까지 작성가능합니다.");
-                                        return;
-                                    }
-                                }
-                                
-                                var cell1 = row.insertCell(0);
-                                var cell2 = row.insertCell(1);
-                                var cell3 = row.insertCell(2);
-                                cell1.innerHTML = `<div class="input_group">
-                                                    <div class="input">
-                                                        <input type=\"text\" id=\"answerA\" name=\"answerAArr\" value=\"\" />
-                                                    </div>
-                                                </div>`;
-                                
-                                if(tableId == 'listTable1')
-                                {
-                                    var answerANum = parseInt(answerTypeA) + 1;
-                                    $("#answerTypeANum").val(answerANum);
-                                    cell1.innerHTML += `<div class="input_group">
-                                                    <div class="input">
-                                                        <input type=\"hidden\" name=\"answerTypeArr\" value=\"A\" />
-                                                    </div>
-                                                </div>`;
-
-                                    cell1.innerHTML += `<div class="input_group">
-                                                    <div class="input">
-                                                        <input type=\"hidden\" name=\"answerNumArr\" value=\""+answerANum+"\" />
-                                                    </div>
-                                                </div>`;
-                                } else {
-                                    var answerBNum = parseInt(answerTypeB) + 1;
-                                    $("#answerTypeBNum").val(answerBNum);
-                                    cell1.innerHTML += `<div class="input_group">
-                                                    <div class="input">
-                                                        <input type=\"hidden\" name=\"answerTypeArr\" value=\"B\" />
-                                                    </div>
-                                                </div>`;
-                                    cell1.innerHTML += `<div class="input_group">
-                                                    <div class="input">
-                                                        <input type=\"hidden\" name=\"answerNumArr\" value=\""+answerBNum+"\" />
-                                                    </div>
-                                                </div>`;
-                                }
-                                
-                                cell2.innerHTML = `<div class="input_group">
-                                                    <div class="input">
-                                                        <input type=\"text\" id=\"answerB\" name=\"answerBArr\" value=\"\" />
-                                                    </div>
-                                                </div>`;
-                                cell3.innerHTML = `<div class="input_group">
-                                                    <div class="input">
-                                                        <input type=\"text\" id=\"answerC\" name=\"answerCArr\" value=\"\" />
-                                                    </div>
-                                                </div>`;
-                                
-                            }
-
-                            function delete_row(tableId) {
-                                var my_tbody = document.getElementById(tableId);
-                                if (my_tbody.rows.length < 3) return;
-                                // my_tbody.deleteRow(0); // 상단부터 삭제
-                                my_tbody.deleteRow( my_tbody.rows.length-1 ); // 하단부터 삭제
-
-                                var trLength = $(tableId + ' tbody tr').length + 1;
-                                if(tableId == 'listTable1'){
-                                    $("#answerTypeANum").val(trLength);
-                                }else{
-                                    $("#answerTypeBNum").val(trLength);
-                                }
-
-                            }
-                            </script>
+                        
                     </div>
                    
                     <div class="form_btns">
-                        <a href="javascript:;" class="btn btn_lg btn_submit">확인</a>
+                        <a href="javascript:fnMemberJudgeWrite();" class="btn btn_lg btn_submit">확인</a>
                         <a href="javascript:modifyCancel();" class="btn btn_lg btn_line">취소</a>
                     </div>
                     </form>

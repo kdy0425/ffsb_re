@@ -9043,7 +9043,7 @@ $.extend( Datepicker.prototype, {
 				for ( ; year <= endYear; year++ ) {
 					inst.yearshtml += "<option value='" + year + "'" +
 						( year === drawYear ? " selected='selected'" : "" ) +
-						">" + year + "</option>";
+						">" + year + "년</option>";
 				}
 				inst.yearshtml += "</select>";
 
