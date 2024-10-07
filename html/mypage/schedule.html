@@ -443,10 +443,15 @@
         </div>
         <!-- //심사 스케줄 관리 안내 -->
          <script>
-            $('.schedule_table tbody td').click(function(){
+            $('.schedule_table tbody td').click(function(e){
                 if($(this).hasClass('other')){return false;}
-                if($(this).find('.items .item').length === 0) {return false;}
-                
+                if ($(this).find('input[type="checkbox"]').length > 0) {
+                    return;
+                }
+                if ($(this).find('.items .item').length === 0) {
+                    return false;
+                }
+                        
                 layerOpen(this, '.pop_schedule');
                 $('#schedule_items').empty();
                 $(this).find('.items .item').each(function() {
@@ -454,10 +459,7 @@
                 });
                 $('.pop_schedule .month').text($('#month_data').text())
                 $('.pop_schedule .day').text($(this).find('.date').text())
-                
             });
-
-            
          </script>
 
         <!-- 심사 스케줄 관리 안내 -->

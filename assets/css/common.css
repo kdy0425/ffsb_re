@@ -235,13 +235,13 @@ label{cursor:pointer;}
 .checkbox{display:inline-block;min-width:24px;min-height:24px;padding-left:31px;position:relative;color:#222;padding-top:3px;}
 .checkbox.lg{color:#444;font-size:18px;}
 .checkbox.lg .ck_icon{top:4px;}
-.checkbox input{position:absolute;left:4px;top:5px;z-index:1;}
 .checkbox .ck_icon{position:absolute;left:0;top:1px;z-index:2;width:24px;height:24px;border:1px solid #D7D8D9;background-color:#fff;border-radius:4px;background-repeat:no-repeat;background-position: center center;}
 .checkbox.circle{padding-left:32px;}
 .checkbox.circle .ck_icon{border-radius:50%;width:24px;height:24px;top:0;background-color:#ccc;background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.816' height='10.408' viewBox='0 0 12.816 10.408'%3E%3Cpath id='패스_6207' data-name='패스 6207' d='M1242.979-7754.041l3.383,4.091,6.617-8' transform='translate(-1241.571 7759.358)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E%0A");}
 .checkbox.sm{padding-left:25px;font-size:14px;padding-top:0;line-height: 1.5;}
 .checkbox.sm .ck_icon{width:20px;height:20px;top:1px;}
-.checkbox input{width:14px;height:14px;left:1px;top:2px;background-color: transparent;border:0;}
+.checkbox input{position:absolute;width:14px;height:14px;left:4px;top:6px;background-color: transparent;border:0;opacity:0;}
+.checkbox.sm input{left:2px;top:3px;}
 .checkbox.sm input[type="radio"] + .ck_icon{width:16px;height:16px;}
 .checkbox input:checked + .ck_icon{border:1px solid #357BF3;background-color:#357BF3;background-position: center center;background-repeat: no-repeat;}
 .checkbox input:disabled{}
