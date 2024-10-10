@@ -144,7 +144,8 @@ button{cursor:pointer;}
 .pdr30{padding-right:30px !important;}
 .pdr40{padding-right:40px !important;}
 .pdr50{padding-right:50px !important;}
-
+.prs10{padding-right:10px !important;}
+.prs6{padding-right:6px !important;}
 
 .txt_underline{text-decoration:underline !important;}
 .txt_red{color:#ee3f3f  !important;}
@@ -283,7 +284,10 @@ label{cursor:pointer;}
 caption.hidden{position: absolute;left:-999999999em;}
 .d_inline_flex{display: inline-flex;;}
 .d_flex{display:flex;}
-.align_center{align-items: center;}
+.align_center{align-items: center !important;}
+.align_right{align-items: right !important;}
+.acs{text-align: center !important;}
+.ars{text-align: right !important;}
 .r{margin-lefT:auto;}
 .btn_list{display:flex;flex-wrap: wrap;}
 .btn_list .btn{margin-left:5px;margin-top:2px;margin-bottom:2px;}

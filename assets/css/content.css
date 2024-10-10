@@ -77,19 +77,22 @@
 .form_type1 .inner_input{margin-left:23px;margin-top:12px;}
 .form_type1 .gbox{padding:10px;background-color: #f1f1f1;border:1px solid #ddd;}
 
-.advice{display: inline-block;position: relative;margin-left:3px;vertical-align: middle;}
+.advice{display: inline-block;position: relative;margin-left:auto;vertical-align: middle;height:15px;}
 .advice button{width:15px;height:15px;border:1px solid #ddd;background-color: #f1f1f1;text-indent: -999em;overflow:hidden;position: relative;}
 .advice button:before{content:"?";position: absolute;left:0;top:0;width:100%;height:100%;display: flex;align-items: center;justify-content: center;font-size:10px;color:#555;text-indent: 0;}
 .advice .cnt{display:none;position: absolute;right:-10px;top:24px;z-index: 100;padding: 10px 17px;min-height: 21px;font-size: 13px;border: 1px solid #e4db6d;background: #fffab9;width:300px;max-width:calc(100vw - 50px);}
 .advice .cnt:before{content: "";position: absolute;right:0;top:-10px;width:100%;height:10px;}
 .advice .cnt:after{content: "";position: absolute;right:13px;top:-5px;transform: rotate(45deg);width:7px;height:7px;border-left: 1px solid #e4db6d;border-top:1px solid #e4db6d;background: #fffab9;}
-.advice:hover .cnt{display:block;}
-.advice .cnt ul{}
-.advice .cnt ul li{position:relative;padding-left:12px;word-break: keep-all;display: flex;}
+.advice:hover .cnt{display:block !important;}
+.advice .cnt ul{display:block !important;}
+.advice .cnt ul li{position:relative;padding-left:12px;word-break: keep-all;display: flex;flex-wrap: wrap;}
 .advice .cnt ul li:before{content:"※";position: absolute;left:0;top:0;}
 .advice .cnt ul li + li{margin-top:5px;}
 .advice .cnt ul li.title span{font-weight:600;white-space: nowrap;flex:none;}
-
+.advice .cnt ul li ul{padding:0;margin:0;}
+.advice .cnt ul li ul.dash li{font-size: 13px;color:#333;font-weight:400;padding:0 0 0 8px;text-indent: -8px;}
+.advice .cnt ul li ul.dash li + li{margin-top:2px;}
+.advice .cnt ul li ul.dash li:before{display: none;}
 .form_title1{padding-bottom: 17px;border-bottom: 1px solid #dddddd;}
 .form_title1 .tit{font-weight: 700;font-size: 22px;}
 .form_check{margin-top:20px;}
@@ -289,17 +292,27 @@ background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/200
 .form_table > table{border-collapse: separate;width: 100%;border-top: 1px solid #464d5d;border-spacing: 0;}
 .form_table > table > thead > tr > th{text-align: center;padding:10px 0;font-weight:700;background-color: #f3f7fc;font-size: 14px;border-bottom: 1px solid #dddddd;vertical-align: middle;line-height: 1.5;word-break: keep-all;}
 .form_table > table > tbody > tr > th{text-align: left;padding-left:15px;font-weight:700;background-color: #f3f7fc;padding: 15px 10px;font-size: 14px;border-bottom: 1px solid #dddddd;vertical-align: middle;line-height: 1.5;word-break: keep-all;}
+.form_table > table > tbody > tr > th + th{border-left:1px solid #ddd;}
+.form_table > table > tbody > tr > th.normals{font-weight:400;}
 .form_table > table > tbody > tr > td{border-left:1px solid #dddddd;padding: 15px 10px;font-size: 14px;border-bottom: 1px solid #dddddd;vertical-align: middle;line-height: 1.5;}
+.form_table > table > tbody > tr > td:first-child{border-left:0;}
 .form_table > table > tbody > tr > td .input_group .advice{margin-left:10px;height: 15px;}
 .form_table > table > tbody > tr > th .required{display:inline-block;padding-left:13px;overflow:hidden;text-indent:-999em;position: relative;}
 .form_table > table > tbody > tr > th .required:before{content:"*";color:#ee3f3f;position: absolute;left:0;top:2px;text-indent: 0;}
+.form_table > table > tbody > tr > td.in_table{border:0;padding:0;}
+.form_table > table > tbody > tr > td.in_table table{border-top:0;}
+.form_table > table > tbody > tr > td.in_table th{background-color: #f9f9f9;}
+
+.form_table table input.align_right,
+.form_table table input.ars{padding-right:10px;}
+
 .form_table .input_group .input_text{height: 34px;display: flex;align-items: center;}
 .form_txt{margin-top:10px;line-height: 1.4;font-size:14px;word-break: keep-all;}
 .form_txt + .form_txt{margin-top:7px;}
 .input_status{font-size:14px;display: block;margin-top:5px;}
 .input_status.blue{color:#2460ce;}
 .input_status.red{color:#ee3f3f;}
-
+input.clear{border:0 !important;background-color: transparent !important;padding:0 !important;}
 .title_bulit{display: flex;align-items: center;margin-bottom:15px;flex-wrap:wrap;}
 .title_bulit h3{font-weight:700;padding-left:15px;position: relative;font-size:16px;}
 .title_bulit h3:before{content: '';position: absolute;top: 7px;left: 0;width: 5px;height: 5px;border-radius: 100%;background-color: #837CBC;}
