@@ -61,7 +61,7 @@ href="https://www.ffsb.kr/mem/compUserJoin.do">회원가입</a></div>
 				<div class="hd_info">
 					<div class="item txt"><a href="javascript:;" class="logout">로그아웃</a></div>
 					<div class="item txt"><a href="javascript:;" class="mypage">마이페이지</a>
-						<ul id="mypage_ly" class="info_ly" style="display: none;">
+						<ul id="mypage_ly" class="info_ly info_layer" style="display: none;">
 							<li><a href="javascript:;">회원정보</a></li>
 							<li><a href="javascript:;">가족친화인증신청</a></li>
 							<li><a href="javascript:;">인증설명회</a></li>
@@ -73,45 +73,82 @@ href="https://www.ffsb.kr/mem/compUserJoin.do">회원가입</a></div>
 						</ul>
 					</div>
 					<div class="item txt"><a href="javascript:;" class="member"><strong>홍길동</strong>님</a>
-						<ul id="member_ly" class="info_ly" style="display: none;">
+						<ul id="member_ly" class="info_ly info_layer" style="display: none;">
 							<li><a href="javascript:;">메뉴명1</a></li>
 							<li><a href="javascript:;">메뉴명2</a></li>
 							<li><a href="javascript:;">메뉴명3</a></li>
 							<li><a href="javascript:;">메뉴명4</a></li>
 						</ul>
 					</div>
-					<div class="item"><span class="lg_time">09분47초</span><a href="javascript:;" class="extension">연장</a>
+					<div class="item"><span class="lg_time">09분47초</span><a href="javascript:;" class="extension">연장</a></div>
+					<div class="item alarm">
+						<!-- <button type="button" class="alarm_btn">알림</button> -->
+						<button type="button" class="alarm_btn active">새 알림있음</button>
+						<div class="alarm_layer info_layer">
+							<div class="mf_layer_bottom">
+								<div class="alarm_cnt">
+									<div class="cnt">
+										<a href="javacript:;">
+											<span class="type">결과보고서 제출 알림</span>
+											<span class="text">교육 콘텐츠 제공형 교육결과보고서 제출하여 주시길 바랍니다.</span>
+										</a>
+									</div>
+									<div class="cnt">
+										<a href="javacript:;">
+											<span class="type">결과보고서 제출 알림</span>
+											<span class="text">교육 콘텐츠 제공형 교육결과보고서 제출하여 주시길 바랍니다.</span>
+										</a>
+									</div>
+									<div class="cnt">
+										<a href="javacript:;">
+											<span class="type">결과보고서 제출 알림</span>
+											<span class="text">교육 콘텐츠 제공형 교육결과보고서 제출하여 주시길 바랍니다.</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 
 			</div>
 			<script>
-				$(".hd_info .mypage").click(function (event) {
-					event.stopPropagation();
-					if ($("#mypage_ly:visible").length > 0) {
-						$(".info_ly").hide();
-					} else {
-						$(".info_ly").hide();
-						$("#mypage_ly").show();
-					}
-					$(".sc_form").hide();
-				});
-				$(".hd_info .member").click(function (event) {
-					event.stopPropagation();
-					if ($("#member_ly:visible").length > 0) {
-						$(".info_ly").hide();
-					} else {
-						$(".info_ly").hide();
-						$("#member_ly").show();
-					}
-					$(".sc_form").hide();
-				});
-				$(document).click(function (event) {
-					if ($(event.target).closest(".info_ly").length === 0) {
-						if ($(".info_ly:visible").length > 0) {
-							$(".info_ly").hide();
+				$(document).ready(function() {
+					$(".hd_info .mypage").click(function(event) {
+						event.stopPropagation();
+						if ($("#mypage_ly:visible").length > 0) {
+							$(".info_layer").hide();
+						} else {
+							$(".info_layer").hide();
+							$("#mypage_ly").show();
 						}
-					}
+					});
+					$(".hd_info .member").click(function(event) {
+						event.stopPropagation();
+						if ($("#member_ly:visible").length > 0) {
+							$(".info_layer").hide();
+						} else {
+							$(".info_layer").hide();
+							$("#member_ly").show();
+						}
+					});
+					$(".hd_info .alarm_btn").click(function(event) {
+						event.stopPropagation();
+						var $alarmLayer = $(this).siblings(".alarm_layer");
+						if ($alarmLayer.is(":visible")) {
+							$alarmLayer.hide();
+						} else {
+							$(".info_layer").hide();
+							$alarmLayer.show();
+						}
+					});
+					$(document).click(function(event) {
+						if ($(event.target).closest(".info_layer").length === 0) {
+							if ($(".info_layer:visible").length > 0) {
+								$(".info_layer").hide();
+							}
+						}
+					});
 				});
 			</script>
 		</div>
@@ -391,16 +428,93 @@ href="https://www.ffsb.kr/mem/compUserJoin.do">회원가입</a></div>
 				<div class="hd_scmn">
 					<div class="hd_search">
 						<button type="button" class="btn_search">검색</button>
-						<div class="sc_form" style="display: none;">
-							<form id="headFrm" name="headFrm" action="" method="post">
-								<input type="text" id="headSearchText" name="searchText" placeholder="검색어를 입력하세요"
-									style="padding-left:16px;" title="검색어">
-								<input type="text" style="display:none;">
-								<button id="headSearchSubmit" type="button" class="sc_submit">검색</button>
-								<button type="button" class="sc_close">검색닫기</button>
-							</form>
+						<div class="sc_form mb_full_layer" style="display: none;">
+							<div class="mf_layer_top">
+								<button type="button" class="btn_back" onclick="$('.mb_full_layer').hide();">닫기</button>
+								<div class="title">검색</div>
+								<button type="button" class="btn_close" onclick="$('.mb_full_layer').hide();">닫기</button>
+							</div>
+							<div class="mf_layer_bottom">
+								<form id="headFrm" name="headFrm" action="" method="post">
+									<div class="input_area">
+										<input type="text" id="headSearchText" name="searchText" placeholder="검색어를 입력하세요" title="검색어">
+										<input type="text" style="display:none;">
+										<button id="headSearchSubmit" type="button" class="sc_submit">검색</button>
+									</div>
+									<button type="button" class="sc_close">검색닫기</button>
+								</form>
+								<div class="search_keywords"> 
+									<div class="tit">추천 검색어</div>
+									<div class="keywords">
+										<div class="item">
+											<a href="javascript:;">
+												<span class="num">1</span>
+												<span class="text">가족친화 인증</span>
+											</a>
+										</div>
+										<div class="item">
+											<a href="javascript:;">
+												<span class="num">2</span>
+												<span class="text">가족친화 컨설팅</span>
+											</a>
+										</div>
+										<div class="item">
+											<a href="javascript:;">
+												<span class="num">3</span>
+												<span class="text">직장교육</span>
+											</a>
+										</div>
+										<div class="item">
+											<a href="javascript:;">
+												<span class="num">4</span>
+												<span class="text">인센티브</span>
+											</a>
+										</div>
+										<div class="item">
+											<a href="javascript:;">
+												<span class="num">5</span>
+												<span class="text">출입국우대카드</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+
+					<div class="hd_alarm">
+						<button type="button" class="alarm_btn active">새 알림있음</button>
+						<div class="alarm_layer mb_full_layer">
+							<div class="mf_layer_top">
+								<button type="button" class="btn_back" onclick="$('.mb_full_layer').hide();">닫기</button>
+								<div class="title">알림 메세지</div>
+								<button type="button" class="btn_close" onclick="$('.mb_full_layer').hide();">닫기</button>
+							</div>
+							<div class="mf_layer_bottom">
+								<div class="alarm_cnt">
+									<div class="cnt">
+										<a href="javacript:;">
+											<span class="type">결과보고서 제출 알림</span>
+											<span class="text">교육 콘텐츠 제공형 교육결과보고서 제출하여 주시길 바랍니다.</span>
+										</a>
+									</div>
+									<div class="cnt">
+										<a href="javacript:;">
+											<span class="type">결과보고서 제출 알림</span>
+											<span class="text">교육 콘텐츠 제공형 교육결과보고서 제출하여 주시길 바랍니다.</span>
+										</a>
+									</div>
+									<div class="cnt">
+										<a href="javacript:;">
+											<span class="type">결과보고서 제출 알림</span>
+											<span class="text">교육 콘텐츠 제공형 교육결과보고서 제출하여 주시길 바랍니다.</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div class="hd_menu">
 						<button type="button" class="btn_menuall">전체메뉴</button>
 					</div>
