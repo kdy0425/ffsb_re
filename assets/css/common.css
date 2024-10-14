@@ -120,6 +120,7 @@ button{cursor:pointer;}
 .mgb0 {margin-bottom:0 !important;}
 .mgb5 {margin-bottom:5px !important;}
 .mgb10 {margin-bottom:10px !important;}
+.mgb15 {margin-bottom:15px !important;}
 .mgb20 {margin-bottom:20px !important;}
 .mgb25 {margin-bottom:25px !important;}
 .mgb30 {margin-bottom:30px !important;}
@@ -194,7 +195,7 @@ input[type="email"],
 input[type="text"]:read-only,
 input[type="password"]:read-only,
 input[type="tel"]:read-only,
-input[type="email"]:read-only{background-color: #F9F9F9;color:#222;}
+input[type="email"]:read-only{background-color: #FFF8F8;color:#222;}
 input[type="text"]::placeholder,
 input[type="password"]::placeholder,
 input[type="tel"]::placeholder,
@@ -210,7 +211,7 @@ select{color:#222;padding-left:16px;border:1px solid #ccc;height:38px;padding-ri
   background-image: url("data:image/svg+xml,%3Csvg id='ico_dropdown' xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Crect id='area' width='20' height='20' fill='%2300dcff' opacity='0'/%3E%3Cg id='그룹_843' data-name='그룹 843' transform='translate(6 8)'%3E%3Cpath id='패스_1135' data-name='패스 1135' d='M1514.5,216.425l4,4,4-4' transform='translate(-1514.5 -216.425)' fill='none' stroke='%23222' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");}
 select::-ms-expand {display:none;}
 @media screen and (max-width:1180px) {
-  select{padding-left:10px;padding-right:17px;background-position:right 2px center;}
+  select{background-position:right 12px center;background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m9.5 2-4 4-4-4' stroke='%23333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");}
 }
 select.select_sm{padding-left:5px;height:30px;padding-right:20px;font-size:13px;background-position: right 5px center;}
 /*슬라이더*/
