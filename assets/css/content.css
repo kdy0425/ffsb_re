@@ -123,6 +123,7 @@ small{font-size:13px;color:#555;margin-top:10px;display: block;word-break: keep-
 .btn_gray:hover{bordeR:1px solid #b6b6b6;}
 .btn_bline{border:1px solid #666;background-color: #fff;color:#333;}
 .btn_bline:hover{bordeR:1px solid #444;}
+.btn_bgray{border:1px solid #C0C4CA;background-color: #C0C4CA;color:#6A6F76;}
 .btn input[type="file"]{position: absolute;left:-9999999999em;}
 .btn svg{width:16px;height:auto;vertical-align: middle;}
 .btn.round{border-radius:5px;}
@@ -247,7 +248,7 @@ background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/200
 .tap_table2 li a{display:block;height:47px;line-height:47px; border:1px solid #dddddd;border-left:none;border-bottom:none;background-color:#fff;font-size:15px;text-decoration:none;}
 .tap_table2 li:first-child a{border-left:1px solid #dddddd;margin-left:0 !important;}
 .tap_table2 li.on a{border-color:#464d5d;border-left:1px solid #464d5d; margin-left:-1px;height:49px;margin-bottom:-1px;position: relative; z-index:1;background-color:#fff;color:#333;}
-.login_content .tap_table2{margin-bottom:30px;}
+.tap_table2{margin-bottom:30px;}
 .tap_table2 li a:hover{color:#3771dc;}
 
 @media screen and (max-width:1180px) {
@@ -534,7 +535,7 @@ input.clear{border:0 !important;background-color: transparent !important;padding
 .text_box1{border:1px solid #dddddd;padding:20px;font-size:14px;line-height:1.5;margin-bottom:35px;}
 
 
-.pops1{position: fixed;left:0;top:0;z-index: 10000;display: flex;align-items: center;justify-content: center;width:100%;height: 100%;background-color: rgba(0,0,0,.6);}
+.pops1{position: fixed;left:0;top:0;z-index: 10000;display: flex;align-items: center;justify-content: center;width:100%;height: 100%;background-color: rgba(0,0,0,.2);}
 .pop-wrap{background-color: #fff;max-width:calc(100% - 30px);max-height:calc(100% - 50px);display: flex;flex-direction: column;position: relative;border-radius:10px;}
 .pop-wrap .heading{padding:20px 55px 20px 20px;border-bottom:1px solid #E9E9E9;}
 .pop-wrap .heading .inner{}
@@ -1285,7 +1286,7 @@ font-weight: 600;
 
 .score_total{margin-top:10px;border:1px solid #F3D5D1;padding:12px;text-align: center;background-color: #FFF0EE;}
 .score_total .tit{margin-bottom:10px;font-size:13px;font-weight:700;}
-.form_score .score_total .item_score{text-align: center;}
+.form_score .score_total .item_score{text-align: end;justify-content: center;}
 .form_score .score_total .item_score > div{margin:0 5px;color:#333;}
 
 .score_total2{margin-top:10px;border:1px solid #F3D5D1;padding:12px;text-align: center;background-color: #FFF0EE;display: flex;align-items: center;}
@@ -1354,9 +1355,20 @@ font-weight: 600;
 .lb_cnt_box .item .tit:before{content:"";position: absolute;left:0;top:6px;width:3px;height:3px;background-color: #333;border-radius: 50%;}
 .lb_cnt_box .item .cnt{color:#357BF3;display: inline-block;}
 
-<div class="lb_cnt_box">
-                                <div class="item">
-                                    <div class="tit">인증기업 정보 : </div>
-                                    <div class="cnt">트라이언소프트</div>
-                                </div>
-                            </div>
+.image_title{text-align: center;margin-bottom:30px;margin-top:50px;}
+.image_title img{margin-bottom:20px;}
+.image_title img.comp{margin-bottom:25px;}
+.image_title .title{color:#333;font-size:20px;font-weight:700;}
+.image_title p{color:#555;font-size:14px;margin-top:10px;}
+.image_title strong{font-weight:500;color:#333;}
+
+.code_form{text-align: center;}
+.code_form .cf_tit{font-size:16px;font-weight:500;margin-bottom: 15px;}
+.code_form .cf_form{}
+.code_form .cf_form input{border:1px solid #DCE0E8;background-color: #fff;height:42px;font-size:14px;padding-left:15px;}
+.code_form .cf_form input::placeholder{color:#606060;}
+.code_form .cf_form .cf_btns{display: grid;grid-template-columns: repeat(3,1fr);margin-top:15px;}
+.code_form .cf_form .cf_btns button{height:42px;border:0;background-color: #fff;color:#333;font-size:16px;font-weight:500;}
+.code_form .cf_form .cf_btns button:hover{background-color: #f9f9f9;}
+.code_form .cf_form .cf_btns button.clear{}
+.code_form .cf_form .cf_btns button.remove{text-indent:-999em;overflow: hidden;background-position: center center;background-repeat: no-repeat;background-image: url("data:image/svg+xml,%3Csvg width='27' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23515B6C' d='M9 0h18v18H9z'/%3E%3Cpath d='m15 6 6 6M21 6l-6 6' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='m0 9 9-9v18L0 9Z' fill='%23515B6C'/%3E%3C/svg%3E");}

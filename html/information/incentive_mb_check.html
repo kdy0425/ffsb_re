@@ -147,132 +147,45 @@
             </div><!-- end #sideBar -->
             <div id="content" class="sub_content">
                 <div class="inner">
-                    <div class="titles1">
-                        <h1>본인인증</h1>
-                        <div class="sub">인증방법을 선택하여 이용해주세요.</div>
+                    
+                    <div class="image_title">
+                        <img src="../../assets/images/content/incentive_img.svg" alt="">
+                        <h3 class="title">인센티브 지원을 이용해 보세요.</h2>
+                        <p>지원 정보를 확인 후 직원확인 버튼을 클릭해주세요.</p>
                     </div>
 
-                    <ul class="tap_table2">
-                        <li id="liCellPhone" class="on"><a href="javascript:;" title="선택됨" onclick="fnOwnCertTab('cellPhone')">휴대폰 인증</a></li>
-                        <li id="liIpin"><a href="javascript:;" title="선택안됨" onclick="fnOwnCertTab('ipin')">아이핀 인증</a></li>
-                    </ul>
-                    <script>
-                        function fnOwnCertTab(elm){
-                            if(elm === 'cellPhone'){
-                                $('#liIpin').removeClass('on');
-                                $('#liIpin a').attr('title', '선택안됨');
-                                $('#liCellPhone').addClass('on');
-                                $('#liCellPhone a').attr('title', '선택됨');
-                                $('#ipin').hide();
-                                $('#cellPhone').show();
-                            }else{
-                                $('#liCellPhone').removeClass('on');
-                                $('#liCellPhone a').attr('title', '선택안됨');
-                                $('#liIpin').addClass('on');
-                                $('#liIpin a').attr('title', '선택됨');
-                                $('#ipin').show();
-                                $('#cellPhone').hide();
-                            }
-                        }
-                    </script>
-    
-                    <div class="certify_texts" id="cellPhone">
-                        <p>
-                            본인명의의 휴대폰 인증으로 가입하실 수 있습니다.<br>
-                            가입을 원하시면 <strong>[인증하기]</strong>를 클릭해 주세요.
-                        </p>
-                        <div class="btns">
-                            <a href="javascript:fnCheckPlusPopup();" class="btn btn_dblue" title="새 창으로 이동">인증하기</a>
-                        </div>
-                    </div>
-    
-                    <div class="certify_texts" id="ipin" style="display: none;">
-                        <p>
-                            아이핀 인증으로 가입하실 수 있습니다.<br>
-                            가입을 원하시면 <strong>[인증하기]</strong>를 클릭해 주세요.
-                        </p>
-                        <div class="btns">
-                            <a href="javascript:fnIpinPopup();" class="btn btn_dblue" title="새 창으로 이동">인증하기</a>
+                    <div class="lb_cnt_box">
+                        <div class="item">
+                            <div class="tit">인증기업 정보 : </div>
+                            <div class="cnt">트라이언소프트</div>
                         </div>
                     </div>
 
-                    <div class="form_table">
-                        <table>
-                            <caption class="hidden">
-                                <strong>회원가입 정보입력</strong>
-                                <p>기업(관)분류, 사업자등록번호, 기업(관)명, 기업(관)지역, 기업(관)주소로 구성된 표</p>
-                            </caption>
-                            <colgroup>
-                                <col width="19%">
-                                <col width="*">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><span class="required">필수</span><label for="memNm">담당자명</label></th>
-                                    <td>
-                                        <div class="input_group">
-                                            <div class="input">
-                                                <input type="text" id="memNm" name="memNm" value="" maxlength="25" readonly="readonly">
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><span class="required">필수</span><label for="memHp1">휴대전화</label></th>
-                                    <td>
-                                        <div class="input_group">
-                                            <div class="input">
-                                                <select title="서비스번호 선택" id="memHp1">
-                                                        <option value="010">010</option>
-                                                        <option value="011">011</option>
-                                                        <option value="016">016</option>
-                                                        <option value="017">017</option>
-                                                        <option value="018">018</option>
-                                                        <option value="019">019</option>
-                                                </select>
-                                            </div>
-                                            <span class="dash">-</span>
-                                            <div class="input">
-                                                <input type="text" id="memHp2" value="" maxlength="4" size="4" title="휴대전화 중간 4자리 입력" onkeyup="fnCommonOnlyNumber(this);">
-                                            </div>
-                                            <span class="dash">-</span>
-                                            <div class="input">
-                                                <input type="text" id="memHp3" value="" maxlength="4" size="4" title="휴대전화 뒤 4자리 입력" onkeyup="fnCommonOnlyNumber(this);">
-                                            </div>
-                                        </div>
-                                        <span id="memHpErr" class="input_status red" style="display: none;">필수 정보입니다.</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><span class="required">필수</span><label for="corpRegNum1">사업자등록번호</label></th>
-                                    <td>
-                                        <div class="input_group">
-                                            <div class="input">
-                                                <input type="text" id="corpRegNum1" value="" maxlength="3" title="사업자등록번호 첫번째 자리 입력" onkeyup="fnCommonOnlyNumber(this);">
-                                            </div>
-                                            <span class="dash">-</span>
-                                            <div class="input">
-                                                <input type="text" id="corpRegNum2" value="" maxlength="2" title="사업자등록번호 중간 자리 입력" onkeyup="fnCommonOnlyNumber(this);">
-                                            </div>
-                                            <span class="dash">-</span>
-                                            <div class="input">
-                                                <input type="text" id="corpRegNum3" value="" maxlength="5" title="사업자등록번호 뒤 자리 입력" onkeyup="fnCommonOnlyNumber(this);">
-                                            </div>
-                                            <button type="button" class="btn btn_gray" onclick="fnCorpRegNumCheck();">확인</button>
-                                        </div>
-                                        <small>사업자등록번호 도용 피해 방지를 위해 기업인증을 시행하고 있습니다.<br>
-                                        NICE평가정보㈜에 등록되어 있지 않은 기업은 사업자등록증 사본을 팩스(02-2122-5040), 이메일(credit@nice.co.kr)로 보내시면
-                                        담당자가 등록을 처리하는데 최소 1일이 소요 됩니다.<br>
-                                        처리 후 등록확인은 1600-1522(-&gt;3번)에서 가능합니다.</small>
-                                        <span id="corpRegNumSuccess" class="input_status blue" style="display: none;">등록 가능합니다.</span><span id="corpRegNumFail" class="input_status red" style="display: none;">잘못된 사업자번호입니다.</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="card_box_wrap">
+                        <div class="card_group">
+                            <div class="card_box">
+                                <div class="card_cnt">
+                                    <div class="cate">한국잡월드</div>
+                                    <div class="subject">한국잡월드 체험료 및 주차료 면제 혜택</div>
+                                    <div class="desc">(전국) 어린이체험관 보호자 1인 무료, 메카이브 체험관 K.ground 체험료 10% 할인, 주차료 1대(4,000원) 무료(‘24.5.1부터 시행)</div>
+                                    <div class="info">
+                                        <div class="item">지원지역 : 전국</div>
+                                        <div class="item">지원대상 : 인증기업 임직원 </div>
+                                        <div class="item">소관부서 : 한국잡월드</div>
+                                        <div class="item">연락처 : 1644-1333</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form_btns2 mgt20">
-                        <a href="javascript:;" class="btn btn_submit">이용하기</a>
+                        <a href="javascript:;" class="btn btn_dblue" onclick="layerOpen(this,'.js-pop-code')">직원확인</a>
+                    </div>
+
+                    <div class="form_btns2 mgt20">
+                        <small class="txt_red align_center mgb10">사용 완료시 재사용이 불가합니다.</small>
+                        <a href="javascript:;" class="btn btn_bgray"> 2024년 10월 11일 11:30:11 사용완료</a>
                     </div>
 
                     
@@ -280,6 +193,54 @@
             </div>
         </div>
 		<!-- //content -->
+
+		<!-- 직원확인 -->
+        <div class="pops1 js-pop-code dns" tabindex="-1">
+            <div class="pop-wrap" style="width:400px;">
+                <div class="heading">
+                    <div class="inner">
+                        <h2 class="tit">직원확인</h2>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="inner">
+                        <div class="code_form">
+                            <div class="cf_tit">
+                                직원이 사용코드 입력 후<br/>
+                                인센티브 사용이 가능합니다.
+                            </div>
+                            <div class="cf_form">
+                                <div class="input_group">
+                                    <label class="input" for="code_input">
+                                        <input type="text" id="code_input" readonly maxlength="6" placeholder="사용코드 6자리">
+                                    </label>
+                                </div>
+                                <div class="cf_btns">
+                                    <button type="button" data="1">1</button>
+                                    <button type="button" data="2">2</button>
+                                    <button type="button" data="3">3</button>
+                                    <button type="button" data="4">4</button>
+                                    <button type="button" data="5">5</button>
+                                    <button type="button" data="6">6</button>
+                                    <button type="button" data="7">7</button>
+                                    <button type="button" data="8">8</button>
+                                    <button type="button" data="9">9</button>
+                                    <button type="button" class="clear" data="c">취소</button>
+                                    <button type="button" data="0">0</button>
+                                    <button type="button" class="remove" data="r">지우기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_btns">
+                            <a href="javascript:;" class="btn btn_lg btn_submit">확인</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
+            </div>
+        </div>
+        <!-- //직원확인 -->
+
 
 		<div class="quick_wrap">
 			<script>
@@ -441,6 +402,31 @@
 </div>
 
 <script src="../../assets/js/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    const $input = $('.cf_form .input input');
+    const maxLength = parseInt($input.attr('maxlength'));
+
+    $('.cf_btns button').on('click', function() {
+        const buttonValue = $(this).attr('data');
+        const currentValue = $input.val();
+
+        switch(buttonValue) {
+            case 'r':
+                $input.val(currentValue.slice(0, -1));
+                break;
+            case 'c':
+                $input.val('');
+                break;
+            default:
+                if (currentValue.length < maxLength) {
+                    $input.val(currentValue + buttonValue);
+                }
+                break;
+        }
+    });
+});
+</script>
 </body>
 
 </html>
