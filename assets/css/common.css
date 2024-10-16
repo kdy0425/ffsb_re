@@ -153,6 +153,7 @@ button{cursor:pointer;}
 .prs6{padding-right:6px !important;}
 
 .txt_underline{text-decoration:underline !important;}
+.txt_black{color:#000  !important;}
 .txt_red{color:#ee3f3f  !important;}
 .txt_bgreen{color:#8edac2 !important;}
 .txt_green{color:#00c63d !important;}
@@ -302,6 +303,7 @@ caption.hidden{position: absolute;left:-999999999em;}
 .btn_list{display:flex;flex-wrap: wrap;}
 .btn_list .btn{margin-left:5px;margin-top:2px;margin-bottom:2px;}
 @media screen and (max-width:1180px) {
+  .r.btn_list{margin-left:auto;}
   .btn_list{margin-left:-2px;margin-right:-2px;}
   .btn_list .btn{margin:2px;}
 }
