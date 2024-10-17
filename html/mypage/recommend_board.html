@@ -112,8 +112,11 @@
                         <li>
                             <a href="/mypage/history/consultant.do?gubun=02">문화 컨설팅</a>
                         </li>
-                        <li class="on">
+                        <li>
                             <a href="/selfChk/mypage/myPageSelfChkResultList.do">온라인서면 컨설팅</a>
+                        </li>
+                        <li class="on">
+                            <a href="/selfChk/mypage/myPageSelfChkResultList.do">컨설팅 사례공유 게시판</a>
                         </li>
                         <li>
                             <a href="/ffsbbod/bs/boardList.do?boardSeq=12">컨설턴트 자료실</a>
@@ -134,77 +137,68 @@
                         <span class="entity">&gt;</span>
                         <span>마이페이지</span>
                         <span class="entity">&gt;</span>
-                        <strong>온라인서면 컨설팅</strong>
+                        <strong>우수교안추천 게시판</strong>
                     </p>
                     <div class="titles1">
-                        <h1>인증 후 온라인(서면) 컨설팅</h1>
+                        <h1>우수교안추천 게시판</h1>
                     </div>
 
-                    <div class="list_table line_table">
-                        <div class="title_bulit">
-                            <h3>인증 후 온라인(서면) 컨설팅 내역</h3>
+                    <div class="list_search">
+                        <div class="inner">
+                            <div class="input_group">
+                                <div class="input">
+                                    <select id="keyKind" name="keyKind" title="검색분류선택" style="width:130px;">
+                                        <option value="ALL">전체</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn_md btn_dblue">검색</button>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="list_top">
+                        <div>
+                            <div class="list_total">전체 <span class="txt_theme">13</span>개</div>
+                        </div>
+                    </div>
+
+                    <div class="list_table">
                         <table>
-                            <caption class="hidden">인증 후 온라인(서면) 컨설팅 내역</caption>
-                            <colgroup>
-                                <col style="width:10%">
-                                <col style="width:10%">
-                                <col style="width:11%">
-                                <col style="width:20%">
-                                <col style="width:12%">
-                                <col style="width:11%">
-                                <col style="*">
-                                <col style="width:11%">
-                            </colgroup>
-                            <!-- 20180122 접근성 수정 -->
+                            <caption class="hidden">우수교안추천 게시판</caption>
                             <thead>
                                 <tr>
-                                    <th scope="col">기업분류</th>
-                                    <th scope="col">차수</th>
-                                    <th scope="col">상태</th>
-                                    <th scope="col">기업명</th>
-                                    <th scope="col">담당자명</th>
-                                    <th scope="col">등록일시</th>
-                                    <th scope="col">비고</th>
+                                    <th scope="col">번호</th>
+                                    <th scope="col">결과보고서</th>
+                                    <th scope="col">기업구분</th>
+                                    <th scope="col">추천자수</th>
                                     <th scope="col">상세보기</th>
                                 </tr>		
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td colspan="8" class="list_empty">
+                                    <td colspan="5" class="list_empty">
                                         내역이 없습니다.
                                     </td>
                                 </tr>
 								<tr>
-                                    <td><span class="mb_tit">기업분류: </span>중소기업</td>
-                                    <td><span class="mb_tit">차수: </span>2020</td>
-                                    <td><span class="mb_tit">상태: </span>임시저장</td>
-                                    <td><span class="mb_tit">기업명: </span>한국기업</td>
-                                    <td><span class="mb_tit">담당자명: </span>인종테스트03</td>
-                                    <td><span class="mb_tit">등록일시: </span>2021-12-12<br class="v_pc">11:11:11</td>
-                                    <td class="mb_flex">
-                                        <span class="mb_tit">비고: </span>
-                                        <a href="javascript:;" class="btn btn_sm btn_line">컨설팅 평가</a>
-                                    </td>
+                                    <td class="num">1</td>
+                                    <td><span class="mb_tit">결과보고서: </span> 2024-09-05</td>
+                                    <td><span class="mb_tit">기업구분: </span> 중소기업</td>
+                                    <td><span class="mb_tit">추천자수: </span>1.00(1명)</td>
                                     <td class="mb_flex">
                                         <span class="mb_tit">상세보기: </span>
-										<a href="javascript:fn_conResult('999005');" onclick="layerOpen(this, '.ex1');" class="btn btn_sm btn_line">상세보기</a>
+										<a href="javascript:;" onclick="layerOpen(this, '.detail_layer');" class="btn btn_sm btn_line">상세보기</a>
                                     </td>
                                 </tr>
-								<tr>
-                                    <td><span class="mb_tit">기업분류: </span>중소기업</td>
-                                    <td><span class="mb_tit">차수: </span>2020</td>
-                                    <td><span class="mb_tit">상태: </span>임시저장</td>
-                                    <td><span class="mb_tit">기업명: </span>한국기업</td>
-                                    <td><span class="mb_tit">담당자명: </span>인종테스트03</td>
-                                    <td><span class="mb_tit">등록일시: </span>2021-12-12<br class="v_pc">11:11:11</td>
-                                    <td class="mb_flex">
-                                        <span class="mb_tit">비고: </span>
-                                        <a href="javascript:;" class="btn btn_sm btn_line">컨설팅 평가</a>
-                                    </td>
+                                <tr>
+                                    <td class="num">1</td>
+                                    <td><span class="mb_tit">결과보고서: </span> 2024-09-05</td>
+                                    <td><span class="mb_tit">기업구분: </span> 중소기업</td>
+                                    <td><span class="mb_tit">모듈: </span>B-가족친화문화</td>
+                                    <td><span class="mb_tit">추천자수: </span>1.00(1명)</td>
                                     <td class="mb_flex">
                                         <span class="mb_tit">상세보기: </span>
-										<a href="javascript:fn_conResult('999005');" onclick="layerOpen(this, '.ex1');" class="btn btn_sm btn_line">상세보기</a>
+										<a href="javascript:;" onclick="layerOpen(this, '.detail_layer');" class="btn btn_sm btn_submit">추천하기</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -234,90 +228,36 @@
             }
          </script>
 
-        <!-- 인증후 컨설팅 착수보고서 파일 업로드 -->
-        <div class="pops1 js-pop dns" tabindex="-1">
-            <div class="pop-wrap" style="width:590px;">
+        <!-- 결과보고서 상세보기 -->
+        <div class="pops1 js-pop detail_layer dns" tabindex="-1">
+            <div class="pop-wrap" style="width:890px;">
                 <div class="heading">
                     <div class="inner">
-                        <h2 class="tit">인증후 컨설팅 착수보고서 파일 업로드</h2>
+                        <h2 class="tit">결과보고서 상세보기</h2>
                     </div>
                 </div>
                 <div class="cont">
                     <div class="inner">
-                        <form name="frm" id="frm" method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="pageNo" id="pageNo">
-                            <input type="hidden" name="jrSeq" id="jrSeq" value="731">
-                            <input type="hidden" name="frmYyyy" id="frmYyyy" value="">
-                            <div class="form form_type1">
-                                <div class="form_item">
-                                    <label for="fileInput11" class="form_tit">착수보고서 파일 업로드</label>
-                                    <div class="form_cnt">
-                                        <div class="input_group file_input">
-                                            <div class="input">
-                                                <input type="text" title="첨부파일 경로" id="fileInput1" placeholder="한가원 착수보고서_홍길동.hwp(1,258kbyte)" readonly>
-                                                <button type="button" class="remove_file">파일삭제</button>
-                                            </div>
-                                            <label class="btn btn_lg btn_gray">
-                                                파일첨부
-                                                <input type="file" id="file67" name="file67" title="첨부파일 찾아찾기" size="5" accept="pdf, hwp, jpg, jpeg, png, zip">
-                                            </label>
-                                        </div>
-                                        <small>ppt, hwp, jpg, pdf, docx파일만 업로드 가능</small>
-                                    </div>
+                        <div class="detail_slider">
+                            <div class="control_box">
+                                <div class="swiper-pagination"></div>
+                                <button type="button" class="button-prev">이전</button>
+                                <button type="button" class="button-next">다음</button>
+                            </div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13221202&filePath=L2Rpc2sxL25ld2RhdGEvMjAxOS8yMS9DTFMxMDAwNC8xMzIyMTIwMl9XUlRfMjAxOTExMjFfMQ==&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10004" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13221202&filePath=L2Rpc2sxL25ld2RhdGEvMjAxOS8yMS9DTFMxMDAwNC8xMzIyMTIwMl9XUlRfMjAxOTExMjFfMQ==&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10004" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://gongu.copyright.or.kr/gongu/wrt/cmmn/wrtFileImageView.do?wrtSn=13221202&filePath=L2Rpc2sxL25ld2RhdGEvMjAxOS8yMS9DTFMxMDAwNC8xMzIyMTIwMl9XUlRfMjAxOTExMjFfMQ==&thumbAt=Y&thumbSe=b_tbumb&wrtTy=10004" alt="">
                                 </div>
                             </div>
-
-                            <div class="form_btns">
-                                <a href="javascript:;" class="btn btn_lg btn_submit js-pw-change" id="btnSubmit">파일업로드</a>
-                                <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">취소</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
-            </div>
-        </div>
-        <!-- //인증후 컨설팅 착수보고서 파일 업로드 -->
-
-        <!-- 다른 컨설팅 받았는지 여부 -->
-        <div class="pops1 ex1 dns" tabindex="-1">
-            <div class="pop-wrap" style="width:500px;">
-                <div class="heading">
-                    <div class="inner">
-                        <h2 class="tit">다른 컨설팅 받았는지 여부</h2>
-                    </div>
-                </div>
-                <div class="cont">
-                    <div class="inner">
-                        <div class="form_table">
-                            <table>
-                                <colgroup>
-                                    <col style="width:50%">
-                                    <col>
-                                </colgroup>
-                                <!-- 20180122 접근성 수정 -->
-                                <caption class="hidden">다른 컨설팅 받았는지 여부</caption>
-                                <!-- //20180122 접근성 수정 -->
-                                <tbody>
-                                    <tr>
-                                        <th scope="col">인증준비 그룹형 컨설팅</th>
-                                        <td scope="col" id="preConslYn">N</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">인증준비 방문형 컨설팅</th>
-                                        <td scope="col" id="preVisitConslYn">N</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">문화 컨설팅</th>
-                                        <td scope="col" id="afterConslYn">N</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">온라인서면 컨설팅</th>
-                                        <td scope="col" id="onConslYn">N</td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
+                        <div class="popup_text">추천해주셔서 감사합니다.</div>
+                        <div class="popup_text">이미 참여하셨습니다.</div>
 
                         <div class="form_btns">
                             <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">닫기</a>
@@ -327,8 +267,8 @@
                 <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
             </div>
         </div>
-        <!-- //다른 컨설팅 받았는지 여부 -->
-        
+        <!-- //결과보고서 상세보기 -->
+
 
 
 		<div class="quick_wrap">
@@ -491,7 +431,20 @@
 </div>
 
 <script src="../../assets/js/common.js"></script>
-
+<script>
+var swiper = new Swiper(".detail_slider", {
+    pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+    },
+    navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+    },
+    observer: true, 
+    observeParents: true
+});
+</script>
 </body>
 
 </html>

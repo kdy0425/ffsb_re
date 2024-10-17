@@ -190,7 +190,7 @@
                                 <col width="11%">
                                 <col width="10%">
                                 <col width="15%">		
-                                <col width="*">
+                                <col width="15%">		
                                 <col width="*">
                                 <!-- <col width="*" /> -->
                                 <col width="15%">
@@ -215,6 +215,29 @@
                                         내역이 없습니다.
                                     </td>
                                 </tr>
+								<tr>
+                                    <td><span class="mb_tit">신청일: </span>2019-01-09</td>
+                                    <td><span class="mb_tit">기업(관)명: </span>니트로아이22f</td>
+                                    <td><span class="mb_tit">담당자연락처: </span>010-1234-1234</td>
+                                    <td class="mb_flex">
+                                        <span class="mb_tit">리포팅: </span>
+                                        <a href="javascript:btnPrint1('3292','031-244-4848','니트로아이22f');" class="btn btn_sm btn_line">기업정보</a>
+                                        <a href="javascript:btnPrint2('963','3292','','니트로아이22f','before');" class="btn btn_sm btn_line">신청정보</a>
+                                    </td>
+									<td class="mb_flex">
+                                        <span class="mb_tit">결과보고: </span>
+                                       123123
+                                    </td>
+                                    <td class="mb_flex">
+                                        <span class="mb_tit">결과보고: </span>
+                                        <a href="javascript:reportPopup(963)" class="btn btn_sm btn_line" onclick="layerOpen(this, '.surveyModal');">결과보고서</a>
+                                        <small>[미제출-저장]</small>
+                                    </td>
+                                    <td class="mb_flex">
+                                        <span class="mb_tit">이전 컨설팅여부: </span>
+										<a href="javascript:fn_conResult('999005');" onclick="layerOpen(this, '.ex1');" class="btn btn_sm btn_line">보기</a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -228,65 +251,215 @@
         </div>
 		<!-- //content -->
 
-        <!-- 직장교육 결과보고서 파일 업로드 -->
-        <div class="pops1 js-pop dns" tabindex="-1">
+		
+        <!-- 가족친화 인증준비 컨설팅 결과보고서(기업·관)-->
+        <div class="pops1 surveyModal dns" tabindex="-1">
             <div class="pop-wrap" style="width:590px;">
                 <div class="heading">
                     <div class="inner">
-                        <h2 class="tit">직장교육 결과보고서 파일 업로드</h2>
+                        <h2 class="tit">가족친화 인증준비 컨설팅 결과보고서(기업·관)</h2>
                     </div>
                 </div>
                 <div class="cont">
                     <div class="inner">
-                        <form name="frm" id="frm" method="post" enctype="multipart/form-data">
-                            <input type="hidden" name="pageNo" id="pageNo">
-                            <input type="hidden" name="jrSeq" id="jrSeq" value="731">
-                            <input type="hidden" name="frmYyyy" id="frmYyyy" value="">
-                            <div class="form form_type1">
-                                <div class="form_item">
-                                    <label for="fileInput11" class="form_tit">직장교육 결과보고서 파일 업로드</label>
-                                    <div class="form_cnt">
-                                        <div class="input_group file_input">
-                                            <div class="input">
-                                                <input type="text" title="첨부파일 경로" id="fileInput1" placeholder="가족친화 직장교육 강의실적 보고서_홍길동.hwp(1,258kbyte)" readonly>
-                                                <button type="button" class="remove_file">파일삭제</button>
-                                            </div>
-                                            <label class="btn btn_lg btn_gray">
-                                                파일첨부
-                                                <input type="file" id="file40" name="file40" title="첨부파일 찾아찾기" size="5" accept="pdf, hwp, jpg, jpeg, png, zip">
-                                            </label>
-                                        </div>
+                        <div class="surveyInner">
+                            <div class="survey_q">1. 컨설팅 개요</div>
+                            <div class="survey_a">
+                                <div class="form_table sm">
+                                    <table>
+                                        <caption class="hidden">컨설팅 개요 정보</caption>
+                                        <colgroup>
+                                            <col style="width:15%;">
+                                            <col style="width:35%;">
+                                            <col style="width:15%;">
+                                            <col style="width:35%;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>컨설턴트</th>
+                                                <td>컨설턴트테스트01</td>
+                                                <th>기업(관)명</th>
+                                                <td>가친부서테스트03</td>
+                                            </tr>
+                                            <tr>
+                                                <th>담당자</th>
+                                                <td>가친부서03 과장</td>
+                                                <th>일시</th>
+                                                <td>2024-12-31</td>
+                                            </tr>
+                                            <tr>
+                                                <th>장소</th>
+                                                <td colspan="3"> 서울특별시 중구 퇴계로 173 (충무로3가) test</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="survey_q">2. 컨설팅 내용</div>
+                            <div class="survey_a">
+                                <div class="form_table sm">
+                                    <table>
+                                        <caption class="hidden">컨설팅 내용 정보입력</caption>
+                                        <colgroup>
+                                            <col style="width:120px;">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th><label for="">의뢰 내용 1.</label></th>
+                                                <td>
+                                                    <div class="input_group">
+                                                        <div class="input">
+                                                            <input type="text" id="title1" name="title1" class="consl_ttl">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><label for="">컨설팅 1.</label></th>
+                                                <td>
+                                                    <div class="input_group">
+                                                        <div class="input">
+                                                            <textarea id="content1" name="content1" rows="5" class="consl_content"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><label for="">의뢰 내용 1.</label></th>
+                                                <td>
+                                                    <div class="input_group">
+                                                        <div class="input">
+                                                            <input type="text" id="title2" name="title2" class="consl_ttl">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><label for="">컨설팅 1.</label></th>
+                                                <td>
+                                                    <div class="input_group">
+                                                        <div class="input">
+                                                            <textarea id="content2" name="content2" rows="5" class="consl_content"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><label for="">의뢰 내용 1.</label></th>
+                                                <td>
+                                                    <div class="input_group">
+                                                        <div class="input">
+                                                            <input type="text" id="title3" name="title3" class="consl_ttl">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><label for="">컨설팅 1.</label></th>
+                                                <td>
+                                                    <div class="input_group">
+                                                        <div class="input">
+                                                            <textarea id="content3" name="content3" rows="5" class="consl_content"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="survey_q">3. 컨설팅 총평 (조치사항 등)</div>
+                            <div class="survey_a">
+                                <div class="input_group">
+                                    <div class="input">
+                                        <textarea id="content4" name="content4" rows="5"></textarea>
                                     </div>
                                 </div>
-                                <div class="form_item">
-                                    <label for="fileInput11" class="form_tit">여비 파일 업로드(선택)</label>
-                                    <div class="form_cnt">
-                                        <div class="input_group file_input">
-                                            <div class="input">
-                                                <input type="text" title="첨부파일 경로" id="fileInput43" placeholder="여비_홍길동.hwp(1,258kbyte)" readonly>
-                                                <button type="button" class="remove_file">파일삭제</button>
-                                            </div>
-                                            <label class="btn btn_lg btn_gray">
-                                                파일첨부
-                                                <input type="file" id="file43" name="file43" title="첨부파일 찾아찾기" size="5" accept="pdf, hwp, jpg, jpeg, png, zip">
-                                            </label>
-                                        </div>
+                            </div>
+                            <div class="survey_q">4. 가족친화 인증 가능 여부 (※ 해당 내용은 관리자만 확인이 가능합니다.)</div>
+                            <div class="survey_a">
+                                <label class="checkbox sm inline">
+                                    <input type="radio" id="secretPassYn_Y" name="secretPassYn" value="Y">
+                                    <span class="ck_icon"></span>
+                                    <strong>예</strong>
+                                </label>
+                                <label class="checkbox sm inline">
+                                    <input type="radio" id="secretPassYn_N" name="secretPassYn" value="N">
+                                    <span class="ck_icon"></span>
+                                    <strong>아니오</strong>
+                                </label>
+                            </div>
+                            <div class="survey_q">5. 비밀글 (※ 해당 내용은 관리자만 확인이 가능합니다.)</div>
+                            <div class="survey_a">
+                                <div class="input_group">
+                                    <div class="input">
+                                        <textarea id="secretCmnt" name="secretCmnt" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form_btns">
-                                <a href="javascript:;" class="btn btn_lg btn_submit js-pw-change" id="btnSubmit">파일업로드</a>
+                                <a href="javascript:;" class="btn btn_lg btn_submit" onclick="surveySubmit();">제출</a>
                                 <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">취소</a>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
                 <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
             </div>
         </div>
-        <!-- //기업(관)명 변경 요청 -->
+        <!-- //가족친화 인증준비 컨설팅 결과보고서(기업·관) -->
 
+		<!-- 다른 컨설팅 받았는지 여부 -->
+        <div class="pops1 ex1 dns" tabindex="-1">
+            <div class="pop-wrap" style="width:500px;">
+                <div class="heading">
+                    <div class="inner">
+                        <h2 class="tit">다른 컨설팅 받았는지 여부</h2>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="inner">
+                        <div class="form_table">
+                            <table>
+                                <colgroup>
+                                    <col style="width:50%">
+                                    <col>
+                                </colgroup>
+                                <!-- 20180122 접근성 수정 -->
+                                <caption class="hidden">다른 컨설팅 받았는지 여부</caption>
+                                <!-- //20180122 접근성 수정 -->
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">인증준비 그룹형 컨설팅</th>
+                                        <td scope="col" id="preConslYn">N</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">인증준비 방문형 컨설팅</th>
+                                        <td scope="col" id="preVisitConslYn">N</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">문화 컨설팅</th>
+                                        <td scope="col" id="afterConslYn">N</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">온라인서면 컨설팅</th>
+                                        <td scope="col" id="onConslYn">N</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="form_btns">
+                            <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">닫기</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
+            </div>
+        </div>
+        <!-- //다른 컨설팅 받았는지 여부 -->
 
 		<div class="quick_wrap">
 			<script>

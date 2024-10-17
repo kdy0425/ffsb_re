@@ -219,16 +219,160 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td rowspan="3"><span class="mb_tit">연계일자: </span>2023-09-12</td>
+                                    <td rowspan="2"><span class="mb_tit">연계일자: </span>2023-09-12</td>
                                     <td><span class="mb_tit">기업(관)명: </span>한국기업5</td>
                                     <td><span class="mb_tit">희망모듈: </span>모듈 B-가족친화문화 컨설팅</td>
                                     <td class="mb_flex"><span class="mb_tit">최종결과보고서: </span>
-                                        <a href="javascript:;" data-pop="3" data="9290" class="btn btn_sm btn_line" onclick="layerOpen(this, '.js-pop');">파일업로드</a>
-                                    </td>
-                                    <td class="mb_flex"><span class="mb_tit">이행보고서: </span>
                                         <a href="javascript:;" data-pop="1" data="9290" class="btn btn_sm btn_line" onclick="layerOpen(this, '.js-pop');">파일업로드</a>
                                         <a href="/file/fileDownAct.do?fileSeq=519282" class="btn btn_sm btn_sline">파일다운로드</a>
-                                        <small class="txt_theme">제출 완료</small>
+                                        <small>[제출 완료]</small>
+                                        <small class="txt_theme">추천완료</small>
+                                    </td>
+                                    <td class="mb_flex"><span class="mb_tit">이행보고서: </span>
+                                        <a href="javascript:;" data-pop="3" data="9290" class="btn btn_sm btn_line" onclick="layerOpen(this, '.js-pop');">파일업로드</a>
+                                    </td>
+                                    <td class="mb_flex"><span class="mb_tit">리포팅: </span>
+                                        <a href="javascript:btnPrint1('999005','010-0000-1111','한국기업5');" class="btn btn_sm btn_line">기업정보</a>
+                                        <a href="javascript:btnPrint2('9290','999005','02','한국기업5','2023-09-12','after');" class="btn btn_sm btn_line">신청정보</a>
+                                        <a href="javascript:reqFileDownload('9290','한국기업5','999005','after');" class="btn btn_sm btn_line">신청서류</a>
+
+                                    </td>
+                                    <td class="mb_flex"><span class="mb_tit">상세보기: </span>
+                                        <a href="javascript:fn_conResult('999005');" onclick="layerOpen(this, '.ex1');" class="btn btn_sm btn_line">상세보기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" class="subject">
+                                        <a href="javascript:;" class="btn btn_sm2 btn_submit wid_100" onclick="consultingToggle(this);">컨설팅 회차정보 입력 펼치기</a>
+                                    </td>
+                                </tr>
+                                <tr class="consultingToggleContent" style="display: none;">
+                                    <td colspan="6" class="subject">
+                                        <div class="list_table line_table">
+                                            <table>
+                                                <colgroup>
+                                                    <col style="width:100px;">
+                                                    <col>
+                                                    <col style="width:180px;">
+                                                </colgroup>
+                                                <caption class="hidden">인증 후 컨설팅 연계이력</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>회차</th>
+                                                        <th>컨설팅일시</th>
+                                                        <th>비고</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="mb_flex"><span class="mb_tit">회차: </span>1회차</td>
+                                                        <td class="mb_flex"><span class="mb_tit">컨설팅일시: </span>
+                                                            <div class="input_group">
+                                                                <div class="input">
+                                                                    <input type="text" class="datepicker">
+                                                                </div>
+                                                                <div class="input">
+                                                                    <select name="conslTime" title="시간선택">
+                                                                        <option value="06" selected="">6시</option>
+                                                                        <option value="07">7시</option>
+                                                                        <option value="08">8시</option>
+                                                                        <option value="09">9시</option>
+                                                                        <option value="10">10시</option>
+                                                                        <option value="11">11시</option>
+                                                                        <option value="12">12시</option>
+                                                                        <option value="13">13시</option>
+                                                                        <option value="14">14시</option>
+                                                                        <option value="15">15시</option>
+                                                                        <option value="16">16시</option>
+                                                                        <option value="17">17시</option>
+                                                                        <option value="18">18시</option>
+                                                                        <option value="19">19시</option>
+                                                                        <option value="20">20시</option>
+                                                                        <option value="21">21시</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="mb_flex">
+                                                            <a href="javascript:;" name="btnSave" class="btn btn_sm2 btn_sline inline mb_auto">저장</a>
+                                                            <a href="javascript:add_row('listTable9290','true','9290','3')" name="btnAdd" class="btn btn_sm2 btn_sline inline mb_auto">추가</a>
+                                                            <a href="javascript:deleteRow('9290','6977')" name="btnDel" class="btn btn_sm2 btn_sline inline mb_auto">제거</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="consultingToggleContent" style="display: none;">
+                                    <td colspan="6" class="subject">
+                                        <div class="list_table line_table">
+                                            <table>
+                                                <colgroup>
+                                                    <col style="width:100px;">
+                                                    <col>
+                                                    <col style="width:180px;">
+                                                </colgroup>
+                                                <caption class="hidden">인증 후 컨설팅 연계이력</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>회차</th>
+                                                        <th>컨설팅일시</th>
+                                                        <th>비고</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="mb_flex"><span class="mb_tit">회차: </span>1회차</td>
+                                                        <td class="mb_flex"><span class="mb_tit">컨설팅일시: </span>
+                                                            <div class="input_group">
+                                                                <div class="input">
+                                                                    <input type="text" class="datepicker">
+                                                                </div>
+                                                                <div class="input">
+                                                                    <select name="conslTime" title="시간선택">
+                                                                        <option value="06" selected="">6시</option>
+                                                                        <option value="07">7시</option>
+                                                                        <option value="08">8시</option>
+                                                                        <option value="09">9시</option>
+                                                                        <option value="10">10시</option>
+                                                                        <option value="11">11시</option>
+                                                                        <option value="12">12시</option>
+                                                                        <option value="13">13시</option>
+                                                                        <option value="14">14시</option>
+                                                                        <option value="15">15시</option>
+                                                                        <option value="16">16시</option>
+                                                                        <option value="17">17시</option>
+                                                                        <option value="18">18시</option>
+                                                                        <option value="19">19시</option>
+                                                                        <option value="20">20시</option>
+                                                                        <option value="21">21시</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="mb_flex">
+                                                            <a href="javascript:;" name="btnSave" class="btn btn_sm2 btn_sline inline mb_auto">저장</a>
+                                                            <a href="javascript:add_row('listTable9290','true','9290','3')" name="btnAdd" class="btn btn_sm2 btn_sline inline mb_auto">추가</a>
+                                                            <a href="javascript:deleteRow('9290','6977')" name="btnDel" class="btn btn_sm2 btn_sline inline mb_auto">제거</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2"><span class="mb_tit">연계일자: </span>2023-09-12</td>
+                                    <td><span class="mb_tit">기업(관)명: </span>한국기업5</td>
+                                    <td><span class="mb_tit">희망모듈: </span>모듈 B-가족친화문화 컨설팅</td>
+                                    <td class="mb_flex"><span class="mb_tit">최종결과보고서: </span>
+                                        <a href="javascript:;" data-pop="1" data="9290" class="btn btn_sm btn_line" onclick="layerOpen(this, '.js-pop');">파일수정</a>
+                                        <small class="txt_red">[대기]</small>
+                                        <small class="txt_theme">추천완료</small>
+                                    </td>
+                                    <td class="mb_flex"><span class="mb_tit">이행보고서: </span>
+                                        <a href="javascript:;" data-pop="3" data="9290" class="btn btn_sm btn_line" onclick="layerOpen(this, '.js-pop');">파일업로드</a>
                                     </td>
                                     <td class="mb_flex"><span class="mb_tit">리포팅: </span>
                                         <a href="javascript:btnPrint1('999005','010-0000-1111','한국기업5');" class="btn btn_sm btn_line">기업정보</a>
@@ -321,10 +465,10 @@
                 var $button = $(button);
                 if ($button.text().trim() === "컨설팅 회차정보 입력 펼치기") {
                     $button.text("컨설팅 회차정보 입력 닫기");
-                    $currentTr.prev('tr').find('th').attr('rowspan', 3);
+                    $currentTr.prev('tr').find('td:first-child').attr('rowspan', 3);
                 } else {
                     $button.text("컨설팅 회차정보 입력 펼치기");
-                    $currentTr.prev('tr').find('th').attr('rowspan', 2);
+                    $currentTr.prev('tr').find('td:first-child').attr('rowspan', 2);
                 }
                 $currentTr.next('tr.consultingToggleContent').toggle();
             }
