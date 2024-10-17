@@ -182,10 +182,10 @@
                                     <strong>신청사유</strong>
                                 </caption>
                                 <colgroup>
-                                    <col width="19%">
-                                    <col width="31%">
-                                    <col width="19%">
-                                    <col width="31%">
+                                    <col width="16%">
+                                    <col width="34%">
+                                    <col width="16%">
+                                    <col width="34%">
                                 </colgroup>
                                 <tbody>
                                     <tr>
@@ -209,9 +209,9 @@
                                                     <strong>재발급</strong>
                                                 </label>
                                             </div>
-                                            <div class="input_group">
+                                            <div class="input_group" id="reisuResonCd"  style="display: none;">
                                                 <div class="input">
-                                                    <select id="reisuResonCd" name="reisuResonCd" title="재발급 사유선택" style="display: none;">
+                                                    <select name="reisuResonCd" title="재발급 사유선택">
                                                         <option value="01">발급자의 변경, 계열사 이동, 퇴사 등</option>
                                                         <option value="02">기존 출입국우대카드 분실</option>
                                                         <option value="03">기존 출입국우대카드 훼손</option>
@@ -221,8 +221,8 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="input_group">
-                                                <small id="reisuResonCdCmnt" class="text txt_red mgt0" style="display: none;">※ [기존발급자] 취소 후 재발급 가능</small>
+                                            <div class="input_group" id="reisuResonCdCmnt"  style="display: none;" >
+                                                <small class="text txt_red mgt0">※ [기존발급자] 취소 후 재발급 가능</small>
                                             </div>
                                         </td>
                                     </tr>
@@ -291,30 +291,13 @@
                                     <strong>발급대상</strong>
                                 </caption>
                                 <colgroup>
-                                    <col width="19%">
-                                    <col width="31%">
-                                    <col width="19%">
-                                    <col width="31%">
+                                    <col width="16%">
+                                    <col width="34%">
+                                    <col width="16%">
+                                    <col width="34%">
                                 </colgroup>
                                 <tbody>
-                                    <tr title="대한민국 외 국적자는 여권의 영문성명 기입 바랍니다.">
-                                        <th scope="row"><span class="required">필수</span><label for="kornm">한글성명</label></th>
-                                        <td title="대한민국 외 국적자는 여권의 영문성명 기입 바랍니다.">
-                                            <div class="input_group">
-                                                <div class="input">
-                                                    <input type="text" id="kornm" name="kornm" value="" placeholder="홍길동">
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <th scope="row"><span class="required">필수</span><label for="engnm">영문성명</label></th>
-                                        <td>
-                                            <div class="input_group">
-                                                <div class="input">
-                                                    <input type="text" id="engnm" name="engnm" value="" placeholder="HONG KIL DONG (여권동일, 영대문자 표기)">
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
+                                    
                                     <tr>
                                         <th scope="row"><span class="required">필수</span><label for="cellNum1">휴대전화</label></th>
                                         <td colspan="3">
@@ -337,13 +320,31 @@
                                                 <div class="input">
                                                     <input type="text" id="cellNum3" name="cellNum3" value="" size="4" title="뒤 4자리 입력" onkeyup="fnCommonOnlyNumber(this);">
                                                 </div>
-                                                <button type="button" class="btn btn_gray">인증하기</button>
+                                                <a href="javascript:fnCheckPlusPopup();" id="btnHpAuth" class="btn btn_gray" title="휴대전화 본인인증">인증하기</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="required">필수</span><label for="kornm">한글성명</label></th>
+                                        <td>
+                                            <div class="input_group">
+                                                <div class="input">
+                                                    <input type="text" id="kornm" name="kornm" value="" placeholder="">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <th scope="row"><span class="required">필수</span><label for="engnm">영문성명</label></th>
+                                        <td>
+                                            <div class="input_group">
+                                                <div class="input">
+                                                    <input type="text" id="engnm" name="engnm" value="" placeholder="HONG KIL DONG (여권동일, 영대문자 표기)">
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><span class="required">필수</span><label for="genderMan">성별</label></th>
-                                        <td colspan="3">
+                                        <td>
                                             <div class="input_group">
                                                 <label class="checkbox sm">
                                                     <input type="radio" id="genderMan" name="gender" value="M" checked="checked">
@@ -357,300 +358,418 @@
                                                 </label>
                                             </div>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">기업(관)명</th>
-                                        <td>가친부서테스트02</td>
-                                        <th scope="row">인증여부</th>
-                                        <td>미인증</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">사업자등록번호</th>
-                                        <td>123-12-12345</td>
-                                        <th scope="row"><span class="required">필수</span><label for="memTel1">전화번호</label></th>
+                                        <th scope="row"><span class="required">필수</span><label for="birthYmd">생년월일</label></th>
                                         <td>
                                             <div class="input_group">
                                                 <div class="input">
-                                                    <select class="ss2" title="지역번호 선택" id="memTel1" name="memTel1">
-                                                        <option value="02" selected="selected"> 02</option>
-                                                        <option value="051"> 051</option>
-                                                        <option value="053"> 053</option>
-                                                        <option value="032"> 032</option>
-                                                        <option value="062"> 062</option>
-                                                        <option value="042"> 042</option>
-                                                        <option value="052"> 052</option>
-                                                        <option value="044"> 044</option>
-                                                        <option value="031"> 031</option>
-                                                        <option value="033"> 033</option>
-                                                        <option value="043"> 043</option>
-                                                        <option value="041"> 041</option>
-                                                        <option value="063"> 063</option>
-                                                        <option value="061"> 061</option>
-                                                        <option value="054"> 054</option>
-                                                        <option value="055"> 055</option>
-                                                        <option value="064"> 064</option>
-                                                        <option value="070"> 070</option>
-                                                        <option value="0505"> 0505</option>
-                                                        <option value="0507"> 0507</option>
-                                                        <option value="0504"> 0504</option>
-                                                        <option value="0303"> 0303</option>
-                                                    </select>
-                                                </div>
-                                                <span class="dash">-</span>
-                                                <div class="input">
-                                                    <input type="text" id="memTel2" name="memTel2" value="3479" maxlength="4" size="4" title="중간 4자리 입력" onkeyup="fnCommonOnlyNumber(this);" >
-                                                </div>
-                                                <span class="dash">-</span>
-                                                <div class="input">
-                                                    <input type="text" id="memTel3" name="memTel3" value="7600" maxlength="4" size="4" title="뒤 4자리 입력" onkeyup="fnCommonOnlyNumber(this);" >
+                                                    <input type="text" class="numberOnly" id="birthYmd" name="birthYmd" value="" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" maxlength="8" placeholder="생년월일 8자리(ex.19701010)">
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <th scope="row"><span class="required">필수</span><label for="nationality">국적</label></th>
+                                        <td colspan="3">
+                                            <div class="input_group">
+                                                <div class="input">
+                                                    <select title="국적 선택" id="nationality" name="nationality">
+                                                        <option value="" codenm="">선택</option>
+                                                        <option value="KOR" codenm="대한민국">대한민국(KOR)</option>
+                                                        <option value="USA" codenm="미국">미국(USA)</option>
+                                                        <option value="JPN" codenm="일본">일본(JPN)</option>
+                                                        <option value="CHN" codenm="중국">중국(CHN)</option>
+                                                        <option value="GHA" codenm="가나">가나(GHA)</option>
+                                                        <option value="GAB" codenm="가봉">가봉(GAB)</option>
+                                                        <option value="GUY" codenm="가이아나">가이아나(GUY)</option>
+                                                        <option value="GMB" codenm="감비아">감비아(GMB)</option>
+                                                        <option value="GTM" codenm="과테말라">과테말라(GTM)</option>
+                                                        <option value="GRD" codenm="그레나다">그레나다(GRD)</option>
+                                                        <option value="GRC" codenm="그리스">그리스(GRC)</option>
+                                                        <option value="GIN" codenm="기니">기니(GIN)</option>
+                                                        <option value="GNB" codenm="기니비사우">기니비사우(GNB)</option>
+                                                        <option value="NAM" codenm="나미비아">나미비아(NAM)</option>
+                                                        <option value="NRU" codenm="나우루">나우루(NRU)</option>
+                                                        <option value="NGA" codenm="나이지리아">나이지리아(NGA)</option>
+                                                        <option value="SSD" codenm="남수단">남수단(SSD)</option>
+                                                        <option value="ZAF" codenm="남아프리카공화국">남아프리카공화국(ZAF)</option>
+                                                        <option value="NLD" codenm="네덜란드">네덜란드(NLD)</option>
+                                                        <option value="NPL" codenm="네팔">네팔(NPL)</option>
+                                                        <option value="NOR" codenm="노르웨이">노르웨이(NOR)</option>
+                                                        <option value="NZL" codenm="뉴질랜드">뉴질랜드(NZL)</option>
+                                                        <option value="NIU" codenm="니우에">니우에(NIU)</option>
+                                                        <option value="NER" codenm="니제르">니제르(NER)</option>
+                                                        <option value="NIC" codenm="니카라과">니카라과(NIC)</option>
+                                                        <option value="DNK" codenm="덴마크">덴마크(DNK)</option>
+                                                        <option value="DOM" codenm="도미니카공화국">도미니카공화국(DOM)</option>
+                                                        <option value="DMA" codenm="도미니카연방">도미니카연방(DMA)</option>
+                                                        <option value="DEU" codenm="독일">독일(DEU)</option>
+                                                        <option value="TLS" codenm="동티모르">동티모르(TLS)</option>
+                                                        <option value="LAO" codenm="라오스">라오스(LAO)</option>
+                                                        <option value="LBR" codenm="라이베리아">라이베리아(LBR)</option>
+                                                        <option value="LVA" codenm="라트비아">라트비아(LVA)</option>
+                                                        <option value="RUS" codenm="러시아">러시아(RUS)</option>
+                                                        <option value="LBN" codenm="레바논">레바논(LBN)</option>
+                                                        <option value="LSO" codenm="레소토">레소토(LSO)</option>
+                                                        <option value="ROU" codenm="루마니아">루마니아(ROU)</option>
+                                                        <option value="LUX" codenm="룩셈부르크">룩셈부르크(LUX)</option>
+                                                        <option value="RWA" codenm="르완다">르완다(RWA)</option>
+                                                        <option value="LBY" codenm="리비아">리비아(LBY)</option>
+                                                        <option value="LTU" codenm="리투아니아">리투아니아(LTU)</option>
+                                                        <option value="LIE" codenm="리히텐슈타인">리히텐슈타인(LIE)</option>
+                                                        <option value="MDG" codenm="마다가스카르">마다가스카르(MDG)</option>
+                                                        <option value="MHL" codenm="마셜제도">마셜제도(MHL)</option>
+                                                        <option value="FSM" codenm="마이크로네시아연방">마이크로네시아연방(FSM)</option>
+                                                        <option value="MWI" codenm="말라위">말라위(MWI)</option>
+                                                        <option value="MYS" codenm="말레이시아">말레이시아(MYS)</option>
+                                                        <option value="MLI" codenm="말리">말리(MLI)</option>
+                                                        <option value="MEX" codenm="멕시코">멕시코(MEX)</option>
+                                                        <option value="MCO" codenm="모나코">모나코(MCO)</option>
+                                                        <option value="MAR" codenm="모로코">모로코(MAR)</option>
+                                                        <option value="MUS" codenm="모리셔스">모리셔스(MUS)</option>
+                                                        <option value="MRT" codenm="모리타니아">모리타니아(MRT)</option>
+                                                        <option value="MOZ" codenm="모잠비크">모잠비크(MOZ)</option>
+                                                        <option value="MNE" codenm="몬테네그로">몬테네그로(MNE)</option>
+                                                        <option value="MDA" codenm="몰도바">몰도바(MDA)</option>
+                                                        <option value="MDV" codenm="몰디브">몰디브(MDV)</option>
+                                                        <option value="MLT" codenm="몰타">몰타(MLT)</option>
+                                                        <option value="MNG" codenm="몽골">몽골(MNG)</option>
+                                                        <option value="MMR" codenm="미얀마">미얀마(MMR)</option>
+                                                        <option value="VUT" codenm="바누아투">바누아투(VUT)</option>
+                                                        <option value="BHR" codenm="바레인">바레인(BHR)</option>
+                                                        <option value="BRB" codenm="바베이도스">바베이도스(BRB)</option>
+                                                        <option value="VAT" codenm="교황청">교황청(VAT)</option>
+                                                        <option value="BHS" codenm="바하마">바하마(BHS)</option>
+                                                        <option value="BGD" codenm="방글라데시">방글라데시(BGD)</option>
+                                                        <option value="BEN" codenm="베냉">베냉(BEN)</option>
+                                                        <option value="VEN" codenm="베네수엘라">베네수엘라(VEN)</option>
+                                                        <option value="VNM" codenm="베트남">베트남(VNM)</option>
+                                                        <option value="BEL" codenm="벨기에">벨기에(BEL)</option>
+                                                        <option value="BLR" codenm="벨라루스">벨라루스(BLR)</option>
+                                                        <option value="BLZ" codenm="벨리즈">벨리즈(BLZ)</option>
+                                                        <option value="BIH" codenm="보스니아헤르체고비나">보스니아헤르체고비나(BIH)</option>
+                                                        <option value="BWA" codenm="보츠와나">보츠와나(BWA)</option>
+                                                        <option value="BOL" codenm="볼리비아">볼리비아(BOL)</option>
+                                                        <option value="BDI" codenm="부룬디">부룬디(BDI)</option>
+                                                        <option value="BFA" codenm="부르키나파소">부르키나파소(BFA)</option>
+                                                        <option value="BTN" codenm="부탄">부탄(BTN)</option>
+                                                        <option value="MKD" codenm="북마케도니아">북마케도니아(MKD)</option>
+                                                        <option value="BGR" codenm="불가리아">불가리아(BGR)</option>
+                                                        <option value="BRA" codenm="브라질">브라질(BRA)</option>
+                                                        <option value="BRN" codenm="브루나이">브루나이(BRN)</option>
+                                                        <option value="WSM" codenm="사모아">사모아(WSM)</option>
+                                                        <option value="SAU" codenm="사우디아라비아">사우디아라비아(SAU)</option>
+                                                        <option value="CYP" codenm="사이프러스">사이프러스(CYP)</option>
+                                                        <option value="SMR" codenm="산마리노">산마리노(SMR)</option>
+                                                        <option value="STP" codenm="상투메프린시페">상투메프린시페(STP)</option>
+                                                        <option value="SEN" codenm="세네갈">세네갈(SEN)</option>
+                                                        <option value="SRB" codenm="세르비아">세르비아(SRB)</option>
+                                                        <option value="SYC" codenm="세이셸">세이셸(SYC)</option>
+                                                        <option value="LCA" codenm="세인트 루시아">세인트 루시아(LCA)</option>
+                                                        <option value="VCT" codenm="세인트 빈센트 그레나딘">세인트 빈센트 그레나딘(VCT)</option>
+                                                        <option value="KNA" codenm="세인트 키츠 네비스">세인트 키츠 네비스(KNA)</option>
+                                                        <option value="SOM" codenm="소말리아">소말리아(SOM)</option>
+                                                        <option value="SLB" codenm="솔로몬제도">솔로몬제도(SLB)</option>
+                                                        <option value="SDN" codenm="수단">수단(SDN)</option>
+                                                        <option value="SUR" codenm="수리남">수리남(SUR)</option>
+                                                        <option value="LKA" codenm="스리랑카">스리랑카(LKA)</option>
+                                                        <option value="SWE" codenm="스웨덴">스웨덴(SWE)</option>
+                                                        <option value="CHE" codenm="스위스">스위스(CHE)</option>
+                                                        <option value="ESP" codenm="스페인">스페인(ESP)</option>
+                                                        <option value="SVK" codenm="슬로바키아">슬로바키아(SVK)</option>
+                                                        <option value="SVN" codenm="슬로베니아">슬로베니아(SVN)</option>
+                                                        <option value="SYR" codenm="시리아">시리아(SYR)</option>
+                                                        <option value="SLE" codenm="시에라리온">시에라리온(SLE)</option>
+                                                        <option value="SGP" codenm="싱가포르">싱가포르(SGP)</option>
+                                                        <option value="ARE" codenm="아랍에미리트">아랍에미리트(ARE)</option>
+                                                        <option value="ARM" codenm="아르메니아">아르메니아(ARM)</option>
+                                                        <option value="ARG" codenm="아르헨티나">아르헨티나(ARG)</option>
+                                                        <option value="ISL" codenm="아이슬란드">아이슬란드(ISL)</option>
+                                                        <option value="HTI" codenm="아이티">아이티(HTI)</option>
+                                                        <option value="IRL" codenm="아일랜드">아일랜드(IRL)</option>
+                                                        <option value="AZE" codenm="아제르바이잔">아제르바이잔(AZE)</option>
+                                                        <option value="AFG" codenm="아프가니스탄">아프가니스탄(AFG)</option>
+                                                        <option value="AND" codenm="안도라">안도라(AND)</option>
+                                                        <option value="ALB" codenm="알바니아">알바니아(ALB)</option>
+                                                        <option value="DZA" codenm="알제리">알제리(DZA)</option>
+                                                        <option value="AGO" codenm="앙골라">앙골라(AGO)</option>
+                                                        <option value="ATG" codenm="앤티가바부다">앤티가바부다(ATG)</option>
+                                                        <option value="ERI" codenm="에리트레아">에리트레아(ERI)</option>
+                                                        <option value="SWZ" codenm="에스와티니">에스와티니(SWZ)</option>
+                                                        <option value="EST" codenm="에스토니아">에스토니아(EST)</option>
+                                                        <option value="ECU" codenm="에콰도르">에콰도르(ECU)</option>
+                                                        <option value="ETH" codenm="에티오피아">에티오피아(ETH)</option>
+                                                        <option value="SLV" codenm="엘살바도르">엘살바도르(SLV)</option>
+                                                        <option value="GBR" codenm="영국">영국(GBR)</option>
+                                                        <option value="YEM" codenm="예멘">예멘(YEM)</option>
+                                                        <option value="OMN" codenm="오만">오만(OMN)</option>
+                                                        <option value="AUT" codenm="오스트리아">오스트리아(AUT)</option>
+                                                        <option value="HND" codenm="온두라스">온두라스(HND)</option>
+                                                        <option value="JOR" codenm="요르단">요르단(JOR)</option>
+                                                        <option value="UGA" codenm="우간다">우간다(UGA)</option>
+                                                        <option value="URY" codenm="우루과이">우루과이(URY)</option>
+                                                        <option value="UZB" codenm="우즈베키스탄">우즈베키스탄(UZB)</option>
+                                                        <option value="UKR" codenm="우크라이나">우크라이나(UKR)</option>
+                                                        <option value="IRQ" codenm="이라크">이라크(IRQ)</option>
+                                                        <option value="IRN" codenm="이란">이란(IRN)</option>
+                                                        <option value="ISR" codenm="이스라엘">이스라엘(ISR)</option>
+                                                        <option value="EGY" codenm="이집트">이집트(EGY)</option>
+                                                        <option value="ITA" codenm="이탈리아">이탈리아(ITA)</option>
+                                                        <option value="IND" codenm="인도">인도(IND)</option>
+                                                        <option value="IDN" codenm="인도네시아">인도네시아(IDN)</option>
+                                                        <option value="JAM" codenm="자메이카">자메이카(JAM)</option>
+                                                        <option value="ZMB" codenm="잠비아">잠비아(ZMB)</option>
+                                                        <option value="GNQ" codenm="적도기니">적도기니(GNQ)</option>
+                                                        <option value="GEO" codenm="조지아">조지아(GEO)</option>
+                                                        <option value="CAF" codenm="중앙아프리카공화국">중앙아프리카공화국(CAF)</option>
+                                                        <option value="DJI" codenm="지부티">지부티(DJI)</option>
+                                                        <option value="ZWE" codenm="짐바브웨">짐바브웨(ZWE)</option>
+                                                        <option value="TCD" codenm="차드">차드(TCD)</option>
+                                                        <option value="CZE" codenm="체코">체코(CZE)</option>
+                                                        <option value="CHL" codenm="칠레">칠레(CHL)</option>
+                                                        <option value="CMR" codenm="카메룬">카메룬(CMR)</option>
+                                                        <option value="CPV" codenm="카보베르데">카보베르데(CPV)</option>
+                                                        <option value="KAZ" codenm="카자흐스탄">카자흐스탄(KAZ)</option>
+                                                        <option value="QAT" codenm="카타르">카타르(QAT)</option>
+                                                        <option value="KHM" codenm="캄보디아">캄보디아(KHM)</option>
+                                                        <option value="CAN" codenm="캐나다">캐나다(CAN)</option>
+                                                        <option value="KEN" codenm="케냐">케냐(KEN)</option>
+                                                        <option value="COM" codenm="코모로">코모로(COM)</option>
+                                                        <option value="XKX" codenm="코소보">코소보(XKX)</option>
+                                                        <option value="CRI" codenm="코스타리카">코스타리카(CRI)</option>
+                                                        <option value="CIV" codenm="코트디부아르">코트디부아르(CIV)</option>
+                                                        <option value="COL" codenm="콜롬비아">콜롬비아(COL)</option>
+                                                        <option value="COG" codenm="콩고공화국">콩고공화국(COG)</option>
+                                                        <option value="COD" codenm="콩고민주공화국(DR콩고)">콩고민주공화국(DR콩고)(COD)</option>
+                                                        <option value="CUB" codenm="쿠바">쿠바(CUB)</option>
+                                                        <option value="KWT" codenm="쿠웨이트">쿠웨이트(KWT)</option>
+                                                        <option value="COK" codenm="쿡제도">쿡제도(COK)</option>
+                                                        <option value="HRV" codenm="크로아티아">크로아티아(HRV)</option>
+                                                        <option value="KGZ" codenm="키르기즈">키르기즈(KGZ)</option>
+                                                        <option value="KIR" codenm="키리바시">키리바시(KIR)</option>
+                                                        <option value="TJK" codenm="타지키스탄">타지키스탄(TJK)</option>
+                                                        <option value="TZA" codenm="탄자니아">탄자니아(TZA)</option>
+                                                        <option value="THA" codenm="태국">태국(THA)</option>
+                                                        <option value="TUR" codenm="튀르키예공화국">튀르키예공화국(TUR)</option>
+                                                        <option value="TGO" codenm="토고">토고(TGO)</option>
+                                                        <option value="TON" codenm="통가">통가(TON)</option>
+                                                        <option value="TKM" codenm="투르크메니스탄">투르크메니스탄(TKM)</option>
+                                                        <option value="TUV" codenm="투발루">투발루(TUV)</option>
+                                                        <option value="TUN" codenm="튀니지">튀니지(TUN)</option>
+                                                        <option value="TTO" codenm="트리니다드토바고">트리니다드토바고(TTO)</option>
+                                                        <option value="PAN" codenm="파나마">파나마(PAN)</option>
+                                                        <option value="PRY" codenm="파라과이">파라과이(PRY)</option>
+                                                        <option value="PAK" codenm="파키스탄">파키스탄(PAK)</option>
+                                                        <option value="PNG" codenm="파푸아뉴기니">파푸아뉴기니(PNG)</option>
+                                                        <option value="PLW" codenm="팔라우">팔라우(PLW)</option>
+                                                        <option value="PSE" codenm="팔레스타인">팔레스타인(PSE)</option>
+                                                        <option value="PER" codenm="페루">페루(PER)</option>
+                                                        <option value="PRT" codenm="포르투갈">포르투갈(PRT)</option>
+                                                        <option value="POL" codenm="폴란드">폴란드(POL)</option>
+                                                        <option value="FRA" codenm="프랑스">프랑스(FRA)</option>
+                                                        <option value="FJI" codenm="피지">피지(FJI)</option>
+                                                        <option value="FIN" codenm="핀란드">핀란드(FIN)</option>
+                                                        <option value="PHL" codenm="필리핀">필리핀(PHL)</option>
+                                                        <option value="HUN" codenm="헝가리">헝가리(HUN)</option>
+                                                        <option value="AUS" codenm="호주">호주(AUS)</option>
+                                                    </select>
+                                                </div>
+                                                <div class="input">
+                                                    <input type="text" id="searchNationality" name="searchNationality" value="" placeholder="검색어" maxlength="10">
+                                                </div>
+                                                <a href="javascript:fnSearchNationality();"  class="btn btn_gray" title="국적 검색">검색</a>
+
+                                            </div>
+                                            <small class="star_txt txt_red">*외국인의 경우 여권사본 메일발송(ffsb@kihf.or.kr) 필수</div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="required">필수</span><label for="passportNo">여권번호</label></th>
+                                        <td>
+                                            <div class="input_group">
+                                                <div class="input">
+                                                    <input type="text" id="passportNo" name="passportNo" value="" placeholder="영문 대문자 표기(ex.M1234567)">
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <th scope="row"><span class="required">필수</span><label for="passportIsuYmd">여권발급일자</label></th>
+                                        <td>
+                                            <div class="input_group">
+                                                <div class="input">
+                                                    <input type="text" id="passportIsuYmd" name="passportIsuYmd" value="" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" maxlength="8" placeholder="년월일 8자리 표기(ex.20220101)">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="required">필수</span><label for="passportExpYmd">여권유효기간</label></th>
+                                        <td>
+                                            <div class="input_group">
+                                                <div class="input">
+                                                    <input type="text" id="passportExpYmd" name="passportExpYmd" value="" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" maxlength="8" placeholder="년월일 8자리 표기(ex.20220101)">                                                </div>
+                                            </div>
+                                        </td>
+                                        <th scope="row"><span class="required">필수</span><label for="passportIsuYmd">전화</label></th>
+                                        <td>
+                                            <div class="input_group">
+                                                <div class="input">
+                                                    <select title="지역번호 선택" id="rcvTel1" name="rcvTel1">
+                                                        <option value="02">02</option>
+                                                        <option value="051">051</option>
+                                                        <option value="053">053</option>
+                                                        <option value="032">032</option>
+                                                        <option value="062">062</option>
+                                                        <option value="042">042</option>
+                                                        <option value="052">052</option>
+                                                        <option value="044">044</option>
+                                                        <option value="031">031</option>
+                                                        <option value="033">033</option>
+                                                        <option value="043">043</option>
+                                                        <option value="041">041</option>
+                                                        <option value="063">063</option>
+                                                        <option value="061">061</option>
+                                                        <option value="054">054</option>
+                                                        <option value="055">055</option>
+                                                        <option value="064">064</option>
+                                                        <option value="070">070</option>
+                                                        <option value="0505">0505</option>
+                                                        <option value="0507">0507</option>
+                                                        <option value="0504">0504</option>
+                                                        <option value="0303">0303</option>
+                                                    </select>
+                                                </div>
+                                                <span class="dash">-</span>
+                                                <div class="input">
+                                                    <input type="text" id="rcvTel2" name="rcvTel2" value="" size="4" title="중간 4자리 입력">
+                                                </div>
+                                                <span class="dash">-</span>
+                                                <div class="input">
+                                                    <input type="text" id="rcvTel3" name="rcvTel3" value="" size="4" title="뒤 4자리 입력">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="required">필수</span><label for="passportExpYmd">주소(카드수령지)</label></th>
+                                        <td colspan="3">
+                                            <div class="input_group w50_pc">
+                                                <div class="input">
+                                                    <input type="text" id="rcvZip" name="rcvZip" value="" placeholder="12345" title="우편번호입력" maxlength="10" readonly="readonly">
+                                                </div>
+                                                <button type="button" class="btn btn_gray" onclick="openPostPopup('1')">주소검색</button>
+                                            </div>
+                                            <div class="input_group m100">
+                                                <div class="input">
+                                                    <input type="text" id="rcvBasicAddr" name="rcvBasicAddr" placeholder="상세주소 입력" title="상세주소 입력" value="">
+                                                </div>
+                                                <div class="input">
+                                                    <input type="text" id="rcvDtlAddr" name="rcvDtlAddr" placeholder="건물명 입력" title="건물명 입력" value="">
+                                                </div>
+                                            </div>
+                                            <small class="star_txt txt_red">*반송 및 재발송 비용 본인 부담 (정확한 주소 입력 요망)</small>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
 
-                    <div class="sub_section">
-                        <div class="title_bulit">
-                            <h3>참석자 정보</h3>
-                            <div class="r"><span class="txt_red">*</span> 필수 입력사항</div>
+                    <div class="terms_wrap">
+                        <div class="terms_all">
+                            <label class="checkbox sm">
+                                <input type="checkbox" id="labelAgreeAll" name="joinAgreeCdArry" value="">
+                                <span class="ck_icon"></span>
+                                <strong><span class="txt_red">*</span> 개인정보 수집 및 이용, 개인정보의 제3자 제공에 모두 동의합니다.</strong>
+                            </label>
                         </div>
-                        <div class="add_wrap">
-                            <div class="add_item">
-                                <div class="form_table">
-                                    <table>
-                                        <caption class="hidden">
-                                            <strong>참석자 정보 정보입력</strong>
-                                            <p>소속부서,참석자(성명),직급,전화,휴대전화,이메일로 구성된 표</p>
-                                        </caption>
-                                        <colgroup>
-                                            <col width="19%">
-                                            <col width="31%">
-                                            <col width="19%">
-                                            <col width="31%">
-                                        </colgroup>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row"><span class="required">필수</span><label for="deptNm">소속부서</label></th>
-                                                <td colspan="3">
-                                                    <div class="input_group">
-                                                        <div class="input">
-                                                            <input type="text" id="deptNm" name="deptNm" value="관리팀" maxlength="50">
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"><span class="required">필수</span><label for="attdNm">참석자(성명)</label></th>
-                                                <td>
-                                                    <div class="input_group">
-                                                        <div class="input">
-                                                            <input type="text" id="attdNm" name="attdNm" value="가친부서02" maxlength="25">
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <th scope="row"><span class="required">필수</span><label for="positNm">직급</label></th>
-                                                <td>
-                                                    <div class="input_group">
-                                                        <div class="input">
-                                                            <input type="text" id="positNm" name="positNm" value="과장" maxlength="25">
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row"><span class="required">필수</span><label for="attdTel1">전화</label></th>
-                                                <td>
-                                                    <div class="input_group">
-                                                        <div class="input">
-                                                            <select title="지역번호 선택" id="attdTel1">
-                                                                <option value="02" selected="selected">02</option>
-                                                                <option value="051">051</option>
-                                                                <option value="053">053</option>
-                                                                <option value="032">032</option>
-                                                                <option value="062">062</option>
-                                                                <option value="042">042</option>
-                                                                <option value="052">052</option>
-                                                                <option value="044">044</option>
-                                                                <option value="031">031</option>
-                                                                <option value="033">033</option>
-                                                                <option value="043">043</option>
-                                                                <option value="041">041</option>
-                                                                <option value="063">063</option>
-                                                                <option value="061">061</option>
-                                                                <option value="054">054</option>
-                                                                <option value="055">055</option>
-                                                                <option value="064">064</option>
-                                                                <option value="070">070</option>
-                                                                <option value="0505">0505</option>
-                                                                <option value="0507">0507</option>
-                                                                <option value="0504">0504</option>
-                                                                <option value="0303">0303</option>
-                                                            </select>
-                                                        </div>
-                                                        <span class="dash">-</span>
-                                                        <div class="input">
-                                                            <input type="text" id="attdTel2" value="0000" maxlength="4" size="4" title="중간 4자리 입력" onkeyup="fnCommonOnlyNumber(this);">
-                                                        </div>
-                                                        <span class="dash">-</span>
-                                                        <div class="input">
-                                                            <input type="text" id="attdTel3" value="0000" maxlength="4" size="4" title="뒤 4자리 입력" onkeyup="fnCommonOnlyNumber(this);">
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <th scope="row"><span class="required">필수</span><label for="attdHp1">휴대전화</label></th>
-                                                <td>
-                                                    <div class="input_group">
-                                                        <div class="input">
-                                                            <select class="ss2" title="서비스번호 선택" id="attdHp1">
-                                                                <option value="010" selected="selected">010</option>
-                                                                <option value="011">011</option>
-                                                                <option value="016">016</option>
-                                                                <option value="017">017</option>
-                                                                <option value="018">018</option>
-                                                                <option value="019">019</option>
-                                                            </select>
-                                                        </div>
-                                                        <span class="dash">-</span>
-                                                        <div class="input">
-                                                            <input type="text" id="attdHp2" value="1111" maxlength="4" size="4" title="중간 4자리 입력" onkeyup="fnCommonOnlyNumber(this);">
-                                                        </div>
-                                                        <span class="dash">-</span>
-                                                        <div class="input">
-                                                            <input type="text" id="attdHp3" value="1111" maxlength="4" size="4" title="뒤 4자리 입력" onkeyup="fnCommonOnlyNumber(this);">
-                                                        </div>
-                                                    </div>
-                                                    <div class="input_group">
-                                                        <label class="checkbox sm">
-                                                            <input type="checkbox" id="b6" name="smsRcvYn" value="Y">
-                                                            <span class="ck_icon"></span>
-                                                            <strong><b>SMS 수신동의</b> (접수현황 및 안내정보)</strong>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">
-                                                    <label for="memEmail1">
-                                                        <span class="required">필수</span>이메일 </label>
-                                                </th>
-                                                <td colspan="3">
-                                                    <div class="input_group">
-                                                        <div class="input">
-                                                            <input type="text" id="memEmail1" value="ffsb" maxlength="50" title="이메일 아이디 입력">
-                                                        </div>
-                                                        <span class="dash">@</span>
-                                                        <div class="input">
-                                                            <input type="text" id="memEmail3" value="kihf.or.kr" maxlength="30" title="이메일 계정 입력">
-                                                        </div>
-                                                        <div class="input">
-                                                            <select id="memEmail2" title="이메일 계정 선택" onchange="fnMemEmailDomain();">
-                                                                <option value="">직접입력</option>
-                                                                <option value="naver.com">naver.com</option>
-                                                                <option value="gmail.com">gmail.com</option>
-                                                                <option value="nate.com">nate.com</option>
-                                                                <option value="hotmail.com">hotmail.com</option>
-                                                                <option value="hanmail.net">hanmail.net</option>
-                                                            </select>
-                                                            <script>
-                                                                function fnMemEmailDomain(email) {
-                                                                    $("#emailAddr2").val(email);
-                                                                }
-                                                            </script>
-                                                        </div>
-                                                    </div>
-                                                    <div class="input_group">
-                                                        <label class="checkbox sm">
-                                                            <input type="checkbox" id="labelA8" name="emailRcvAgreeYn" value="Y" checked="checked" disabled="disabled">
-                                                            <span class="ck_icon"></span>
-                                                            <strong>수신동의</strong>
-                                                        </label>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="bottom_btns mgt20">
-                                    <a href="javascript:;" id="addAttendee" class="btn btn_sm btn_default" onclick="addTable()">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0h24v24H0z" stroke="none"/><path d="M12 5v14M5 12h14"/></svg>
-                                        참석자 추가
-                                    </a>
-                                </div>
+    
+                        <div class="terms_box">
+                            <div class="default_table">
+                                <table>
+                                    <caption class="hidden">개인정보 수집 및 이용, 개인정보의 제3자 제공에 동의</caption>
+                                    <!-- 20180122 접근성 수정 -->
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" colspan="2">[개인정보 수집.이용]</th>
+                                            <th scope="col" colspan="2">[개인정보의 제3자 제공]</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="al">
+                                        <tr>
+                                            <th scope="row" rowspan="2">개인정보 수집 및 이용목적</th>
+                                            <td rowspan="2">출입국우대 카드 이용 서비스 제공 및 출입국우대 카드 발급 관련 제반 목적 </td>
+                                            <th scope="row">개인정보를 제공받는 자</th>
+                                            <!-- 텍스트 일부 삭제 : 2018.01.17 -->
+                                            <!-- <td>법무부, 카드발급 대행기관(우리은행)</td> -->
+                                            <td>법무부</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="b">개인정보를 제공 받는 자의 개인 정보 이용목적</th>
+                                            <td>카드 발급 및 카드 유효성 확인 관련 제반 목적</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" style="width: 22%">개인정보의 보유 및 이용기간</th>
+                                            <td style="width: auto">출입국우대 카드 유효 기간</td>
+                                            <th scope="row" style="width: 19%">제공받는 개인정보의 보유 및 이용기간</th>
+                                            <td style="width: 30%">좌동</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">수집하는 고유 식별정보 항목</th>
+                                            <td>여권번호</td>
+                                            <th scope="row" rowspan="2">제공하는 개인정보 항목</th>
+                                            <td rowspan="2">좌동</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">수집하는 일반 개인정보 항목</th>
+                                            <td>신청서류에 명시된 성명, 생년월일, 성별, 주소, 국적, 연락처</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">동의 거부 권리 및 동의 거부에 따른 제한사항</th>
+                                            <td colspan="3">귀하는 개인정보 수집·이용 및 제3자 제공에 거부할 권리가 있으며, 위 항목 동의 거부 시 출입국 우대 카드 발급이 제한됩니다.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="sub_section">
-                        <div class="title_bulit">
-                            <h3>개인정보 및 기업정보 수집ㆍ이용에 관한 사항</h3>
-                        </div>
-                        <div class="form_table">
-                            <table>
-                                <caption class="hidden">
-                                    <strong>개인정보 및 기업정보 수집ㆍ이용에 관한 사항 이용동의</strong>
-                                </caption>
-                                <colgroup>
-                                    <col width="19%">
-                                    <col width="">
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">수집항목</th>
-                                        <td>
-                                            <ul class="dot_ul">
-                                                <li>개인정보 : 담당자 성명, 부서 및 직위, 전화번호, 이메일</li>
-                                                <li>기업정보 : 회원가입 및 교육콘텐츠 신청 시 기업으로부터 제공받은 정보</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">이용목적</th>
-                                        <td>
-                                            <ul class="dot_ul">
-                                                <li>개인 및 기업 식별, 가족친화인증 설명회 및 컨설팅, 인증신청 안내</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">보유 및 이용기간</th>
-                                        <td>
-                                            <ul class="dot_ul">
-                                                <li>개인정보 삭제요청 시 까지</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">동의 거부 관리 및 불이익 내용</th>
-                                        <td>
-                                            <ul class="dot_ul">
-                                                <li>위 개인정보 및 기업정보 수집·이용에 관한 동의는 거부할 수 있으며, 다만 동의하지 않을 경우 설명회신청을 하실 수 없습니다.</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">수집항목</th>
-                                        <td>
-                                            <ul class="dot_ul">
-                                                <li>개인정보 : 담당자 성명, 부서 및 직위, 전화번호, 이메일</li>
-                                                <li>기업정보 : 회원가입 및 교육콘텐츠 신청 시 기업으로부터 제공받은 정보</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="terms_radio">
-                                <p><span class="required">*</span> 본인은 상기 내용을 확인하였으며 위와 같이 개인 정보 수집‧이용에 동의합니다.</p>
+                            <div class="terms_radio_flex">
+                                <p>고유 식별 정보 수집 및 이용에 동의하십니까?</p>
                                 <div class="radios">
                                     <label class="checkbox sm">
-                                        <input type="radio" id="indiAgreeYn2Y" name="indiAgreeYn2" value="Y" >
+                                        <input type="radio" id="idAgreeY" name="idAgreeYn" value="Y">
                                         <span class="ck_icon"></span>
                                         <strong>동의함</strong>
                                     </label>
                                     <label class="checkbox sm">
-                                        <input type="radio" id="indiAgreeYn2N" name="indiAgreeYn2" value="N" >
+                                        <input type="radio" id="idAgreeN" name="idAgreeYn" value="N">
+                                        <span class="ck_icon"></span>
+                                        <strong>동의하지 않음</strong>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="terms_radio_flex">
+                                <p>일반 개인 정보 수집 및 이용에 동의하십니까?</p>
+                                <div class="radios">
+                                    <label class="checkbox sm">
+                                        <input type="radio" id="genAgreeY" name="genAgreeYn" value="Y">
+                                        <span class="ck_icon"></span>
+                                        <strong>동의함</strong>
+                                    </label>
+                                    <label class="checkbox sm">
+                                        <input type="radio" id="genAgreeN" name="genAgreeYn" value="N">
+                                        <span class="ck_icon"></span>
+                                        <strong>동의하지 않음</strong>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="terms_radio_flex">
+                                <p>상기 개인정보의 제3자 제공에 동의하십니까?</p>
+                                <div class="radios">
+                                    <label class="checkbox sm">
+                                        <input type="radio" id="suplyAgreeY" name="suplyAgreeYn" value="Y">
+                                        <span class="ck_icon"></span>
+                                        <strong>동의함</strong>
+                                    </label>
+                                    <label class="checkbox sm">
+                                        <input type="radio" id="suplyAgreeN" name="suplyAgreeYn" value="N">
                                         <span class="ck_icon"></span>
                                         <strong>동의하지 않음</strong>
                                     </label>
@@ -659,84 +778,264 @@
                         </div>
                     </div>
 
-                    <div class="sub_section">
-                        <div class="title_bulit">
-                            <h3>개인 및 기업정보의 제3자 제공에 관한 사항</h3>
+                    <div class="terms_wrap">
+                        <div class="terms_all">
+                            <label class="checkbox sm">
+                                <input type="checkbox" id="labelCheckAll" name="joinCheckCdArry" value="">
+                                <span class="ck_icon"></span>
+                                <strong>출입국우대카드 발급 및 관리지침</strong>
+                            </label>
                         </div>
-                        <div class="form_table">
-                            <table>
-                                <caption class="hidden">
-                                    <strong>개인 및 기업정보의 제3자 제공에 관한 사항 이용동의</strong>
-                                </caption>
-                                <colgroup>
-                                    <col width="19%">
-                                    <col width="">
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">제공받는 자</th>
-                                        <td>여성가족부, 한국건강가정진흥원</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">제공받는 자의 개인 및 기업정보 이용목적 </th>
-                                        <td>
-                                            <ul class="dot_ul">
-                                                <li>개인 및 기업식별</li>
-                                                <li>가족친화 인증신청 관련 제반목적</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">제공하는 개인 및 기업정보 항목</th>
-                                        <td>
-                                            <ul class="dot_ul">
-                                                <li>개인정보 : 담당자 성명, 부서 및 직위, 전화번호, 이메일</li>
-                                                <li>기업정보 : 회원가입 및 설명회 신청 시 기업으로부터 제공받은 정보</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">보유 및 이용기간</th>
-                                        <td>
-                                            <ul class="dot_ul">
-                                                <li>개인정보 삭제요청 시 까지</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">동의 거부 관리 및 불이익 내용 </th>
-                                        <td>위 개인정보 및 기업정보 수집·이용에 관한 동의는 거부할 수 있으며, 다만 동의하지 않을 경우 설명회신청을 하실 수 없습니다.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="terms_radio">
-                                <p><span class="required">*</span> 본인은 상기 내용을 확인하였으며 위와 같이 개인 정보 수집‧이용에 동의합니다.</p>
+
+                        <div class="terms_box">
+                            <div class="cont">
+                                <div class="terms_cnt">
+                                    <div class="inners4">
+                                        <h2 class="cls1">
+                                            <b>제1조(목적)</b>
+                                        </h2>
+                                        <p class="mts5">이 지침은 국가·사회 발전 등을 위해 인센티브 제공 등의 일환으로 공헌자 등에게 출입국절차를 보다 편리하게 제공하기 위하여 출입국우대카드의 발급, 관리, 출입국 편의 제공 방식 등 필요한 사항을 규정함을 목적으로 한다.</p>
+                                        <h2 class="cls1 mts15">
+                                            <b>제2조(근거 법령)</b>
+                                        </h2>
+                                        <p class="mts5">이 지침의 근거 법령은 출입국관리법 제3조·제6조·제12조·제28조, 같은 법 시행령 제1조·제15조, 같은 법 시행규칙 제1조·제19조·제39조 이다.</p>
+                                        <h2 class="cls1 mts15">
+                                            <b>제3조(정의)</b>
+                                        </h2>
+                                        <p class="mts5">이 지침에서 사용하는 용어의 정의는 다음과 같다.</p>
+                                        <ol class="mts5 tps17">
+                                            <li>1. “출입국우대”란 일정 자격의 국민 및 외국인이 출입국할 때 출입국우대심사대 이용 등 출입국절차를 편리하게 제공하는 것을 말한다.</li>
+                                            <li>2. “출입국우대카드”(이하 “우대카드”라 한다)란 제1호의 출입국우대를 받을 수 있음을 나타내는 것을 말한다.</li>
+                                            <li>3. “출입국우대전자카드”(이하 “전자카드”라 한다)란 현물카드를 발급하지 않고 정보화처리절차에 따라 명단을 관리하여 우대카드발급 대상자임을 확인할 수 있는 것을 말한다.</li>
+                                            <li>4. “출입국우대심사대”(이하 “우대심사대”라 한다)란 출입국우대카드 소지자 등을 대상으로 출입국심사를 간편하게 제공하기 위해 공·항만 출입국심사장에 설 치된 출입국심사대를 말한다.</li>
+                                            <li>5. “우대카드발급 대상자 선정기관”이란(이하 “선정기관”이라 한다) 우대카드 발급 대상자를 선정하여 법무부장관에게 추천하는 기관을 말한다.</li>
+                                            <li>6. “출입국우대카드 발급 대행기관”(이하 “발급대행기관”라 한다)이란 우대카드 발급과 관련하여 우대카드 신청 접수 및 발급 등의 업무를 대행하는 역할을 하 며 법무부장관이 지정하는 기관을 말한다.</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제4조(우대카드 발급)</b>
+                                        </h2>
+                                        <ol class="mts5 tps17">
+                                            <li>① 법무부장관은 법질서 준수, 사회공헌, 사회적 약자 보호 등 국가·사회발전을 장려하기 위하여 필요하다고 인정하는 경우 우대카드를 발급 할 수 있다.</li>
+                                            <li>② 법무부장관은 적정한 출입국우대를 구현하기 위해 우대심사대의 운용 현황 등 제반 여건을 고려하여 출입국우대 대상 인원의 일정 범위를 정할 수 있다.</li>
+                                            <li>③ 법무부장관은 우대카드의 도안을 선정할 때 선정기관과 협의할 수 있다.</li>
+                                            <li>④ 법무부장관은 예산의 범위 내에서 우대카드(실물카드)를 발급함을 원칙으로 하며, 정보화처리절차(온라인 포함)에 따라 전자카드를 발급할 수 있다.</li>
+                                            <li>⑤ 제5조 제1호, 제2호의 우대카드 발급 대상자에 대해서는 기존에 법무부에서 정보화처리절차에 따라 명단을 관리하고 있으므로 별도의 절차 없이 전자카드를 발급한 것으로 본다.</li>
+                                            <li>⑥ 선정기관에서 개인이 아닌 단체 또는 기업체를 기준으로 제5조에 따른 우대카드 발급 대상자를 선정하는 경우에는 단체 또는 기업체 별로 1명에게만 우대카드를 발급한다.</li>
+                                            <li>⑦ 우대카드는 같은 사람에 대하여 중복하여 발급하지 않는다.</li>
+                                            <li>⑧ 법무부장관은 제1항의 규정에도 불구하고 우대카드 발급 대상자가 원하는 경우나 그 밖에 필요한 경우에는 전자카드를 발급할 수 있다.</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제5조(우대카드 발급 대상자)</b>
+                                        </h2>
+                                        <p class="mts5">우대카드는 다음 각 호의 어느 하나에 해당하고 우대카드 발급을 신청한 사람에게 발급한다.</p>
+                                        <ol class="mts5 tps17">
+                                            <li>1. 법무부장관이 선정한 APEC 기업인여행카드 발급 대상자</li>
+                                            <li>2. 법무부장관이 선정한 기업투자(D-8) 체류자격의 외국인등록증 소지자</li>
+                                            <li>3. 법무부장관이 선정한 범죄피해자 지원 우수 법인 종사자</li>
+                                            <li>4. 고용노동부장관이 선정한 고용창출 우수기업 종사자</li>
+                                            <li>5. 여성가족부장관이 선정한 가족친화 인증기업 종사자</li>
+                                            <li>6. 국가보훈처장이 선정한 독립유공자</li>
+                                            <li>7. 금융위원회 위원장이 선정한 외국인 금융투자가</li>
+                                            <li>8. 국세청장이 선정한 모범납세자</li>
+                                            <li>9. 관세청장이 선정한 종합인증우수업체 카드 발급 대상자</li>
+                                            <li>10. 인천국제공항공사사장이 선정한 기업인카드 발급 대상자</li>
+                                            <li>11. 대한무역투자진흥공사사장이 선정한 외국인투자가</li>
+                                            <li>12. 동반성장위원원회 위원장이 선정한 동반성장지수 우수업체 종사자</li>
+                                            <li>13. 한국법무보호복지공단 이사장이 선정한 출소자 고용 우수기업 종사자</li>
+                                            <li>14. 문화체육관광부 장관이 선정한 문화예술후원 인증업체 종사자</li>
+                                            <li>15. 이민자 사회통합에 기여한 공로로 세계인의 날에 포상을 받은 개인 또는 단체의 구성원 1인</li>
+                                            <li>16. 출입국관리법 제41조에 따른 사회통합 자원봉사위원 중 활동이 우수한 사람 으로서 지방출입국·외국인 관서의 장이 추천하여 법무부장관이 인정한 사람</li>
+                                            <li>17. 국적법 제7조 제1항 제2호에 따른 특별귀화자 및 국적업무 처리지침에 따른 명예국민</li>
+                                            <li>18. 제1호부터 제17호까지의 규정에 준하는 사람 등으로서 법무부장관이 우대카드 발급이 적당하다고 인정하는 사람</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제6조(우대카드 발급의 결격 사유)</b>
+                                        </h2>
+                                        <ol class="mts5 tps17">
+                                            <li>① 다음 각 호의 어느 하나에 해당하는 사람에 대해서는 우대카드를 발급하지 아니한다. <ul class="tps17">
+                                                    <li>1. 발급 접수일 기준 최근 3년 이내에 출입국관리법을 위반하여 500만원 이상의 범칙금 처분을 받은 사람</li>
+                                                    <li>2. 출입국규제자로 등재된 사람</li>
+                                                    <li>3. 법무부장관이 우대카드 발급이 적당하지 아니하다고 인정하는 사람</li>
+                                                </ul>
+                                            </li>
+                                            <li>② 법무부장관은 제1항 제1호 규정에 해당하는 경우에도 출입국우대가 필요하다고 인정하는 사람에 대해서는 우대카드를 발급할 수 있다.</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제7조(발급대행기관의 선정)</b>
+                                        </h2>
+                                        <p class="mts5">법무부장관은 다음 각 호의 요건을 갖춘 기관을 공개 모집 등의 방법에 의하여 발급대행기관으로 선정·지정할 수 있다.</p>
+                                        <ol class="mts5 tps17">
+                                            <li>1. 정보화처리절차에 따라 우대카드를 발급할 수 있는 전산시스템을 갖추고 있을 것</li>
+                                            <li>2. 출입국전산시스템인 출입국관리정보시스템과 연계할 수 있는 시설과 프로그램을 갖추고 있을 것</li>
+                                            <li>3. 우대카드의 도안 및 품질 등 우대카드 발급과 관련하여 법무부장관이 요구하는 사항을 준수하는 것에 동의할 것</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제8조(발급대행기관의 역할)</b>
+                                        </h2>
+                                        <p class="mts5">발급대행기관은 다음 각 호의 업무를 수행한다.</p>
+                                        <ol class="mts5">
+                                            <li>1. 우대카드의 발급 신청 접수</li>
+                                            <li>2. 우대카드의 발급 및 배포</li>
+                                            <li>3. 우대카드 발급과 관련하여 법무부의 출입국관리정보시스템과 전산연계 업무</li>
+                                            <li>4. 전자우대카드 관련 업무</li>
+                                            <li>5. 법무부장관이 기타 우대카드 발급과 관련하여 필요하다고 인정하여 명한 사항</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제9조(우대카드 발급 신청 및 접수)</b>
+                                        </h2>
+                                        <ol class="mts5 tps17">
+                                            <li>① 제5조의 우대카드발급 대상자의 우대카드 발급 신청은 해당 선정기관이 대행한다.</li>
+                                            <li>② 선정기관은 자체 선정한 우대카드 대상자의 신청서를 접수하고 발급대행기관과 법무부에 신청자의 정보를 전송한다.</li>
+                                            <li>③ 선정기관 또는 대행기관이 서식 1의 신청서와 다른 서식을 사용하고자 하는 때에는 법무부와 협의하여 승인을 받아야 한다.</li>
+                                            <li>④ 제2항, 제3항의 신청 접수의 정보화처리절차는 발급대행기관이 정하는 절차에 따라 한다.</li>
+                                            <li>⑤ 발급대행기관은 제2항, 제3항에 따라 우대카드 신청을 선정기관으로부터 받은 경우 반드시 법무부에 제6조에 따른 우대카드 발급의 결격 여부를 조회하여야 한다.</li>
+                                            <li>⑥ 발급대행기관은 제5항의 조회 결과, 우대카드 발급 대상자가 결격 사유에 해당 하는 경우 그 사실을 해당 선정기관 또는 신청자에게 통보한다.(온라인 포함)</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제10조(우대카드의 재발급)</b>
+                                        </h2>
+                                        <ol class="mts5 tps17">
+                                            <li>① 법무부장관은 우대카드를 발급 받은 사람에게 다음 각 호 어느 하나에 해당하는 사유가 있으면 우대카드를 재발급할 수 있다. <ol class="tps17">
+                                                    <li>1. 우대카드가 분실되었거나 없어진 때</li>
+                                                    <li>2. 우대카드가 훼손된 때</li>
+                                                    <li>3. 우대카드명의인이 여권을 새로이 발급받은 때</li>
+                                                    <li>4. 우대카드의 유효기간이 만료된 때</li>
+                                                </ol>
+                                            </li>
+                                            <li>② 우대카드의 재발급은 제9조의 규정을 준용하며 그 사유가 발생한 날부터 14일 이내에 한다.</li>
+                                            <li>③ 제1항 제3호 사유가 발생하여 우대카드를 재발급할 때에는 제1항의 규정에도 불구하고 정보화처리절차에 따라 새로운 여권의 변경사항만 수정하고 원 우대카드를 사용하게 할 수 있다.</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제11조(우대카드의 효력 취소)</b>
+                                        </h2>
+                                        <ol class="mts5 tps17">
+                                            <li>① 법무부장관은 다음 각 호의 어느 하나에 해당 하는 경우 우대카드의 효력을 취소할 수 있다. <ol class="tps17">
+                                                    <li>1. 거짓이나 그 밖의 부정한 방법으로 우대카드를 받은 것이 밝혀진 경우</li>
+                                                    <li>2. 우대카드를 남에게 대용하게 하는 등 부정하게 사용한 경우</li>
+                                                    <li>3. 제6조에 따른 우대카드 발급의 결격사유가 우대카드 발급 후에 발견된 경우</li>
+                                                    <li>4. 우대카드 발급 조건을 위반한 경우</li>
+                                                    <li>5. 사정 변경으로 우대카드의 효력을 더 이상 유지시킬 수 없는 중대한 사유가 발생한 경우</li>
+                                                    <li>6. 선정기관의 선정요건 등에 위배되어 선정 효력이 상실된 경우</li>
+                                                </ol>
+                                            </li>
+                                            <li>② 선정기관은 스스로 선정한 우대카드 발급 대상자에게 제1항의 우대카드 효력 취소 사유가 발견 된 경우 즉시 법무부장관에게 그 사실을 알려야 한다.</li>
+                                            <li>③ 출입국관리사무소장은 업무처리 과정에서 우대카드 발급 대상자에게 제1항의 우대카드 효력 취소 사유가 발견된 경우 즉시 법무부장관에게 보고하여야 한다. (정보화처리절차에 따른 보고 포함)</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제12조(우대카드의 유효기간)</b>
+                                        </h2>
+                                        <p class="mts5">우대카드의 유효기간은 발급일로부터 3년으로 정한다. 다만 선정기관이 우대카드발급대상자 선정 시 따로 정할 때에는 그 기간으로 한다.</p>
+                                        <h2 class="cls1 mts15">
+                                            <b>제13조(우대카드소지자의 출입국심사)</b>
+                                        </h2>
+                                        <ol class="mts5 tps17">
+                                            <li>① 우대카드 소지자는 우대심사대에서 여권, 우대카드(전자카드 포함), 탑승권 등 출입국심사에 필요한 서류를 출입국관리공무원 에게 제출하여 출입국심사를 받는다. 다만, 출입국관리공무원은 정보화처리절차에 따라 본인 확인이 가능한 경우에는 우대카드 제출을 생략하게 할 수 있다.</li>
+                                            <li>② 우대카드소지자와 동반하는 3명 이내의 사람도 우대심사대에서 출입국심사를 받을 수 있다.</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제14조(선정기관의 협조의무)</b>
+                                        </h2>
+                                        <ol class="mts5 tps17">
+                                            <li>① 법무부장관은 선정기관에 대하여 그 기관의 소관 업무 범위 내에서 우대카드 소지자에게 우대 혜택을 제공할 것을 요청할 수 있다.</li>
+                                            <li>② 제1항의 요청을 받은 선정기관은 정당한 이유 없이 그 요청을 거부하여서는 아니 된다.</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제15조(우대카드 발급의 예외)</b>
+                                        </h2>
+                                        <ol class="mts5 tps17">
+                                            <li>① 제5조의 우대카드 발급 대상자 중 독립유공자 등 고령, 건강 등의 사유로 제9조에 따른 우대카드 발급을 신청하기 어렵다고 법무부 장관이 인정하는 사람은 제3조제1호의 출입국우대를 받을 수 있으며 제13조제1항에 따라 출입국심사를 받을 때 우대카드를 제출하지 않아도 된다.</li>
+                                            <li>② 법무부장관은 우대카드를 발급 받지 않은 경우에도 다음 각 호의 어느 하나에 해당하는 사람(이하 “출입국우대를 받는 사람”이라 한다)에게 출입국우대를 제공 할 수 있다. <ol class="tps17">
+                                                    <li>1. 유소아(만 7세 미만), 고령자(만 70세 이상), 임산부</li>
+                                                    <li>2. 보건복지부에서 규정한 장애등급판정기준에 따른 보행 상 장애인(1~5급)</li>
+                                                    <li>3. ‘국가유공자 등 예우 및 지원에 관한 법률’에 따라 등록된 상이자 및 ‘5 18 민주유공자예우에 관한 법률’에 따라 등록된 5 18 민주화운동 부상자</li>
+                                                    <li>4. 국토교통부 부령인 ‘공항에서의 귀빈 예우에 관한 규칙’에 따른 귀빈실 대상자</li>
+                                                    <li>5. 4호에서 규정한 대상자 외에 인천국제공항공사에서 제정한 ‘귀빈실운영규정’에 따른 귀빈실 사용 대상자</li>
+                                                    <li>6. 외교관</li>
+                                                    <li>7. 한국방문우대카드 소지자</li>
+                                                    <li>8. 법무부장관 또는 공항만 관할 출입국관리사무소장이 원활한 공무수행, 국제교류 및 외교관계 증진, 국제행사 및 관광활성화 지원 등을 위하여 출입국우대가 필요 하다고 인정하는 사람</li>
+                                                </ol>
+                                            </li>
+                                            <li>③ 제2항에서 규정한 출입국우대를 받는 사람의 동반자에 대해서는 제13조제2항을 준용한다. 이 경우 “우대카드소지자”는 “출입국우대를 받는 사람”으로 본다.</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제16조(출입국우대에 따른 추가 혜택)</b>
+                                        </h2>
+                                        <ol class="mts5 tps17">
+                                            <li>① 제3조 제2호, 제3호에 따른 우대카드․ 전자카드 소지자 및 그 동반 3인과 제15조 제2항에 따라 출입국우대를 받는 사람에 대해서는 국제공항의 출국심사장에 들어갈 때 보안검색 전용통로를 이용하게 할 수 있다.</li>
+                                            <li>② 국토교통부 등 관계기관은 제1항의 혜택이 이루어지도록 협조하여야 한다.</li>
+                                        </ol>
+                                        <h2 class="cls1 mts15">
+                                            <b>제17조(우대카드 발급의 재원)</b>
+                                        </h2>
+                                        <p class="mts5">우대카드를 발급하는 데 소요되는 재원은 법무부와 발급대행기관이 협의하여 정한다.</p>
+                                        <h2 class="cls1 mts15">
+                                            <b>제18조(발급대행기관과 한국방문우대카드 발급대행기관과의 관계)</b>
+                                        </h2>
+                                        <p class="mts5">법무부장관이 선정․지정한 한국방문우대카드 발급대행기관은 제7조의 발급대행기관을 겸한다.</p>
+                                        <h2 class="cls1 mts15">
+                                            <b>제19조(세부사항)</b>
+                                        </h2>
+                                        <p class="mts5">이 지침에서 정하는 것 외에 필요한 세부사항은 법무부장관이 따로 정한다.</p>
+                                        <h2 class="cls1 mts15">
+                                            <b>부 칙 (2013. 12. 23.)</b>
+                                        </h2>
+                                        <p class="mts5">제1조(시행일) 이 지침은 2013년 12월 23일부터 시행한다. 다만, 기존의 출입국 우대를 받고 있는 사람은 선정기관에서 따로 정한 날로부터 이 치침을 적용한다.</p>
+                                        <p class="mts5">제2조(경과 규정) 이 지침 시행 전 선정․지정된 한국방문우대카드 발급 대행기관을 제7조의 발급대행기관으로 간주한다.</p>
+                                        <h2 class="cls1 mts15">
+                                            <b>부 칙 (2016. 10. 10.)</b>
+                                        </h2>
+                                        <p class="mts5">제1조(시행일) 이 지침은 2016년 10월 10일부터 시행한다. 다만, 제15조 제2항 제8호의 규정은 2016년 9월 30일부터 시행한다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="terms_radio_flex">
+                                <p>위 출입국우대카드 발급 및 관리지침을 확인하였습니까?</p>
                                 <div class="radios">
                                     <label class="checkbox sm">
-                                        <input type="radio" id="indiAgreeYn3Y" name="indiAgreeYn3" value="Y">
+                                        <input type="radio" id="immgCheckY" name="termCheck" value="Y">
                                         <span class="ck_icon"></span>
-                                        <strong>동의함</strong>
+                                        <strong>예</strong>
                                     </label>
                                     <label class="checkbox sm">
-                                        <input type="radio" id="indiAgreeYn3N" name="indiAgreeYn3" value="N">
+                                        <input type="radio" id="immgCheckN" name="termCheck" value="N">
                                         <span class="ck_icon"></span>
-                                        <strong>동의하지 않음</strong>
+                                        <strong>아니오</strong>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="terms_radio_flex">
+                                <p>발급 대상자는 현재 가족친화인증기업 종사자입니까? (필요시, 발급 대상자는 별도 증빙 자료 제출)</p>
+                                <div class="radios">
+                                    <label class="checkbox sm">
+                                        <input type="radio" id="immgCheck1Y" name="immgCheck" value="Y">
+                                        <span class="ck_icon"></span>
+                                        <strong>예</strong>
+                                    </label>
+                                    <label class="checkbox sm">
+                                        <input type="radio" id="immgCheck1N" name="immgCheck" value="N">
+                                        <span class="ck_icon"></span>
+                                        <strong>아니오</strong>
                                     </label>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="gbox mgt20">
-                        <label class="checkbox">
-                            <input type="checkbox" id="indiAgreeYn" name="indiAgreeYn" value="Y">
-                            <span class="ck_icon"></span>
-                            <strong>신청기업(관)정보 및 참석자 개인정보 수집·이용에 모두 동의합니다.</strong>
-                        </label>
+                    <div class="caution_box mts30">
+                        <div class="inners2">
+                            <div class="tit">
+                                주의사항
+                            </div>
+                            <ul class="dot_ul">
+                                <li>신청일 기준 최근 3년 이내 출입국관리법을 위반하여 500만원 이상 범칙금 또는 과태료 처분을 받거나
+                                    출입국 규제가 있는 경우 카드발급이 제한될 수 있습니다.</li>
+                                <li>여권을 재발급 받은 경우 반드시 14일 이내 선정기관에 신고해야 합니다.</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="form_btns">
-                        <a href="javascript:;" class="btn btn_lg btn_submit" id="btnPresentRqn">인증 설명회 참여 신청</a>
+                        <a href="javascript:;" class="btn btn_lg btn_submit" id="btnReqConfirm">출입국우대카드 신청</a>
                     </div>
                     </form>
 
@@ -954,15 +1253,22 @@
 <script src="../../assets/js/common.js"></script>
 <script>
 //전체체크
-$('#indiAgreeYn').on('change', function() {
+$('#labelAgreeAll').on('change', function() {
     var isChecked = $(this).is(':checked');
-    $('#indiAgreeYn2Y').prop('checked', isChecked);
-    $('#indiAgreeYn2N').prop('checked', !isChecked);
-    $('#indiAgreeYn3Y').prop('checked', isChecked);
-    $('#indiAgreeYn3N').prop('checked', !isChecked);
+    $('#idAgreeY').prop('checked', isChecked);
+    $('#idAgreeN').prop('checked', !isChecked);
+    $('#genAgreeY').prop('checked', isChecked);
+    $('#genAgreeN').prop('checked', !isChecked);
+    $('#suplyAgreeY').prop('checked', isChecked);
+    $('#suplyAgreeN').prop('checked', !isChecked);
 });
-
-
+$('#labelCheckAll').on('change', function() {
+    var isChecked = $(this).is(':checked');
+    $('#immgCheckY').prop('checked', isChecked);
+    $('#immgCheckN').prop('checked', !isChecked);
+    $('#immgCheck1Y').prop('checked', isChecked);
+    $('#immgCheck1N').prop('checked', !isChecked);
+});
 
 function fnIsuTypeCdChange(isuTypeCd){
     if(isuTypeCd == '02'){
