@@ -314,6 +314,23 @@ h3.form_title:before{content: '';position: absolute;top: 7px;left: 0;width: 5px;
 .form_table > table > tbody > tr > td.in_table th{background-color: #f9f9f9;}
 .form_table > table > tfoot > tr > th{text-align: center;padding:10px;background-color: #e4e4e4 ;font-size: 14px;border-bottom: 1px solid #dddddd;vertical-align: middle;line-height: 1.5;word-break: keep-all;border-left: 1px solid #dddddd;}
 .form_table > table > tfoot > tr > td{border-left:1px solid #dddddd;padding: 15px 10px;font-size: 14px;border-bottom: 1px solid #dddddd;vertical-align: middle;line-height: 1.5;background-color: #fff;}
+
+.form_table.sm > table > thead > tr > th{padding:8px;font-weight:500;}
+.form_table.sm > table > thead > tr > td{padding: 8px;}
+.form_table.sm > table > tbody > tr > th{padding: 8px;font-weight:500;}
+.form_table.sm > table > tbody > tr > td{padding: 8px;}
+.form_table.sm > table > tbody > tr > th .required{padding-left:8px;}
+.form_table.sm > table > tfoot > tr > th{padding:8px;}
+.form_table.sm > table > tfoot > tr > td{padding: 8px;}
+.form_table.sm input[type="text"],
+.form_table.sm input[type="password"],
+.form_table.sm input[type="email"],
+.form_table.sm input[type="tel"]{padding-left:8px;height:32px;}
+.form_table.sm textarea{padding:8px;height:80px;}
+.form_table.sm select{padding-left:8px;height:32px;}
+.form_table.sm .form_table select{padding-left:8px;}
+.form_table.sm .btn{padding:0 12px;;height: 32px;line-height:30px;}
+
 @media screen and (min-width:1180px) {
     .form_table > table  .gray th,
     .form_table > table  .gray td{background-color: #f1f1f1 ;}
@@ -649,6 +666,7 @@ input.clear{border:0 !important;background-color: transparent !important;padding
     .list_table table tbody td.mb_flex.top{align-items: start;}
     .list_table table tbody td.mb_flex.top .mb_tit{white-space: nowrap;}
     .list_table table tbody td.mb_flex .btn + small{margin-top:0;margin-left:5px;}
+    .list_table table tbody td.mb_flex small + small{margin-top:0;margin-left:5px;}
     .list_table table tbody td.mb_flex .btn + .btn{margin-left:5px;}
     .list_table table tbody td.mb_flex .btn.inline + .btn.inline{margin-left:5px;}
 
@@ -829,7 +847,7 @@ font-weight: 500;
 .survey_a{
 color: #444;
 margin-bottom: 20px;
-padding-left: 20px;
+padding-left: 16px;
 }
 .survey_a label{
 margin-top:2px;margin-bottom:2px;
