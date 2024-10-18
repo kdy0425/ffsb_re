@@ -194,7 +194,7 @@
                                     <td><span class="mb_tit">추천자수: </span>1.00(1명)</td>
                                     <td class="mb_flex">
                                         <span class="mb_tit">상세보기: </span>
-										<a href="javascript:;" onclick="layerOpen(this, '.detail_layer');" class="btn btn_sm btn_line">상세보기</a>
+										<a href="javascript:;" onclick="layerOpen(this, '.detail_layer');swiper.update();" class="btn btn_sm btn_line">상세보기</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -205,7 +205,7 @@
                                     <td><span class="mb_tit">추천자수: </span>1.00(1명)</td>
                                     <td class="mb_flex">
                                         <span class="mb_tit">상세보기: </span>
-										<a href="javascript:;" onclick="layerOpen(this, '.detail_layer');" class="btn btn_sm btn_submit">추천하기</a>
+										<a href="javascript:;" onclick="layerOpen(this, '.detail_layer');swiper.update();" class="btn btn_sm btn_submit">추천하기</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -445,8 +445,8 @@ var swiper = new Swiper(".detail_slider", {
     type: "fraction",
     },
     navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
     },
     observer: true, 
     observeParents: true
