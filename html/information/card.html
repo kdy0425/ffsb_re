@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>가족친화지원사업</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="가족친화제도를 모범적으로 운영하는 기업 및 공공기관에 대하여 심사를 통해 인증을 부여하는 제도">
+	<meta name="keywords" content="가족친화인증">
+
+	<link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+	<title>가족친화지원사업</title>
+	<link href="../../assets/css/normalize.css" rel="stylesheet" />
+	<link href="../../assets/css/common.css" rel="stylesheet" />
+	<link href="../../assets/css/layout.css" rel="stylesheet" />
+	<link href="../../assets/css/main.css" rel="stylesheet" />
+	<link href="../../assets/css/content.css" rel="stylesheet" />
+	<link href="../../assets/css/swiper.min.css" rel="stylesheet" />
+	<link href="../../assets/css/slick.css" rel="stylesheet" />
+	<link href="../../assets/css/simplebar.css" rel="stylesheet" />
+	<link href="../../assets/css/jquery-ui.css" rel="stylesheet" />
+	<script src="../../assets/js/jquery-3.7.1.min.js"></script>
+	<script src="../../assets/js/jquery-ui.js"></script>
+	<script src="../../assets/js/swiper.min.js"></script>
+	<script src="../../assets/js/slick.min.js"></script>
+	<script src="../../assets/js/litepicker.js"></script>
+	<script src="../../assets/js/jquery.validate.js"></script>
+
+
+</head>
+<ul id="skip">
+	<li><a href="#content"
+			onclick="document.getElementById('content').tabIndex = -1;document.getElementById('content').focus();return false;">본문
+			바로가기</a></li>
+	<li><a href="#footer"
+			onclick="document.getElementById('footer').tabIndex = -1;document.getElementById('footer').focus();return false;">하단
+			바로가기</a></li>
+</ul>
+
+<div id="wrap">
+
+	<!-- 헤더 -->
+	<div id="header" class="">
+		<span class="nav_bg"></span>
+		<div class="hd_top">
+			<div class="hd_inner">
+				<a href="https://www.ffsb.kr/">
+					<div id="logo">가족친화사업</div>
+				</a>
+				<div class="hd_info">
+					<div class="item txt"><a href="javascript:;" class="logout">로그아웃</a></div>
+					<div class="item txt"><a href="javascript:;" class="mypage">마이페이지</a></div>
+					<div class="item txt"><a href="javascript:;" class="member"><strong>홍길동</strong>님</a></div>
+					<div class="item"><span class="lg_time">09분47초</span><a href="javascript:;" class="extension">연장</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="hd_bottom">
+			<div class="hd_inner">
+				<div id="nav">
+					<ul>
+						<li><a id="topMenu1" href="https://www.ffsb.kr/ffm/ffmCertBusiGuide.do?menuSeq=1146">가족친화사업</a></li>
+						<li><a id="topMenu2" href="https://www.ffsb.kr/ffm/ffmCertSummary.do?menuSeq=2157">가족친화인증</a></li>
+						<li><a id="topMenu3" href="https://www.ffsb.kr/consulting/consultingPreGuide.do?menuSeq=3175">가족친화 컨설팅</a></li>
+						<li><a id="topMenu4" href="https://www.ffsb.kr/education/educationGuide.do?menuSeq=4179">직장교육</a></li>
+						<li><a id="topMenu5" href="https://www.ffsb.kr/selfChk/selfChkGuide.do?menuSeq=5184">자체점검</a></li>
+						<li><a id="topMenu6" href="https://www.ffsb.kr/media/list.do?menuSeq=6188">알림소식</a></li>
+						<li><a id="topMenu7" href="https://www.ffsb.kr/ffsbbod/bs/boardList.do?boardSeq=19&amp;menuSeq=7198">소통·참여</a></li>
+					</ul>
+				</div>
+				<div class="hd_scmn">
+					<div class="hd_search">
+						<button type="button" class="btn_search">검색</button>
+					</div>
+					<div class="hd_menu">
+						<button type="button" class="btn_menuall">전체메뉴</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="dialog-confirm" title="로그인 연장" style="display:none;">
+			<p>
+				<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
+				<span id="confirm-msg"></span>
+			</p>
+		</div>
+	</div>
+	<!-- //헤더 -->
+
+
+
+	<!-- //sub_wrap -->
+	<div class="sub_wrap">
+		<!-- content -->
+		<div id="twoColWrap" class="clearfix">
+            <div id="sideBar">
+                <div class="heading">
+                    <h2 class="tit">가족친화사업</h2>
+                    <img src="https://www.ffsb.kr/common/img/sub/icon_lnb1.png" class="icon">
+                </div>
+                <div class="inner">
+                    <ul id="lnb">
+                        <li id="parentMenuSeq146">
+                            <a href="/ffm/ffmCertBusiGuide.do?menuSeq=1146">가족친화사업안내</a>
+                        </li>
+                        <li id="parentMenuSeq151">
+                            <a href="/ffm/ffmCertStatus.do?menuSeq=1151" class="arrow js-a">인증기업·기관현황</a>
+                            <ul class="js-cont" style="display: none;">
+                                <li menuseq="151">
+                                    <a href="/ffm/ffmCertStatus.do?menuSeq=1151">인증기업 현황</a>
+                                </li>
+                                <li menuseq="152">
+                                    <a href="/ffm/ffmCertCompSearch.do?menuSeq=1152">인증기업 정보</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="parentMenuSeq153">
+                            <a href="/information/incentive1.do?menuSeq=1153" class="arrow js-a">인증기업인센티브</a>
+                            <ul class="js-cont" style="display: none;">
+                                <li menuseq="153">
+                                    <a href="/information/incentive1.do?menuSeq=1153">기업 인센티브</a>
+                                </li>
+                                <li menuseq="154">
+                                    <a href="/information/incentive2.do?menuSeq=1154">근로자 인센티브</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="parentMenuSeq155" class="on">
+                            <a href="/information/immgCardGuide.do?menuSeq=1155" class="arrow js-a">출입국우대카드</a>
+                            <ul class="js-cont">
+                                <li menuseq="155" class="on">
+                                    <a href="/information/immgCardGuide.do?menuSeq=1155">출입국우대카드 안내</a>
+                                </li>
+                                <li menuseq="156">
+                                    <a href="/information/immgCardReqWrite.do?menuSeq=1156">출입국우대카드 신청</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="parentMenuSeq200">
+                            <a href="/customer/location1.do?menuSeq=1200">찾아오시는길</a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- end #sideBar -->
+            <div id="content" class="sub_content">
+                <div class="inner">
+                    <p class="locations">
+                        <span class="home">Home</span> 
+                        <span class="entity">&gt;</span>
+                        <span>가족친화사업</span>
+                        <span class="entity">&gt;</span>
+                        <strong>출입국우대카드 안내</strong>
+                    </p>
+                    <div class="titles1">
+                        <h1>인증기업 인센티브</h1>
+                        <div class="sub">가족친화제도를 운영하는 기업.기관에 대한 인센티브 안내입니다.</div>
+
+						<div class="share_btn">
+							<button type="button" title="SNS 공유하기" onclick="layerOpen(this, '.js-pop-sns')">
+								SNS 공유하기
+							</button>
+						</div>
+                    </div>
+
+                    <div class="sub_section">
+                        <div class="title_large">
+                            <h3>가족친화인증이란?</h3>
+                        </div>
+                        <div class="text">가족친화제도를 모범적으로 운영하는 기업 및 공공기관에 대하여 심사를 통해 인증을 부여하는 제도</div>
+                        <div class="text">* 자녀출산 및 양육지원, 유연근무제도, 가족친화직장문화조성 등
+                            <ul class="dash_ul">
+                                <li>- 법적근거 : 가족친화 사회환경의 조성 촉진에 관한 법률 제 15조</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sub_section">
+                        <div class="title_large">
+                            <h3>출입국우대카드란?</h3>
+                        </div>
+                        <p class="text">가족친화인증기업에게 지원되는 인센티브로서 전용보안검색대 및 출입국우대심사대 이용서비스를 제공합니다.</p>
+                    </div>
+
+                    <div class="sub_section">
+                        <div class="title_large">
+                            <h3>가족친화인증기업 대상 법무부 출입국 우대카드 기능</h3>
+                        </div>
+                        <div class="card_info">
+                            <div class="card_img"><img src="../../assets/images/content/card1.png" alt="법무부 출입국 우대카드 사진"></div>
+                            <div class="card_cnt">
+                                <ul class="dot_ul dot_lg">
+                                    <li>가족친화인증기업 에 대한 인센티브로 기업 당 1명 지원(동반 3인 가능, 공공기관 제외)</li>
+                                    <li>가국제공항 전용 출입문 편의제공 (인천공항 90% 해당)</li>
+                                    <li>가출입국 우대 심사대 편의 제공</li>
+                                </ul>
+                                <a href="/information/immgCardReqWrite.do?menuSeq=1156" class="btn btn_sm btn_default">출입국우대카드 신청</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sub_section">
+                        <div class="title_large">
+                            <h3>출입국 우대카드 발급 (기업당 1인) 과정</h3>
+                        </div>
+                        <div class="dot_text">출입국 우대카드 발급 흐름도</div>
+                        <div class="card_step mgt10">
+                            <div class="item">
+                                <img src="../../assets/images/content/icon_step2_1.png" alt="">
+                                <div class="tit">1. 신청</div>
+                            </div>
+                            <div class="item">
+                                <img src="../../assets/images/content/icon_step2_2.png" alt="">
+                                <div class="tit">2. 접수</div>
+                            </div>
+                            <div class="item">
+                                <img src="../../assets/images/content/icon_step2_3.png" alt="">
+                                <div class="tit">3. 적격심사(법무부)</div>
+                            </div>
+                            <div class="item">
+                                <img src="../../assets/images/content/icon_step2_4.png" alt="">
+                                <div class="tit">4. 발급</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sub_section">
+                        <div class="title_large">
+                            <h3>발급 소요기간</h3>
+                        </div>
+                        <ul class="dot_ul dot_lg">
+                            <li>신청은 매달 9일까지 접수받고 있으며, 10일 이후 신청 건은 익월 발송됩니다.</li>
+                            <li>기관 상황에 따라 신청일로부터 최대 2개월까지 소요되오니 소요기간을 감안하셔서 카드사용에 차질이 없도록 사전에 신청하여 주시기 바랍니다.</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub_section">
+                        <div class="title_large">
+                            <h3>가족친화인증기업 대상 출입국우대카드 이용방법</h3>
+                        </div>
+                        <div class="dot_text">출입국우대카드 소지자 이용 가능 시설</div>
+                        <div class="default_table mgt10">
+                            <table>
+                                <caption class="hidden">
+                                    <strong>출입국우대카드 소지자 이용 가능 시설</strong>
+                                    <p>전국 공항만, 인청 공항으로 구성된 표</p>
+                                </caption>
+                                <colgroup>
+                                    <col>
+                                    <col style="width:50%;">
+                                </colgroup>
+                                <!-- 20180122 접근성 수정 -->
+                                <thead>
+                                    <tr>
+                                        <th scope="col">전국 공항만</th>
+                                        <th scope="col">인천 공항</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="als">
+                                            <ul class="dash_ul">
+                                                <li>- 전용보안검색대 및 출입국우대심사대 이용<br/>
+                                                    일반 출국장의 승무원이 사용하는 전용 출입문 이용</li>
+                                            </ul>
+                                        </td>
+                                        <td class="als">
+                                            <ul class="dash_ul">
+                                                <li>- 패스트 트랙 (Fast Track)<br/>
+                                                    보안검색 및 출입국심사 전용통로 - 1,6번<br/>
+                                                    오전 7시~오후7시 (12시간)</li>
+                                                <li>- 2, 5번 출국장(측문) : 해당 출국장 운영시간 이용가능</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="gall_photo grid_3 border_no mgt20">
+                            <ul>
+                                <li>
+                                    <div class="photo">
+                                        <img src="../../assets/images/content/ex_ic1.jpg" alt="패스트 트랙 사진">
+                                    </div>
+                                    <div class="cnt">패스트 트랙</div>
+                                </li>
+                                <li>
+                                    <div class="photo">
+                                        <img src="../../assets/images/content/passenger_terminal_1.png" alt="출국장 전용출입문 사진">
+                                    </div>
+                                    <div class="cnt">출국장 전용출입문</div>
+                                </li>
+                                <li>
+                                    <div class="photo">
+                                        <img src="../../assets/images/content/passenger_terminal_2.png" alt="출입국 우대 심사대 사진">
+                                    </div>
+                                    <div class="cnt">출입국 우대 심사대</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="dot_ul dot_lg mgt20">
+                            <li>카드 유효기간 : 인증기업 유효기간과 동일</li>
+                            <li>발급부서 : 법무부 출입국·외국인정책본부 출입국심사과</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub_section">
+                        <div class="title_large">
+                            <h3>카드 관리시 유의사항</h3>
+                        </div>
+                        <div class="in_section">
+                            <div class="title_bulit mgb10">
+                                <h3>출입국우대카드 재발급 사유</h3>
+                            </div>
+                            <ul class="num_ul">
+                                <li>1.발급자의 변경, 계열사 이동, 퇴사 등</li>
+                                <li>2.기존 출입국우대카드 분실</li>
+                                <li>3.기존 출입국우대카드 훼손</li>
+                                <li>4.성명, 성별 등 카드기재 내용 정정</li>
+                                <li>5. 유효기간 만료(갱신)</li>
+                            </ul>
+                        </div>
+                        <div class="in_section">
+                            <div class="title_bulit mgb10">
+                                <h3>출입국 우대카드 유의사항</h3>
+                            </div>
+                            <ul class="num_ul">
+                                <li>1. 명의자 변경 시 : 기존 카드 반납 후 기업 내 타 발급인으로 재발급 신청</li>
+                                <li>2. 카드 분실 시 : 기존 명의자 그대로 재발급 신청, 신청사유는 '분실'로 설정</li>
+                                <li>3. 유효기간 만료 시 : 인증연장 확정 시 재발급 신청 가능(명의자 변경 가능)</li>
+                                <li>4. 여권정보 변경 시 : 변경된 여권번호, 발급일, 유효기간을 가족친화지원센터로 유선 알림 요망</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sub_section cnt_text_box">
+                        <div class="form_table">
+                            <table>
+                                <colgroup>
+                                    <col width="18%">
+                                    <col width="*">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">관련 문의</th>
+                                        <td>한국건강가정진흥원 가족친화서비스부(☎ 02-3479-7677)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+		<!-- //content -->
+
+		<!-- sns공유하기 -->
+        <div class="pops1 js-pop-sns dns" tabindex="-1">
+            <div class="pop-wrap" style="width:400px;">
+                <div class="heading">
+                    <div class="inner">
+                        <h2 class="tit">공유하기</h2>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="inner">
+                        <ul class="sns_wrap">
+							<li>
+								<a href="javascript:;" onclick="javascript:fnShareSite(1);return false;">
+									<img src="https://www.ffsb.kr/common/img/common/icon_facebook2.gif" alt="페이스북 공유하기(새창)">
+									<span class="text">페이스북</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" onclick="javascript:fnShareSite(2);return false;">
+									<img src="https://www.ffsb.kr/common/img/common/icon_twitter2.gif" alt="(새창)">
+									<span class="text">트위터</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" onclick="javascript:fnShareSite(3);return false;">
+									<img src="https://www.ffsb.kr/common/img/common/icon_blog2.gif" alt="네이버블로그 공유하기(새창)">
+									<span class="text">네이버블로그</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" onclick="javascript:fnShareSite(4);return false;">
+									<img src="https://www.ffsb.kr/common/img/common/icon_band2.gif" alt="네이버밴드 공유하기(새창)">
+									<span class="text">네이버밴드</span>
+								</a>
+							</li>
+						</ul>
+                        <div class="form_btns">
+                            <a href="javascript:;" class="btn btn_lg btn_line" onclick="layerClose(this)">닫기</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="close"><a href="javascript:;" class="js-close" onclick="layerClose(this)">닫기</a></p>
+            </div>
+        </div>
+        <!-- //sns공유하기 -->
+
+		<div class="quick_wrap">
+			<script>
+			//퀵메뉴 토글 쿠키 딜레이 없게 하려고 태그 바로 밑에서 실행
+			// 쿠키 설정
+			function setCookie(name, value) {
+				var date = new Date();
+				date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));  // 365일
+				var expires = "; expires=" + date.toUTCString();
+				document.cookie = name + "=" + (value || "") + expires + "; path=/";
+			}
+			// 쿠키 가져오기
+			function getCookie(name) {
+				var nameEQ = name + "=";
+				var ca = document.cookie.split(';');
+				for (var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+					if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+				}
+				return null;
+			}
+			//퀵메뉴
+			if (getCookie('quickMenu') === 'off') {
+				$('.quick_wrap').addClass('off_cookie');
+				$('.quick_wrap').addClass('off');
+			}
+			function quickToggle() {
+				if ($('.quick_wrap').hasClass('off')) {
+					$('.quick_wrap').removeClass('off_cookie');
+					$('.quick_wrap').removeClass('off');
+					setCookie('quickMenu', 'on');
+				} else {
+					$('.quick_wrap').removeClass('off_cookie');
+					$('.quick_wrap').addClass('off');
+					setCookie('quickMenu', 'off');
+				}
+			}
+			</script>
+			<div class="quick_inner">
+				<button type="button" class="quick_toggle" onclick="quickToggle();">QUICK MENU</button>
+				<div class="quick_title">QUICK <br/>MENU</div>
+				<div class="quick_items">
+					<ul class="item">
+						<li class="ic1"><a href="http://www.ffsb.kr/ffm/ffmCertSummary.do?menuSeq=2157">인증제도 <br>안내</a></li>
+						<li class="ic2"><a href="http://www.ffsb.kr/ffm/ffmCertEstLaw.do?menuSeq=2163">평가배점 <br>기준</a></li>
+						<li class="ic3"><a href="http://www.ffsb.kr/ffm/ffmCertRqnGuide.do?menuSeq=2169">가족친화인증 <br>신청</a></li>
+						<li class="ic4"><a href="http://www.ffsb.kr/ffm/ffmPresentMain.do?menuSeq=2161">설명회신청</a></li>
+						<li class="ic5"><a href="http://www.ffsb.kr/information/incentive1.do?menuSeq=1153">인증기업 <br>혜택</a></li>
+						<li class="ic6"><a href="https://www.ffsb.kr/information/immgCardGuide.do?menuSeq=1155">출입국 <br>우대카드</a></li>
+					</ul>
+				</div>
+				<div class="top">
+					<a href="#top">TOP</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //sub_wrap -->
+
+	<!-- 푸터 -->
+	<div id="footer">
+		<div class="container">
+			<div class="ft_top">
+				<ul class="ft_links">
+					<li><a href="http://www.ffsb.kr/rule/termsUse.do">이용약관</a></li>
+					<li><a href="http://www.ffsb.kr/rule/privacy.do?v=8" class="em" style="color:#66B2FF !important">개인정보처리방침</a></li>
+					<li><a href="http://www.ffsb.kr/customer/location1.do?menuSeq=1200">찾아오시는길</a></li>
+				</ul>
+				<div class="ft_marks">
+					<div class="item">
+						<a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank">
+							<img src="https://www.ffsb.kr/common/img/common/foot_ban_wia.png"
+								alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치"
+								style="vertical-align: middle">
+						</a>
+					</div>
+					<div class="item">
+						<a href="https://www.eprivacy.or.kr/front/certifiedSiteMark/certifiedSiteMarkPopup.do?certCmd=E&amp;certNum=2023-E-R073"
+							onclick="window.open(this.href,'seal','width=527,height=720,location=no,status=no,scrollbars=no'); return false;"
+							target="_blank" title="새 창 알림(eprivacy 인증서)"><img
+								src="https://www.ffsb.kr/common/img/common/mark1_eprivacy.png" style="cursor:pointer;"
+								alt="개인정보보호협회 인증서 보기 e PRIVACY" title="eprivacy 인증서" width="40px"></a>
+					</div>
+				</div>
+			</div>
+			<div class="ft_bottom">
+				<div class="l">
+					<div class="ft_logo">가족친화사업</div>
+					<div class="ft_ads">서울특별시 중구 퇴계로 173(충무로3가,
+						남산스퀘어)21층, 24층</div>
+					<div class="ft_family">
+						<button type="button" class="btn_family">패밀리
+							사이트</button>
+						<div class="family_list">
+							<a href="http://www.mogef.go.kr/" target="_blank">여성가족부</a>
+							<a href="http://www.kihf.or.kr/" target="_blank">한국건강가정진흥원</a>
+							<a href="http://www.ikmr.co.kr/" target="_blank">한국경영인증원</a>
+						</div>
+						<script>
+							$(".btn_family").click(function (event) {
+								event.stopPropagation();
+								if ($(".family_list:visible").length > 0) {
+									$(".family_list").hide();
+								} else {
+									$(".family_list").show();
+								}
+							});
+							$(document).click(function (event) {
+								if ($(event.target).closest(".family_list").length === 0) {
+									if ($(".family_list:visible").length > 0) {
+										$(".family_list").hide();
+									}
+								}
+							});
+						</script>
+					</div>
+				</div>
+				<div class="r">
+					<div class="ft_cs">
+						<div class="item">
+							<span class="num">02 - 3479 - 7671,
+								7674</span>
+							<span class="cp">가족친화컨설팅</span>
+							<span class="dm">한국건강가정진흥원
+								가족친화서비스부</span>
+						</div>
+						<div class="item">
+							<span class="num">02 - 3479 -
+								7672</span>
+							<span class="cp">가족친화직장교육</span>
+							<span class="dm">한국건강가정진흥원
+								가족친화서비스부</span>
+						</div>
+						<div class="item">
+							<span class="num">02 - 6309 - 9034,
+								9042, 9043</span>
+							<span class="cp">가족친화인증심사</span>
+							<span class="dm">(한국경영인증원
+								가족친화인증사무국)</span>
+						</div>
+					</div>
+					<div class="ft_cooperative">
+						<div class="item"><img
+								src="https://www.ffsb.kr/common/style/assets/images/common/cooperative_hk.png"
+								alt="한국건강가정진흥원"></div>
+						<div class="item"><img
+								src="https://www.ffsb.kr/common/style/assets/images/common/cooperative_ys.png"
+								alt="여성가족부"></div>
+						<div class="item"><img
+								src="https://www.ffsb.kr/common/style/assets/images/common/cooperative_ky.png"
+								alt="한국경영인증원"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //푸터 -->
+</div>
+
+<script src="../../assets/js/common.js"></script>
+
+</body>
+
+</html>

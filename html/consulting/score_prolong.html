@@ -187,8 +187,8 @@
 
                     <ul class="taps_link">
                         <li><a href="/ffm/ffmCertEstLaw.do?menuSeq=2163">법규 요구사항(공통)</a></li>
-                        <li class="on"><a href="/ffm/ffmCertEstNew.do?menuSeq=2164">신규인증(최초)</a></li>
-                        <li><a href="/ffm/ffmCertEstRe.do?menuSeq=2165">유효기간 연장,재인증(기인증)</a></li>
+                        <li><a href="/ffm/ffmCertEstNew.do?menuSeq=2164">신규인증(최초)</a></li>
+                        <li class="on"><a href="/ffm/ffmCertEstRe.do?menuSeq=2165">유효기간 연장,재인증(기인증)</a></li>
                         <li><a href="/ffm/ffmCertEstReg.do?menuSeq=2166">가·감점</a></li>
                     </ul>
 
@@ -202,7 +202,12 @@
                         <div class="title_large">
                             <h3>중소기업 (중소기업기본법에 따름)</h3>
                         </div>
-                        <h3 class="form_title">신규인증기준 <div class="sub">100점 만점에 60점(가점포함) 이상 점수획득, <b>'최고경영층의 리더십에서 5점 이상 획득'</b>시 인증</div></h3>
+                        <h3 class="form_title">유효기간 연장 기준 <div class="sub">100점 만점에 60점(가점포함) 이상 획득 시 인증</div></h3>
+                
+                        <h3 class="form_title">재인증 인증기준 <div class="sub">100점 만점에 65점(가점포함) 이상 획득 시 인증</div></h3>
+
+                        <h3 class="form_title">공통 기준 <div class="sub"><b>'최고경영층의 리더십'의 배점에서 5점 이상 획득 필수</b></div></h3>
+
                         <table>
                             <!-- 20180122 접근성 수정 -->
                             <caption class="hidden">
@@ -311,13 +316,22 @@
                                     <td colspan="2">70</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row" colspan="2" class="normals">3. 가족친화경영 만족도(20)</th>
+                                    <th scope="row" colspan="2" class="normals acs">3. 가족친화경영 만족도(10)</th>
                                     <td class="als">3.1 가족친화제도 실행 및 직장문화 조성 관련 직원 만족도 </td>
-                                    <td colspan="2">20</td>
+                                    <td colspan="2">10</td>
                                 </tr>
                                 <tr class="lgray">
-                                    <td colspan="3" class="als" style="text-align:center !important;">가족친화경영 만족도 소계 </td>
-                                    <td colspan="2">20</td>
+                                    <td colspan="3" class="als" style="text-align:center !important;">가족친화경영 만족도 소계</td>
+                                    <td colspan="2">10</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" colspan="2" class="normals acs">4. 자체점검(온라인) 이력(10)</th>
+                                    <td class="als">4.1 2021~2023년도 가족친화제도 자체점검 실적</td>
+                                    <td colspan="2">10</td>
+                                </tr>
+                                <tr class="lgray">
+                                    <td colspan="3" class="als" style="text-align:center !important;">자체점검(온라인)이력 소계</td>
+                                    <td colspan="2">10</td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -334,7 +348,9 @@
                         <div class="title_large">
                             <h3>대기업·공공기관</h3>
                         </div>
-                        <h3 class="form_title">신규인증기준 <div class="sub">100점 만점에 70점(가점포함) 이상 <b>'최고경영층의 리더십'에서 5점 이상 획득</b>,<br>'가족친화제도 실행'의 배점에서 35점 이상 획득 시 인증</div></h3>
+                        <h3 class="form_title">유효기간 연장 기준 <div class="sub">100점 만점에 70점(가·감점포함) 이상, '가족친화제도 실행'에서 35점 이상</div></h3>
+                        <h3 class="form_title">재인증 인증기준 <div class="sub">100점 만점에 75점(가·감점포함), '가족친화제도 실행'에서 35점 이상</div></h3>
+                        <h3 class="form_title">공통 기준 <div class="sub"><b>'최고경영층의 리더십'의 배점에서 5점 이상 획득 필수</b></div></h3>
                         <table>
                             <!-- 20180122 접근성 수정 -->
                             <caption class="hidden">
@@ -405,9 +421,14 @@
                                     <td>5</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row" colspan="2" class="normals acs">3. 가족친화경영 만족도(20)</th>
+                                    <th scope="row" colspan="2" class="normals acs">3. 가족친화경영 만족도(10)</th>
                                     <td class="als">3.1 가족친화제도 실행 및 직장문화 조성 관련 직원 만족도</td>
-                                    <td>20</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" colspan="2" class="normals acs">4. 자체점검(온라인) 이력(10)</th>
+                                    <td class="als">4.1 2021~2023년도 가족친화제도 자체점검 실적</td>
+                                    <td>10</td>
                                 </tr>
                             </tbody>
                             <tfoot>
@@ -597,7 +618,7 @@
                                 <div class="score_section">
                                     <div class="section_title">
                                         <h3>3. 가족친화경영 만족도</h3>
-                                        <div class="r"><div class="rtotal red"><span>소계</span><strong>20점</strong></div></div>
+                                        <div class="r"><div class="rtotal red"><span>소계</span><strong>10점</strong></div></div>
                                     </div>
                                     <div class="score_box">
                                         <div class="score_item sm">
@@ -605,8 +626,25 @@
                                                 3.1 가족친화제도 실행 및 직장문화 조성 관련 직원 만족도
                                             </div>
                                             <div class="item_score">
-                                                <div class="blue"><span>가형</span><strong>10점</strong></div>
-                                                <div class="blue"><span>나형</span><strong>10점</strong></div>
+                                                <div class="blue"><span>가형</span><strong>5점</strong></div>
+                                                <div class="blue"><span>나형</span><strong>5점</strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="score_section">
+                                    <div class="section_title">
+                                        <h3>4. 자체점검(온라인) 이력</h3>
+                                        <div class="r"><div class="rtotal red"><span>소계</span><strong>10점</strong></div></div>
+                                    </div>
+                                    <div class="score_box">
+                                        <div class="score_item sm">
+                                            <div class="item_cnt">
+                                                4.1 2021~2023년도 가족친화제도 자체점검 실적
+                                            </div>
+                                            <div class="item_score">
+                                                <div class="blue"><span>가형</span><strong>5점</strong></div>
+                                                <div class="blue"><span>나형</span><strong>5점</strong></div>
                                             </div>
                                         </div>
                                     </div>
@@ -783,7 +821,7 @@
                                 <div class="score_section">
                                     <div class="section_title">
                                         <h3>3. 가족친화경영 만족도</h3>
-                                        <div class="r"><div class="rtotal red"><span>소계</span><strong>20점</strong></div></div>
+                                        <div class="r"><div class="rtotal red"><span>소계</span><strong>10점</strong></div></div>
                                     </div>
                                     <div class="score_box">
                                         <div class="score_item sm">
@@ -791,7 +829,23 @@
                                                 3.1 가족친화제도 실행 및 직장문화 조성 관련 직원 만족도
                                             </div>
                                             <div class="item_score">
-                                                <div class="blue"><span>배점</span><strong>20점</strong></div>
+                                                <div class="blue"><span>배점</span><strong>10점</strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="score_section">
+                                    <div class="section_title">
+                                        <h3>4. 자체점검(온라인) 이력</h3>
+                                        <div class="r"><div class="rtotal red"><span>소계</span><strong>10점</strong></div></div>
+                                    </div>
+                                    <div class="score_box">
+                                        <div class="score_item sm">
+                                            <div class="item_cnt">
+                                                4.1 2021~2023년도 가족친화제도 자체점검 실적
+                                            </div>
+                                            <div class="item_score">
+                                                <div class="blue"><span>배점</span><strong>10점</strong></div>
                                             </div>
                                         </div>
                                     </div>
