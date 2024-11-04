@@ -12,6 +12,7 @@
 .visual1.bg_lock{background-position: right center;background-repeat: no-repeat;background-image: url('../images/content/visual1_bg_lock.jpg');}
 .visual1.bg_person{background-position: right center;background-repeat: no-repeat;background-image: url('../images/content/visual1_bg_person.jpg');}
 
+.short_hr{displaY:block;height:1px;width:16px;background-color: #837CBC;border:0;margin:25px 0 12px;}
 .form_box1{padding:40px 50px;background-color: #f8f8f8;}
 .form_box1 + .form_box1{margin-top:30px;}
 .form_box1 .form_title1{margin-bottom:50px;}
@@ -362,8 +363,10 @@ h4.form_title{font-weight:500;font-size:15px;}
 .input_status.blue{color:#2460ce;}
 .input_status.red{color:#ee3f3f;}
 input.clear{border:0 !important;background-color: transparent !important;padding:0 !important;}
-.title_large{display: flex;align-items: center;margin-bottom:15px;flex-wrap:wrap;word-break: keep-all;}
-.title_large h3{font-weight:700;font-size:22px;}
+.title_large{display: flex;align-items: center;margin-bottom:10px;flex-wrap:wrap;word-break: keep-all;}
+.title_large h3{font-weight:700;font-size:22px;margin-bottom:5px;}
+.title_large .r{margin-bottom:5px;}
+
 .title_bulit{display: flex;align-items: center;margin-bottom:15px;flex-wrap:wrap;}
 .title_bulit h3{font-weight:700;padding-left:15px;position: relative;font-size:16px;}
 .title_bulit h3:before{content: '';position: absolute;top: 7px;left: 0;width: 5px;height: 5px;border-radius: 100%;background-color: #837CBC;}
@@ -373,7 +376,7 @@ input.clear{border:0 !important;background-color: transparent !important;padding
     table.v_pc{display: none !important;}
     .form_table.v_pc{display:none !important;}
     .form_table.v_mobile{display:block;}
-    .title_large{margin-bottom:12px;}
+    .title_large{margin-bottom:7px;}
     .title_large h3{font-size:18px;}
     .form_title{margin-bottom:12px;}
     .form_title h3{padding-left:12px;font-size:15px;}
@@ -546,7 +549,7 @@ input.clear{border:0 !important;background-color: transparent !important;padding
     .locations span, /* 20170313 수정 */.locations strong, /* 20170313 수정 */.locations a {display: inline-block;padding:3px 2px 2px;vertical-align: middle;}
     /* 20170313 수정 */.locations a:last-child {padding-left: 0;padding-right: 0;}
     /* 20170313 추가 */.locations span.home {padding-left: 26px;background-repeat: no-repeat;background-position: 0 50%;background-image: url("data:image/svg+xml,%0A%3Csvg width='17' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 8.5h1v7H2v-7ZM14 8.5h1v7h-1v-7ZM0 8.5h1v1H0v-1ZM1 7.5h1v1H1v-1ZM2 6.5h1v1H2v-1ZM3 5.5h1v1H3v-1ZM4 4.5h1v1H4v-1ZM5 3.5h1v1H5v-1ZM6 2.5h1v1H6v-1ZM7 1.5h1v1H7v-1ZM8 .5h1v1H8v-1ZM9 1.5h1v1H9v-1ZM10 2.5h1v1h-1v-1ZM11 3.5h1v1h-1v-1ZM12 4.5h1v1h-1v-1ZM13 5.5h1v1h-1v-1ZM14 6.5h1v1h-1v-1ZM15 7.5h1v1h-1v-1ZM16 8.5h1v1h-1v-1ZM6 8.5h2v1H6v-1ZM9 8.5h2v1H9v-1ZM8 9.5h1v1H8v-1ZM5 9.5h1v3H5v-3ZM11 9.5h1v3h-1v-3ZM6 12.5h1v1H6v-1ZM7 13.5h1v1H7v-1ZM8 14.5h1v1H8v-1ZM9 13.5h1v1H9v-1ZM10 12.5h1v1h-1v-1Z' fill='%23707070'/%3E%3C/svg%3E");}
-    .titles1{margin-bottom:20px;margin-top:25px;}
+    .titles1{margin-bottom:30px;margin-top:25px;}
     .locations + .titles1{margin-top:0;}
     .titles1 h1{font-size:20px;font-weight:700;}
     .titles1 .sub{font-size:15px;margin-top:10px;}
@@ -648,7 +651,9 @@ input.clear{border:0 !important;background-color: transparent !important;padding
 .list_table table thead{}
 .list_table table thead th{background-color: #f3f7fc;border-bottom:1px solid #ddd;vertical-align: middle;padding:15px 10px;font-size:14px;text-align: center;}
 .list_table table tbody{}
+.list_table table tbody th{height:50px;padding:14px 10px;font-size:14px;border-bottom:1px solid #ddd;background-color: #fbfdfe;text-align: center;vertical-align: middle;}
 .list_table table tbody td{height:50px;padding:14px 10px;font-size:14px;border-bottom:1px solid #ddd;text-align: center;vertical-align: middle;}
+.list_table table tbody th .mb_tit{display: none;}
 .list_table table tbody td .mb_tit{display: none;}
 .list_table table tbody .badge{border-radius:3px;color:#fff;font-size:13px;padding:4px 8px;background-color: #837CBC;display: inline-block;}
 .list_table table tbody td .new{display: table-cell;background-color: #f74c2b;color:#fff;font-size:10px;text-align: center;width:14px;height:14px;line-height:16px;margin-left:5px;}
@@ -661,6 +666,7 @@ input.clear{border:0 !important;background-color: transparent !important;padding
 .list_table table tbody .lblue{background-color: #fbfdfe ;}
 .list_table.line_table table thead th{border-right:1px solid #ddd;}
 .list_table.line_table table thead tr th:last-child{border-right:0;}
+.list_table.line_table table tbody th{border-right:1px solid #ddd;line-height:1.5;}
 .list_table.line_table table tbody td{border-right:1px solid #ddd;line-height:1.5;}
 .list_table.line_table table tbody td:last-child{border-right:0;}
 .list_table td .btn{display: inline-block;}
@@ -693,6 +699,8 @@ input.clear{border:0 !important;background-color: transparent !important;padding
     .list_table table tbody tr{padding:15px 0;border-bottom:1px solid #ddd;}
     .list_table table tbody tr td{height:auto;padding:0;border-bottom:0;text-align:left;margin:5px 12px 0 0;display: inline-flex;align-items: center;font-size:13px;color:#555;flex-wrap: wrap;}
     .list_table table tbody tr td svg{height:17px !important;position:relative;top:-1px;}
+    .list_table table tbody th {height:auto;padding:0;border:0;text-align:left;margin:5px 12px 0 0;display: inline-flex;align-items: center;font-size:13px;color:#000;flex-wrap: wrap;font-weight:500;}
+    .list_table table tbody th .mb_tit{display: inline-block;margin-right:5px;color:#000;font-weight:600;}
     .list_table table tbody td .mb_tit{display: inline-block;margin-right:5px;color:#222;font-weight:500;}
     .list_table table tbody .empty{display: none;}
     .list_table table tbody .num{display: none;}
@@ -712,6 +720,7 @@ input.clear{border:0 !important;background-color: transparent !important;padding
     .list_table td .btn.mb_auto{flex:1 1;}
 
     .list_table.line_table table thead th{border-right:0;}
+    .list_table.line_table table tbody th{border-right:0;}
     .list_table.line_table table tbody td{border-right:0;}
     .list_table.line_table table tbody td input[type="text"],
     .list_table.line_table table tbody td input[type="tel"],
@@ -724,6 +733,9 @@ input.clear{border:0 !important;background-color: transparent !important;padding
 .form_table + .default_table{margin-top:20px;}
 .default_table + .form_table{margin-top:20px;}
 .default_table + .default_table{margin-top:20px;}
+.table_title{margin-bottom:12px;display: flex;align-items: end;flex-wrap: wrap;line-height: 1.4;}
+.table_title h4{font-size:16px;font-weight:600;margin-right:8px;}
+.table_title .sub{font-size:14px;color:#666;}
 .default_table{}
 .default_table{border-left:0;border-right:0;position: relative;padding-left:1px;padding-right:1px;}
 .default_table:before{content:"";position: absolute;left:0;top:0;width:1px;height:100%;background-color: #fff;}
@@ -1894,138 +1906,209 @@ p.buls1 + p.buls1{margin-top:3px;}
 .only_pc_page p{margin-top:10px;color:#555;font-size:14px;}
 .only_pc_page .btn{margin-top:20px;display: inline-block;color:#fff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:5px;background-color: #357BF3;}
 
+.grid_text_icon{line-height: 1.4;}
+.grid_text_icon > ul{display: grid;}
+.grid_text_icon.grid_2 > ul{grid-template-columns: repeat(2,1fr);gap:40px 35px;}
+.grid_text_icon > ul > li{border-top:1px solid #e9e9e9;position: relative;padding:12px 0 0 0;display: flex;flex-direction: column;justify-content: center;}
+.grid_text_icon > ul > li:before{content:"";position: absolute;left:0;top:-1px;width:100px;height:1px;background-color: #837CBC;}
+.grid_text_icon ul li .tit{font-size:18px;font-weight: 600;margin-bottom:15px;;}
+.grid_text_icon ul li .cnt{display: flex;align-items: start;word-break: keep-all;}
+.grid_text_icon ul li .cnt .img{margin-right:30px;}
+.grid_text_icon ul li .cnt .texts{flex:1 1 auto;width: 1%;}
+.grid_text_icon ul li .cnt .texts ul{}
+.grid_text_icon ul li .cnt .texts ul li{font-size:14px;color:#666;}
+.grid_text_icon ul li .cnt .texts ul li + li{margin-top:4px;}
 
-<div class="only_pc">
-                        <div class="title">해당 화면은 PC버전에서만<br/>확인이 가능합니다.</div>
-                        <p>PC버전을 이용하시면 화면 확인이 가능합니다.</p>
-                        <a href="javascript:;" class="btn">PC버전으로 확인하기</a>
-                    </div>
+.information_ballon_wrap{display: flex;align-items: center;}
+.information_ballon_wrap .default_table{flex:1 1 auto;margin-right:40px;}
+.information_ballon_wrap .balloon_graph{margin-left:auto;width:410px;height:205px;}
+.balloon_graph{display: flex;position: relative;}
+.balloon_graph:before{content:"";position: absolute;left:0;bottom:10px;width:100%;height: 1px;background-color: #d6d8dd;}
+.balloon_graph .col{flex:1 1;position: relative;overflow: hidden;transition: all 1s;}
+.balloon_graph .col:before{content:"";position: absolute;z-index:2;left:50%;bottom:0px;margin-left:-9px;width:12px;height:12px;background-color: #fff;border-radius: 50%;border:4px solid #aea09c;}
+.balloon_graph .col:nth-child(1):before{border-color:#aea09c;}
+.balloon_graph .col:nth-child(2):before{border-color:#f58233;}
+.balloon_graph .col:nth-child(3):before{border-color:#f05a72;}
+.balloon_graph .col:nth-child(4):before{border-color:#9765ab;}
+.balloon_graph .col:after{content:"";position: absolute;left:50%;top:0;width:1px;height:100%;border-left:1px dashed #d6d8dd;transition: all 1s;}
 
+.balloon_graph .item{width:90px;height:110px;text-align: center;font-size:14px;font-weight: 600;margin:0 auto;padding-bottom:12px;position: relative;z-index: 10;;color: #fff;display: flex;align-items: center;justify-content: center;transition: all 1s;}
+.balloon_graph .item::before{content:"";position: absolute;width:90px;height:90px;left:0;top:0;background-color: #ccc;border-radius: 50% 50% 50% 0;transform: rotate(-45deg);}
+.balloon_graph .col:nth-child(1) .item:before{background-color:#786a66;}
+.balloon_graph .col:nth-child(2) .item:before{background-color:#cd4a00;}
+.balloon_graph .col:nth-child(3) .item:before{background-color:#df2644;}
+.balloon_graph .col:nth-child(4) .item:before{background-color:#7b498e;}
+.balloon_graph .item .tit{position: relative;z-index: 3;}
+.balloon_graph .item .count{font-size:16px;display: block;margin-top:4px;}
+.balloon_graph .col:nth-child(2n){padding-top:35px;}
+.balloon_graph .col:nth-child(2n):after{top:50%;}
 
+.balloon_graph.load .col{padding-top:90px !important;}
+.balloon_graph.load .item{color:transparent !important;}
+.balloon_graph.load .col:after{opacity:0;}
 
-<div class="card_info">
-<div class="card_img"><img src="../../assets/images/content/card1.png" alt="법무부 출입국 우대카드 사진"></div>
-<div class="card_cnt">
-    <ul class="dot_ul dot_lg">
-        <li>가족친화인증기업 에 대한 인센티브로 기업 당 1명 지원(동반 3인 가능, 공공기관 제외)</li>
-        <li>가국제공항 전용 출입문 편의제공 (인천공항 90% 해당)</li>
-        <li>가출입국 우대 심사대 편의 제공</li>
-    </ul>
-    <a href="/information/immgCardReqWrite.do?menuSeq=1156" class="btn btn_lg btn_default">출입국우대카드 신청</a>
-</div>
+.operating_system{text-align: center;background-color: #F8F8F8;}
+@media screen and (max-width:700px) {
+    .grid_text_icon.grid_2 > ul{grid-template-columns: repeat(1,1fr);gap:25px;}
+    .grid_text_icon ul li .tit{font-size:16px;margin-bottom:12px;}
+    .grid_text_icon ul li .cnt .img{margin-right:15px;width:65px;}
+    .grid_text_icon ul li .cnt .texts ul li + li{margin-top:3px;}
 
-<div class="card_cnt">
-                            <div class="card"><img src="../../assets/images/content/card1.png" alt="법무부 출입국 우대카드 사진"></div>
-                            <ul class="dot_ul dot_lg">
-                                <li>가족친화인증기업 에 대한 인센티브로 기업 당 1명 지원(동반 3인 가능, 공공기관 제외)</li>
-                                <li>가국제공항 전용 출입문 편의제공 (인천공항 90% 해당)</li>
-                                <li>가출입국 우대 심사대 편의 제공</li>
-                            </ul>
-                        </div>
+    .information_ballon_wrap{display: block;}
+    .information_ballon_wrap .default_table{margin-right:0;}
+    .information_ballon_wrap .balloon_graph{width:100%;height:165px;margin-top:20px;}
+    .balloon_graph{justify-content: center;}
+    .balloon_graph:before{bottom:7px;}
+    .balloon_graph .col{margin:0 3px;max-width: 90px;}
+    .balloon_graph .col:before{margin-left:-6px;width:8px;height:8px;border:3px solid #aea09c;}
+    .balloon_graph .item{width:100%;height:auto;padding-top:100%;font-size:13px;padding-bottom:7px;}
+    .balloon_graph .item::before{width:98%;height:auto;padding-top:98%;left:1%;}
+    .balloon_graph .item .tit{position: absolute;left:0;top:0;width:100%;height: 100%;display: flex;align-items: center;flex-direction: column;justify-content: center;}
+    .balloon_graph .item .count{font-size:15px;}
+    .balloon_graph .col:nth-child(2n){padding-top:20px;}
+}
 
-<div class="location_map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.160012223669!2d126.97284647640596!3d37.57484962365056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2952e132cdb%3A0xec21d456f8a6f02a!2z7ISc7Jq47Yq567OE7IucIOyiheuhnOq1rCDshLjsooXrjIDroZwgMjA5!5e0!3m2!1sko!2skr!4v1730624542146!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+.map_search_form *{box-sizing: border-box;}
+.map_search_form{display:flex;border:1px solid #E1E5EB;margin-bottom:35px;}
+.map_search_form .map_box{flex:1 1;background-color: #F4F7FC;}
+.map_search_form .map_box .tit{padding:25px 0 0 25px;color:#677491;font-size:14px;font-weight:700;}
+.map_search_form .map_box .map{margin:10px auto 0;height:418px;position:relative;width:303px;background-position: center center;background-repeat: repeat;background-image: url('../images/content/map_bg.png');}
+.map_search_form .map_box .map a{color:#fff;font-size:12.5px;font-weight:700;padding-top:8px;text-align:center;position:absolute;width:34px;height:39px;background-position: center center;background-repeat: no-repeat;background-size: contain;background-image: url('../images/content/map_icon.png');}
+.map_search_form .map_box .map a.active{background-image: url('../images/content/map_icon_active.png');}
+.map_search_form .map_box .map a:hover{text-decoration: none;}
+.map_search_form .search_box{flex:1 1;padding:50px;border-left:1px solid #E1E5EB;}
+.map_search_form .search_box .form{}
+.map_search_form .search_box .form .item{}
+.map_search_form .search_box .form .item + .item{margin-top:8px;}
+.map_search_form .search_box .form .item select{width:100%;height:46px;padding-left:20px;border:1px solid #DCE0E8;color:#606060;font-size:14px;background-repeat: no-repeat;background-position:right 20px center;background-image: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23606060' stroke-width='2'/%3E%3C/svg%3E%0A");
+-o-appearance: none;-webkit-appearance: none;-moz-appearance: none;appearance: none;}
+.map_search_form .search_box .form .item input[type="text"],
+.map_search_form .search_box .form .item input[type="password"],
+.map_search_form .search_box .form .item input[type="tel"],
+.map_search_form .search_box .form .item input[type="email"]{width:100%;height:46px;padding-left:20px;border:1px solid #DCE0E8;color:#606060;font-size:14px;}
+.map_search_form .search_box .map_submit{cursor:pointer;width:100%;border:0;background-color: #545B6B;margin-top:15px;height:56px;color:#fff;font-size:14px;font-weight:700;}
+.map_search_form .search_box .map_submit:hover{background-color:#424958;}
+.table_top{display: flex;align-items: center;}
+.table_top .r{margin-left:auto;}
+.info_icon{}
+.info_icon .be_icon{float:left;position: relative;}
+.info_icon .be_icon + .be_icon{margin-left:30px;}
+.info_icon .be_icon + .be_icon:before{content:"";position:absolute;left:-15px;top:50%;margin-top:-7px;width:1px;height:14px;background-color: #ddd;}
+.be_icon{color:#555;font-size:13px;line-height:25px;padding-left:24px;background-position: left center;background-repeat: no-repeat;}
+.be_icon.excellent{background-image: url("data:image/svg+xml,%3Csvg width='20' height='24' viewBox='0 0 20 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.9289 23.0405L14.418 18.8966L18.674 20.0215L14.1357 11.3802L8.38849 14.3992L12.9289 23.0405Z' fill='%23FD978A'/%3E%3Cpath d='M12.9289 23.3637C12.8104 23.3637 12.6983 23.2969 12.6423 23.1913L8.10188 14.5501C8.06309 14.4746 8.05447 14.3863 8.08033 14.3044C8.10619 14.2225 8.16222 14.1536 8.2398 14.1148L13.9848 11.0957C14.0603 11.0569 14.1486 11.0483 14.2305 11.0742C14.3124 11.1 14.3813 11.1561 14.4201 11.2336L18.9369 19.834C18.9756 19.8878 18.9994 19.9546 18.9994 20.0257C18.9994 20.2046 18.855 20.349 18.6761 20.349H18.6718C18.6438 20.349 18.6158 20.3447 18.5899 20.3382L14.6205 19.2888L13.2306 23.1525C13.1875 23.2732 13.0776 23.3573 12.9483 23.3659C12.9419 23.3659 12.9332 23.3659 12.9268 23.3659L12.9289 23.3637ZM8.82594 14.535L12.8729 22.2388L14.1141 18.7867C14.1702 18.6293 14.3404 18.541 14.4999 18.5841L18.0469 19.5215L13.9999 11.8176L8.82594 14.535Z' fill='%234A3835'/%3E%3Cpath d='M6.06981 23.0404L4.58075 18.8965L0.324768 20.0214L4.8652 11.3801L10.6102 14.3992L6.06981 23.0404Z' fill='%23FD978A'/%3E%3Cpath d='M6.0698 23.3637C6.0698 23.3637 6.05472 23.3637 6.04825 23.3637C5.92111 23.3551 5.80906 23.271 5.76596 23.1504L4.37603 19.2866L0.406652 20.3339C0.281666 20.3662 0.150215 20.3231 0.0704828 20.2218C-0.00924955 20.1227 -0.0221791 19.9826 0.0360039 19.8706L4.57859 11.2293C4.61954 11.1539 4.68634 11.0957 4.76823 11.0698C4.85011 11.044 4.93847 11.0526 5.01389 11.0914L10.7589 14.1104C10.8343 14.1514 10.8925 14.2182 10.9184 14.3001C10.9442 14.382 10.9356 14.4703 10.8968 14.5457L6.35641 23.187C6.30038 23.2947 6.19048 23.3594 6.0698 23.3594V23.3637ZM4.58075 18.5754C4.71435 18.5754 4.83718 18.6573 4.88459 18.7888L6.12583 22.241L10.1749 14.5371L5.00096 11.8197L0.951848 19.5215L4.49886 18.5841C4.52687 18.5776 4.55489 18.5733 4.58075 18.5733V18.5754Z' fill='%234A3835'/%3E%3Cpath d='M17.7 8.49883C17.7 13.0267 14.0291 16.6977 9.49883 16.6977C4.96859 16.6977 1.3 13.0291 1.3 8.49883C1.3 3.96865 4.97087 0.3 9.49883 0.3C14.0269 0.3 17.7 3.97103 17.7 8.49883Z' fill='%23FFCA42' stroke='%234A3835' stroke-width='0.6'/%3E%3Cpath d='M9.5 4L10.8873 6.73749L14 6.71601L12.4496 8.99917L14 11.2823L10.8873 11.2609L9.5 14L8.11274 11.2609L5 11.2823L6.55036 8.99917L5 6.71601L8.11274 6.73749L9.5 4Z' fill='white' stroke='%234A3835' stroke-width='0.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");}
+.be_icon.best{background-image: url("data:image/svg+xml,%3Csvg width='19' height='25' viewBox='0 0 19 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5028 20.4506C17.4953 19.7022 16.8513 19.1007 16.0654 19.1101L14.7574 19.1291L15.2324 19.1196L16.053 19.1007C16.8388 19.0936 17.4705 18.4802 17.463 17.7318C17.4556 17.0663 16.9458 16.5193 16.2793 16.4127H15.5308C16.2694 16.4127 16.9308 15.9082 17.0179 15.2096C17.1198 14.3783 16.4409 13.6726 15.5905 13.6726H15.583C15.583 13.6726 15.5706 13.6726 15.5631 13.6726H14.0934V13.6773L13.698 13.6868H11.9921C11.5619 13.6892 11.2137 13.3576 11.2137 12.9479L11.44 10.8733C11.44 10.1889 10.9277 9.5755 10.214 9.4855C9.35111 9.37656 8.60756 10.0207 8.60756 10.8212L8.38126 12.3653C8.38126 13.4287 7.7148 14.4044 6.67532 14.7975C6.01135 15.0486 5.29515 15.1788 4.56652 15.1717H4.20345C3.60165 15.1646 3.11175 15.6264 3.11175 16.1972L3.09186 21.5589C3.09186 22.132 3.57678 22.5962 4.17858 22.5939H5.54632C6.4341 22.5891 7.31194 22.7904 8.10274 23.1741L9.02285 23.6193C10.2389 24.209 11.5842 24.5193 12.947 24.5193L15.6725 24.5264C16.4583 24.5193 17.09 23.9082 17.0825 23.1575C17.0751 22.4518 16.5031 21.8786 15.777 21.8218L16.0953 21.8171C16.8811 21.81 17.5127 21.1966 17.5053 20.4482L17.5028 20.4506Z' fill='white' stroke='%234A3835' stroke-width='0.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.2793 16.4127H14.7151' stroke='%234A3835' stroke-width='0.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M16.2793 21.817H14.7151' stroke='%234A3835' stroke-width='0.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5.5 14.1936H1.5V23.3872H5.5V14.1936Z' fill='%236DA8EE' stroke='%234A3835' stroke-width='0.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M3.52622 5.24023L4.38678 6.98361L6.30989 7.26356L4.91806 8.6204L5.24733 10.5372L3.52622 9.63207L1.80353 10.5372L2.1328 8.6204L0.740967 7.26356L2.66408 6.98361L3.52622 5.24023Z' fill='%23FCD46D' stroke='%234A3835' stroke-width='0.6'/%3E%3Cpath d='M15.5262 5.24023L16.3868 6.98361L18.3099 7.26356L16.9181 8.6204L17.2473 10.5372L15.5262 9.63207L13.8035 10.5372L14.1328 8.6204L12.741 7.26356L14.6641 6.98361L15.5262 5.24023Z' fill='%23FCD46D' stroke='%234A3835' stroke-width='0.6'/%3E%3Cpath d='M9.52622 1.24023L10.3868 2.98361L12.3099 3.26356L10.9181 4.6204L11.2473 6.53716L9.52622 5.63207L7.80353 6.53716L8.1328 4.6204L6.74097 3.26356L8.66408 2.98361L9.52622 1.24023Z' fill='%23FCD46D' stroke='%234A3835' stroke-width='0.6'/%3E%3C/svg%3E%0A");}
 
-                    <div class="location_info">
-                        <div class="title">주소 및 연락처</div>
-                        <div class="item">
-                            <div class="tit">주소</div>
-                            <div class="cnt">03171 서울특별시 종로구 세종대로209 (세종로)</div>
-                        </div>
-                        <div class="item">
-                            <div class="tit">대표번호</div>
-                            <div class="cnt">02-2100-6000</div>
-                        </div>
-                    </div>
+@media (max-width: 768px) {
+	.map_search_form{display:block;}
+	.map_search_form .map_box{}
+	.map_search_form .map_box .tit{padding:15px 0 0 15px;}
+	.map_search_form .search_box{padding:15px;border-left:0;border-top:1px solid #E1E5EB;}
+	.map_search_form .search_box .form{}
+	.map_search_form .search_box .form .item{}
+	.map_search_form .search_box .form .item + .item{margin-top:5px;}
+	.map_search_form .search_box .form .item select{height:40px;padding-left:12px;}
+	.map_search_form .search_box .form .item input[type="text"],
+	.map_search_form .search_box .form .item input[type="password"],
+	.map_search_form .search_box .form .item input[type="tel"],
+	.map_search_form .search_box .form .item input[type="email"]{height:40px;padding-left:12px;}
+	.map_search_form .search_box .map_submit{margin-top:10px;height:46px;}
 
-                    <div class="location_public">
-                        <div class="item">
-                            <div class="title">
-                                <img src="../../assets/images/content/icon_subway.png" class="icon">
-                                지하철
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li>
-                                        <div class="cate" style="color:#f2683f ;">3호선</div>
-                                        <div class="cnt">경복궁역 6번 출구</div>
-                                    </li>
-                                    <li>
-                                        <div class="cate" style="color:#8554a0 ;">5호선</div>
-                                        <div class="cnt">광화문역 1번 출구</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="title">
-                                <img src="../../assets/images/content/icon_bus.png" class="icon">
-                                버스
-                            </div>
-                            <div class="content">
-                                <div class="group">
-                                    <div class="tit">세종문화회관 정류장</div>
-                                    <ul>
-                                        <li>
-                                            <div class="cate" style="color:#395cb4 ;">간선버스</div>
-                                            <div class="cnt">103, 150, 401, 402, 406, 408, 607, 700, 704</div>
-                                        </li>
-                                        <li>
-                                            <div class="cate" style="color:#50a332 ;">지선버스</div>
-                                            <div class="cnt">711, 7016, 7018, 7022, 7212</div>
-                                        </li>
-                                        <li>
-                                            <div class="cate" style="color:#e0121a ;">광역버스</div>
-                                            <div class="cnt">9401, 9409, 9703</div>
-                                        </li>
-                                        <li>
-                                            <div class="cate" style="color:#444444 ;">마을버스</div>
-                                            <div class="cnt">종로09 , 종로11</div>
-                                        </li>
-                                        <li>
-                                            <div class="cate" style="color:#8b3191 ;">직행버스</div>
-                                            <div class="cnt">1005-1, 1500, 5000, 5005, 5500-1, 5500-2, 9000</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="group">
-                                    <div class="tit">광화문 한국통신</div>
-                                    <ul>
-                                        <li>
-                                            <div class="cate" style="color:#395cb4 ;">간선버스</div>
-                                            <div class="cnt">109, 706, 606</div>
-                                        </li>
-                                        <li>
-                                            <div class="cate" style="color:#50a332 ;">지선버스</div>
-                                            <div class="cnt">1020, 1711, 7016, 7018, 7212</div>
-                                        </li>
-                                        <li>
-                                            <div class="cate" style="color:#444444 ;">마을버스</div>
-                                            <div class="cnt">종로09 , 종로11</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="group">
-                                    <div class="tit">적선동 정류장</div>
-                                    <ul>
-                                        <li>
-                                            <div class="cate" style="color:#395cb4 ;">간선버스</div>
-                                            <div class="cnt">171, 272, 601, 606, 607, 700, 707, 708</div>
-                                        </li>
-                                        <li>
-                                            <div class="cate" style="color:#50a332 ;">지선버스</div>
-                                            <div class="cnt">7025</div>
-                                        </li>
-                                        <li>
-                                            <div class="cate" style="color:#e0121a ;">광역버스</div>
-                                            <div class="cnt">9703</div>
-                                        </li>
-                                        <li>
-                                            <div class="cate" style="color:#ff5f19 ;">공항버스	</div>
-                                            <div class="cnt">6011(인천국제공항)</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                            </div>
+	.pc_colgorup colgroup{display:none;}
+	.tables1.mb_sm tbody td{padding-left:3px;padding-right:3px;}
+}
+
+.search_form{background-color: #F1F2F3;padding:25px;margin-top:30px;}
+.search_form form{display:flex;justify-content: center;align-items: center;}
+.search_form #tempSearchText{width:305px;height:34px;border:0;padding-left:10px;color:#606060;font-size:14px;border:1px solid #ccc;}
+.search_form #searchSubmit{border:0;background-color: #515B6C;width:80px;height:30px;color:#fff;font-size:14px;font-weight: 700;margin-left:9px;transition: all 300ms ease;cursor:pointer;}
+.search_form #searchSubmit:hover{background-color:#303b52;}
+.tabs5{display:flex;}
+.tabs5 li{flex:1 1;}
+.tabs5 li a{display:block;text-align:center;padding:16px 5px;color:#333;font-size:15px;border-top:1px solid #ddd;border-left:1px solid #ddd;border-bottom:1px solid #464D5D;}
+.tabs5 li a.on{border:1px solid #464D5D;border-bottom:1px solid #fff;font-weight:700;}
+.tabs5 li + li a{}
+.tabs5 li:last-child a{border-right:1px solid #ddd;}
+.tabs5 li:last-child a.on{border-right:1px solid #464D5D;}
+
+.search_form + .tabs5{margin-top:30px;}
+.tabs5 + .search_result{margin-top:50px;}
+.result_cont{color:#333;font-size:22px;font-weight:700;margin-bottom:35px;}
+.result_cont strong{color:#EE3F3F;font-weight:700;}
+.search_result{border-bottom:1px solid #E4E7E9;}
+.search_result .result_box{padding:35px 0;border-top:1px solid #E4E7E9;}
+.search_result .result_box + .result_box{}
+.search_result .title{margin-bottom:20px;color:#333;font-size:20px;font-weight:700;padding-left:27px;background-position: left center;background-repeat: no-repeat;background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='19' height='19' rx='1' fill='%23627492'/%3E%3Cpath d='M7.60002 13.3L11.4 9.5L7.60002 5.7' stroke='white' stroke-width='2.5'/%3E%3C/svg%3E%0A");}
+.search_result .title .count{color:#EE3F3F;font-size:15px;font-weight:400;display:inline-block;margin-left:2px;}
+.search_result .result_box .cnt{}
+.search_result .link_items{}
+.search_result .link_items .item{position: relative;padding-left:13px;}
+.search_result .link_items .item:before{content:"";width:5px;height:5px;background-color: #837CBC;border-radius: 50%;position:absolute;left:0;top:6px;}
+.search_result .link_items .item + .item{margin-top:12px;}
+.search_result .link_items .item a{color:#3333CC;font-size:15px;text-decoration: underline;}
+.search_result .link_items .item a strong{font-weight:800;}
+.search_result .link_items .item a:hover{color:#2121a5;}
+.search_result .link_items .item .lct{margin-top:5px;color:#333;font-size:13px;}
+.search_result .result_box .result_more{margin-top:35px;text-align: right;}
+.search_result .result_box .result_more a{display:inline-block;bordeR:1px solid #ccc;font-size:12px;font-weight:700;border-radius:2px;color:#555;padding:7px 20px;}
+.search_result .result_box .result_more a:hover{text-decoration: underline;}
+.search_result .result_box .empty{position: relative;padding-left:13px;font-size:15px;color:#333;}
+.search_result .result_box .empty:before{content:"";width:5px;height:5px;background-color: #837CBC;border-radius: 50%;position:absolute;left:0;top:6px;}
+.search_result .pagings1{margin-top:100px;}
+
+@media (max-width: 768px) {
+    .search_form{margin-top:30px;}
+    .search_form #searchText{width:1%;flex:1 1 auto;}
+    .tabs5{display:flex;flex-wrap:wrap;}
+    .tabs5 li{width:33.333%;flex:none;}
+    .tabs5 li a{padding:10px 5px;font-size:13px;border:0;border-bottom:1px solid #ddd;border-top:1px solid #ddd;border-right:1px solid #ddd;display: flex;height:100%;box-sizing: border-box;justify-content: center;align-items: center;}
+    .tabs5 li a.on{background-color:#464D5D;color:#fff;border:1px solid #464D5D;}
+    .tabs5 li + li a{}
+    .tabs5 li:nth-child(3n) a{border-right:1px solid #ddd;}
+    .tabs5 li:nth-child(n+4) a{border-top:0;}
+    .tabs5 li:first-child a,
+    .tabs5 li:nth-child(3n + 1) a{border-left:1px solid #ddd;}
+    .tabs5 li:last-child a{border-right:1px solid #ddd;}
+
+    .search_form + .tabs5{margin-top:20px;}
+    .tabs5 + .search_result{margin-top:35px;}
+    .result_cont{font-size:18px;margin-bottom:25px;word-break: keep-all;}
+    .search_result .result_box{padding:25px 0;}
+    .search_result .result_box .title{margin-bottom:15px;font-size:16px;padding-left:22px;background-size:14px;}
+    .search_result .result_box .title .count{font-size:13px;}
+    .search_result .result_box .link_items .item a{font-size:14px;}
+    .search_result .result_box .result_more{margin-top:25px;}
+    .search_result .result_box .empty{font-size:14px;}
+    .search_result .result_box .result_more a{padding:7px 15px;}
+    .search_result .pagings1{margin-top:50px;}
+}
+
+.cert_graph_line{border:1px solid #e9e9e9;padding:30px;position: relative;}
+.cert_total{position: absolute;right:30px;top:30px;padding:8px 18px;border-radius:40px;border:1px solid #dddddd;color:#333;font-weight:600;}
+.cert_total b{}
+.cert_total .count{color:#;}
+
+.maps1{position:relative;width:400px;height: 574px;margin:0 auto;background-position: center center;background-repeat: no-repeat;background-image:url('../../assets/images/content/map_south_korea.png');}
+.maps1 .spot{position:absolute;color:#4d5e7b;top:0;left:0;text-align:center;line-height:1;z-index:2;}
+.maps1 .txt{font-weight:700;display:block;}
+.maps1 .num{font-family:'Myriad Pro';font-weight:bold;}
+.maps1 .gyeonggi{top:50px;left:85px;}
+.maps1 .incheon{top:114px;left:46px;}
+.maps1 .gangwon{top:78px;left:212px;}
+.maps1 .sejong{top:178px;left:120px;}
+.maps1 .chungbuk{top:167px;left:166px;}
+.maps1 .chungnam{top:199px;left:67px;}
+.maps1 .daejeon{top:224px;left:146px;}
+.maps1 .jeonbuk{top:289px;left:114px;}
+.maps1 .gwangju{top:343px;left:90px;}
+.maps1 .jeonnam{top:386px;left:114px;}
+.maps1 .jeju{top:517px;left:60px;}
+.maps1 .kyongbuk{top:208px;left:258px;}
+.maps1 .daegu{top:286px;left:247px;}
+.maps1 .gyeongnam{top:328px;left:211px;}
+.maps1 .ulsan{top:312px;left:302px;}
+.maps1 .busan{top:360px;left:275px;}
+.maps1 .seoul{width:100px;height:100px;left:-35px;top:0;}
+.maps1 .seoul .tbls .cell{ width:100px;height:100px;background-color:#837CBC;color:#fff;border-radius:100%;position:relative;z-index:1;display: flex;align-items: center;justify-content: center;flex-direction: column;font-size:22px;}
+.maps1 .seoul:before{content:'';position:absolute;top:35%;left:50%;width:104px;height:84px;border-left:1px solid #c4d1df;border-bottom:1px solid #c4d1df;}
+.maps1 .seoul .dot{ position:absolute;top:113px;left:148px;width:12px;height:12px;background-color:#9cb2c6;border-radius:100%; }
+.maps1 .seoul .dot:after{content:''; position:absolute;left:3px;top:3px;width:6px;height:6px;border-radius:100%;background-color:#506381;}
