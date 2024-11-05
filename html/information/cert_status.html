@@ -322,12 +322,145 @@
                         </div>
                         <div class="in_section">
                             <h3 class="form_title">업종별 현황</h3>
-                            123
+                            <div id="barChart1" class="bar_graph">
+                                <div class="bar_list">
+                                    <div class="cert_total">
+                                        <b>총계</b>
+                                        <span class="txt_theme">5,911</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="2042"><div class="bar"><div class="count"><span>2042</span></div></div></div>
+                                        <div class="tit">제조업</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="796"><div class="bar"><div class="count"><span>796</span></div></div></div>
+                                        <div class="tit">전문,과학 및<br/> 기술 서비스업</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="706"><div class="bar"><div class="count"><span>706</span></div></div></div>
+                                        <div class="tit">정보통신업</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="486"><div class="bar"><div class="count"><span>486</span></div></div></div>
+                                        <div class="tit">공공행정,<br/> 국방 및<br/> 사회보장 행정</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="427"><div class="bar"><div class="count"><span>427</span></div></div></div>
+                                        <div class="tit">도매 및 소매업</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="271"><div class="bar"><div class="count"><span>271</span></div></div></div>
+                                        <div class="tit">건설업</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="245"><div class="bar"><div class="count"><span>245</span></div></div></div>
+                                        <div class="tit">사업시설
+                                            관리, 사업지원 및<br/> 임대 서비스업</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="189"><div class="bar"><div class="count"><span>189</span></div></div></div>
+                                        <div class="tit">기타</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="159"><div class="bar"><div class="count"><span>159</span></div></div></div>
+                                        <div class="tit">교육 서비스업</div>
+                                    </div>
+                                </div>
+                                <div class="etc_list">
+                                    <div class="item"><div class="tit">보건업 및 사회복지 서비스업</div><div class="count">108</div></div>
+                                    <div class="item"><div class="tit">금융 및 보험업</div><div class="count">102</div></div>
+                                    <div class="item"><div class="tit">예술, 스포츠 및 여가관련 서비스업</div><div class="count">74</div></div>
+                                    <div class="item"><div class="tit">수도, 하수 및 폐기물처리, 원료 재생업</div><div class="count">69</div></div>
+                                    <div class="item"><div class="tit">부동산업</div><div class="count">62</div></div>
+                                    <div class="item"><div class="tit">운송 및 창고업</div><div class="count">57</div></div>
+                                    <div class="item"><div class="tit">협회 및 단체, 수리 및  기타 개인 서비스업</div><div class="count">49</div></div>
+                                    <div class="item"><div class="tit">전기, 가스, 증기 및 공기조절 공급업</div><div class="count">32</div></div>
+                                    <div class="item"><div class="tit">숙박 및 음식점업</div><div class="count">20</div></div>
+                                    <div class="item"><div class="tit">농업,임업 및 어업</div><div class="count">13</div></div>
+                                    <div class="item"><div class="tit">광업</div><div class="count">4</div></div>
+                                </div>
+                            </div>
+                            <script>
+                                //bar 높이 %로 계산
+                                const bars1 = document.querySelectorAll('#barChart1 .bar_wrap');
+                                const counts1 = Array.from(bars1).map(bar => parseInt(bar.getAttribute('data-count')));
+                                const maxCount1 = Math.max(...counts1);
+                                bars1.forEach(bar => {
+                                    const count = parseInt(bar.getAttribute('data-count'));
+                                    const percentage = ((count / maxCount1) * 100).toFixed(1);
+                                    bar.querySelector('.bar').style.height = `${percentage}%`;
+                                });
+                            </script>
                         </div>
                         <div class="in_section">
                             <h3 class="form_title">공공기관 현황</h3>
-                            123
-
+                            <div id="barChart2" class="bar_graph">
+                                <div class="bar_list">
+                                    <div class="cert_total">
+                                        <b>총계</b>
+                                        <span class="txt_theme">1,133</span>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="49"><div class="bar"><div class="count"><span>49</span></div></div></div>
+                                        <div class="tit">중앙<br/>행정기관</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="239"><div class="bar"><div class="count"><span>239</span></div></div></div>
+                                        <div class="tit">지방<br/>자치단체</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="346"><div class="bar"><div class="count"><span>346</span></div></div></div>
+                                        <div class="tit">공공기관<br/>
+                                            (기획재정부<br/>
+                                            지정)</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="147"><div class="bar"><div class="count"><span>147</span></div></div></div>
+                                        <div class="tit">지방<br/>공사공단</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="122"><div class="bar"><div class="count"><span>122</span></div></div></div>
+                                        <div class="tit">지자체<br/>
+                                            출자<br/>출연기관</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="102"><div class="bar"><div class="count"><span>102</span></div></div></div>
+                                        <div class="tit">군부대</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="69"><div class="bar"><div class="count"><span>69</span></div></div></div>
+                                        <div class="tit">비영리<br/>기관</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="36"><div class="bar"><div class="count"><span>36</span></div></div></div>
+                                        <div class="tit">기타</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="19"><div class="bar"><div class="count"><span>19</span></div></div></div>
+                                        <div class="tit">중앙<br/>행정기관
+                                            소속기관</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="2"><div class="bar"><div class="count"><span>2</span></div></div></div>
+                                        <div class="tit">국립대학</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="bar_wrap" data-count="2"><div class="bar"><div class="count"><span>2</span></div></div></div>
+                                        <div class="tit">지방<br/>자치단체<br/>(의무화아님)</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                //bar 높이 %로 계산
+                                const bars2 = document.querySelectorAll('#barChart2 .bar_wrap');
+                                const counts2 = Array.from(bars2).map(bar => parseInt(bar.getAttribute('data-count')));
+                                const maxCount2 = Math.max(...counts2);
+                                bars2.forEach(bar => {
+                                    const count = parseInt(bar.getAttribute('data-count'));
+                                    const percentage = ((count / maxCount2) * 100).toFixed(1);
+                                    bar.querySelector('.bar').style.height = `${percentage}%`;
+                                });
+                            </script>
                         </div>
                         <div class="in_section">
                             <h3 class="form_title">지역별 현황</h3>
