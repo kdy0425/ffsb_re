@@ -42,6 +42,8 @@ $(".btn_search").click(function (event) {
     event.stopPropagation(); 
     $(".info_layer").hide();
     $(".sc_form").show();
+    $('.btn_menuall').removeClass('active').text('전체메뉴 닫기');
+    $('.nav_all').hide();
 });
 $(".sc_close").click(function (event) {
     event.stopPropagation(); 
@@ -50,6 +52,8 @@ $(".sc_close").click(function (event) {
 $(".hd_alarm .alarm_btn").click(function (event) {
     event.stopPropagation(); 
     $(".alarm_layer.mb_full_layer").show();
+    $('.btn_menuall').removeClass('active').text('전체메뉴 닫기');
+    $('.nav_all').hide();
 });
 $(document).click(function (event) {
     if ($(event.target).closest(".sc_form").length === 0) {
