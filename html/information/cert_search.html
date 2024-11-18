@@ -605,6 +605,104 @@
 
 <script src="../../assets/js/common.js"></script>
 
+<script type="text/javascript">
+	
+	$(document).ready(function() {
+		
+		// 지역 아이콘 클릭시 백그라운드 이미지 변경 및 select에 값 넣기
+		$('.map a').click(function(){
+			$('.map a').removeClass('active');
+			$(this).addClass('active');
+			$("#tempKeyWord4").val($(this).text());
+			fnSearch();
+		});
+		
+		// 지역 select 변경 시 지역 아이콘 백그라운드 이미지 변경
+		$("#tempKeyWord4").change(function(){			
+			$('.map a').removeClass('active');
+			var sidoNm = $(this).val();
+			
+			$(".map a").each(function(i, item){
+				if(sidoNm == item.text) {
+					$(this).addClass('active');
+				}	
+			});			
+		});
+		
+		// 검색어 입력 후 엔터시 검색 호출
+		$("#tempKeyWord3").keydown(function(e) {
+			if(e.keyCode == 13) {
+				fnSearch();
+			}
+		});
+		
+		// 화면 초기화
+		fnInit();
+	});
+
+	// 검색
+	function fnSearch() {
+		
+		if($("#tempKeyKind").val() != "" && $("#tempKeyWord3").val() == "") {
+			alert("검색어를 입력 해주세요");
+			$("#tempKeyWord3").focus();
+			return;
+		}
+		
+		$("#pageNo").val("1");
+		$("#keyKind").val($("#tempKeyKind").val());
+		$("#keyWord1").val($("#tempKeyWord1").val());
+		$("#keyWord2").val($("#tempKeyWord2").val());
+		$("#keyWord3").val($("#tempKeyWord3").val().trim());
+		$("#keyWord4").val($("#tempKeyWord4").val());
+		$("#keyWord5").val($("#tempKeyWord5").val());
+		$("#awardTypeCd").val($("#tempAwardTypeCd").val());
+		
+		var form = document.frm;
+		form.action = "/ffm/ffmCertCompSearch.do?menuSeq=1152";
+		form.submit();
+	}
+	
+	function fnInit() {
+		
+		// 검색후 화면의 select 박스 value 세팅 
+		if("" != "") {
+			$("#tempKeyWord1").val("");
+		}
+		if("" != "") {
+			$("#tempKeyWord2").val("");
+		}
+		if("" != "") {
+			$("#tempKeyWord3").val("");
+		}
+		if("" != "") {
+			$("#tempKeyWord4").val("");
+		}
+		if("" != "") {
+			$("#tempKeyWord5").val("");
+		}
+		if("" != "") {
+			$("#tempKeyKind").val("");
+		}
+		if("" != "") {
+			$("#tempAwardTypeCd").val("");
+		}
+		
+		// 선택한 지역 있다면 지역 이미지 세팅
+		if("" != "") {
+			$('.map a').removeClass('active');
+			var sidoNm = "";
+			
+			$(".map a").each(function(i, item){
+				if(sidoNm == item.text) {
+					$(this).addClass('active');
+				}	
+			});	
+		}
+	}
+	
+</script>
+
 </body>
 
 </html>
