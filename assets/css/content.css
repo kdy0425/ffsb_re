@@ -2279,3 +2279,9 @@ p.buls1 + p.buls1{margin-top:3px;}
     .form_btns_new .btn svg{margin-left:12px;}
 }
 
+.member_check_info{background-color: #EFF4FA;padding:20px;text-align: center;margin-bottom:10px;}
+.member_check_info .ct{display: inline-block;background-color: #357BF3;color:#fff;margin-bottom:8px;padding:5px 8px;border-radius:2px;font-size:13px;font-weight:700;}
+.member_check_info .sbj{margin-bottom:8px;color:#333;font-size:20px;font-weight:700;}
+.member_check_info .lct{color:#555;font-size:14px;font-weight:500;}
+.member_check_info .name{margin-top:20px;background-color: #fff;padding:12px;color:#333;font-size:16px;font-weight:500;}
+.member_check_info .name strong{font-weight:600;}
