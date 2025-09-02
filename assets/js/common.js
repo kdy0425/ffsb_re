@@ -1,6 +1,8 @@
-$("#nav").hover(
-    function () { menuFocusOn(); }
-  , function () { menuFocusOut(); }
+$("#nav > ul > li").hover(
+    function () { menuFocusOn(this); }
+);
+$("#nav").mouseleave(
+  function () { menuFocusOut(); }
 );
 
 // 웹 접근성 보안으로 인하여 탭키 사용시에 하위메뉴 보여주도록 수정
@@ -19,23 +21,25 @@ $(".hd_bottom").keyup(function (e) {
 //nav hover  header 디자인 효과
 let bgHeight = 0;
 
-function menuFocusOn() {
-	$("#header").addClass("hover");
-    $(".sc_form").hide();
-    $(".info_layer").hide();
-    if(bgHeight == 0){
-        $('#nav .in_wrap').each(function(){
-            if(bgHeight < $(this).outerHeight()){
-                bgHeight = $(this).outerHeight();
-            }
-        });
-        $('.nav_bg').outerHeight(bgHeight + $('#header').outerHeight());
-        $('#nav .in_wrap').outerHeight(bgHeight);
-    }
-};
+function menuFocusOn(target) {
+    console.log(1)
+  $("#header").addClass("hover");
+  $(".sc_form").hide();
+  $(".info_layer").hide();
+  $('.nav_inner').hide();
+  const $inner = $(target).children('.nav_inner');
+  $inner.show();
+  requestAnimationFrame(() => {
+    const innerH = $inner.outerHeight() || 0;
+    const headerH = $('#header').outerHeight() || 0;
+    $('.nav_bg').outerHeight(innerH + headerH);
+  });
+}
 
 function menuFocusOut() {
 	$("#header").removeClass("hover");
+    $('.nav_inner').hide();
+    $('.nav_bg').outerHeight(0);
 };
 
 $(".btn_search").click(function (event) {
