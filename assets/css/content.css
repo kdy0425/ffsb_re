@@ -2175,7 +2175,6 @@ p.buls1 + p.buls1{margin-top:3px;}
 .find_business .fb_radio1{display: grid;grid-template-columns: repeat(2,1fr);gap: 20px;}
 .find_business .fb_radio1 .item{flex:1 1;position: relative;}
 .find_business .fb_radio1 .item input[type="radio"]{position: absolute;left:50%;top:50%;z-index:1;}
-.find_business .fb_radio1 .item input[type="radio"]:focus + label{outline:2px solid #000;}
 .find_business .fb_radio1 .item label{display: block;position: relative;z-index: 5;background-color: #F8F8F8;text-align: center;border-radius: 10px;padding:58px 0;border:2px solid transparent;}
 .find_business .fb_radio1 .item label:hover{border-color: #ccc;}
 .find_business .fb_radio1 .item label:before{content:"";position: absolute;right:20px;top:20px;width:28px;height:28px;background-size:contain;background-repeat: no-repeat;background-position: center center;background-image: url("data:image/svg+xml,%0A%3Csvg width='28' height='28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='14' fill='%23DBDCDD'/%3E%3Cpath d='M20.167 10 11.5 19 7 13.844' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");}
@@ -2189,7 +2188,6 @@ p.buls1 + p.buls1{margin-top:3px;}
 .find_business .fb_radio2{display: grid;grid-template-columns: repeat(2,1fr);gap: 20px;}
 .find_business .fb_radio2 .item{flex:1 1;position: relative;}
 .find_business .fb_radio2 .item input[type="radio"]{position: absolute;left:50%;top:50%;z-index:1;}
-.find_business .fb_radio2 .item input[type="radio"]:focus + label{outline:2px solid #000;}
 .find_business .fb_radio2 .item label{display: block;position: relative;z-index: 5;background-color: #F8F8F8;border-radius: 10px;padding:27px 65px 27px 30px;border:2px solid transparent;}
 .find_business .fb_radio2 .item label:hover{border-color: #ccc;}
 .find_business .fb_radio2 .item label:before{content:"";position: absolute;right:30px;top:50%;margin-top:-14px;width:28px;height:28px;background-size:contain;background-repeat: no-repeat;background-position: center center;background-image: url("data:image/svg+xml,%0A%3Csvg width='28' height='28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='14' fill='%23DBDCDD'/%3E%3Cpath d='M20.167 10 11.5 19 7 13.844' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");}
@@ -2281,3 +2279,12 @@ p.buls1 + p.buls1{margin-top:3px;}
     .form_btns_new .btn svg{margin-left:12px;}
 }
 
+.member_check_info{background-color: #EFF4FA;padding:20px;text-align: center;margin-bottom:10px;}
+.member_check_info .ct{display: inline-block;background-color: #357BF3;color:#fff;margin-bottom:8px;padding:5px 8px;border-radius:2px;font-size:13px;font-weight:700;}
+.member_check_info .sbj{margin-bottom:8px;color:#333;font-size:20px;font-weight:700;}
+.member_check_info .lct{color:#555;font-size:14px;font-weight:500;}
+.member_check_info .name{margin-top:20px;background-color: #fff;padding:12px;color:#333;font-size:16px;font-weight:500;}
+.member_check_info .name strong{font-weight:600;}
+@media screen and (max-width:1180px) {
+    .member_check_info{margin-top:25px;}
+}
